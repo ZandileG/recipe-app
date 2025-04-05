@@ -1,10 +1,14 @@
+import React, {useContext} from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 
 function App(){
-  return(
-    <div className="App">
-    
-    </div>
+  return( 
+    <BrowserRouter basename="/recipe-app">
+    <Routes>
+    <Route />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
