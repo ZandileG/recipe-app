@@ -5,7 +5,7 @@ import "../Styles/YourRecipes.css";
 
 function YourRecipes() {
   return (
-    <Fragment>
+    <Fragment className="your-recipes-page">
     <section>
     
     </section>   

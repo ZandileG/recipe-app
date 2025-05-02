@@ -8,7 +8,7 @@ function Recipe() {
 const { recipeId } = useParams();
 
   return (
-    <Fragment>
+    <Fragment className="recipe-page">
       <section>
         
       </section>

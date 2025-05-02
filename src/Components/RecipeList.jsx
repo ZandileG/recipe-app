@@ -4,7 +4,9 @@ import "../Styles/RecipeCard.css";
 function RecipeList() {
   return (
     <Fragment className="recipe-list">
-      
+      <section>
+        
+      </section>
     </Fragment>
   );
 }

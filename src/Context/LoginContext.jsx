@@ -4,7 +4,7 @@ export const LoginContext = createContext();
 
 function LoginProvider({ children }) {
 const [isLoggedIn, setIsLoggedIn] = useState(
-    function () {
+    function() {
         const LoginToken = localStorage.getItem("isLoggedIn");
         return LoginToken === "true";
 });

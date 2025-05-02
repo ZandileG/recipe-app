@@ -1,16 +1,32 @@
-/*.grid-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/*.login-page{
+
 }
 
-@media (max-width: 768px){
-    .grid-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
+.backdrop{
+
 }
 
-@media (max-width: 480px){
-    .grid-container{
-        grid-template-columns: 1fr;
-    }
-}*/
+.login-form{
+
+}
+
+.login-heading{
+
+}
+
+.username{
+
+}
+
+.password{
+
+}
+
+.login-submit{
+
+}
+
+.login-error{
+
+}
+*/

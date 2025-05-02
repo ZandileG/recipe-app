@@ -5,7 +5,7 @@ import "../Styles/UserProfile.css";
 
 function UserProfile() {
   return (
-    <Fragment>
+    <Fragment className="user-profile-page">
     <section>
     
     </section> 

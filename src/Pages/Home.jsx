@@ -6,7 +6,7 @@ import "../Styles/Home.css";
 
 function Home() {
   return (
-    <Fragment>
+    <Fragment className="home-page">
     <section>
     
     </section> 
