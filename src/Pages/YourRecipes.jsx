@@ -6,7 +6,9 @@ import "../Styles/YourRecipes.css";
 function YourRecipes() {
   return (
     <Fragment>
-      
+    <section>
+    
+    </section>   
     </Fragment>
   );
 }

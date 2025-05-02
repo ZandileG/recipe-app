@@ -22,18 +22,18 @@ function Login() {
     }
 
   return (
-    <Fragment className="login">
+    <Fragment className="login-page">
       <img src={Backdrop} alt="Backdrop" />
     
     <p>Welcome to Zandile's Recipes!</p>
 
-    <form action="" onSubmit={handleSubmit}>
+    <form className="login-form" action="" onSubmit={handleSubmit}>
     <h1>Sign In</h1>
     <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
     <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-    <button type="submit">Enter</button>
+    <button type="login-submit">Enter</button>
     </form>
-    {error && <p className="error">{error}</p>}
+    {error && <p className="login-error">{error}</p>}
     </Fragment>
   );
 }

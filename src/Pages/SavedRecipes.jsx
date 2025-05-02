@@ -8,7 +8,9 @@ import "../Styles/SavedRecipes.css";
 function SavedRecipes() {
   return (
     <Fragment>
-      
+     <section>
+    
+     </section> 
     </Fragment>
   );
 }

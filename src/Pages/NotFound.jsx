@@ -4,7 +4,9 @@ import "../Styles/NotFound.css";
 function NotFound() {
   return (
     <Fragment className="not-found">
-      <h1>404 Page Not found!</h1>
+      <section>
+        <h1>404 Page Not found!</h1>
+      </section>
     </Fragment>
   );
 }

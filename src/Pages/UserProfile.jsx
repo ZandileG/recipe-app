@@ -6,7 +6,9 @@ import "../Styles/UserProfile.css";
 function UserProfile() {
   return (
     <Fragment>
-      
+    <section>
+    
+    </section> 
     </Fragment>
   );
 }

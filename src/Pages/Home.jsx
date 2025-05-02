@@ -7,7 +7,9 @@ import "../Styles/Home.css";
 function Home() {
   return (
     <Fragment>
-      
+    <section>
+    
+    </section> 
     </Fragment>
   );
 }

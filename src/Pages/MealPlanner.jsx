@@ -7,7 +7,9 @@ import "../Styles/MealPlanner.css";
 function MealPlanner() {
   return (
     <Fragment>
-      
+      <section>
+        
+      </section>
     </Fragment>
   );
 }
