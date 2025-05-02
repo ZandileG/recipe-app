@@ -14,7 +14,7 @@ useEffect(() => {
 }, [isLoggedIn]);
 
 function login(username, password) {
-    if (username === "" && password === "") {
+    if (username === "admin" && password === "admin") {
         setIsLoggedIn(true);
         return true;
     } else {

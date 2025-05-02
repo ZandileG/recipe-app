@@ -21,6 +21,8 @@ function ProtectedRoute({ children }) {
 
 function App(){
   return( 
+    <LoginProvider>
+    <SavedProvider>
     <BrowserRouter basename="/recipe-app">
     <Routes>
     <Route path="/login" element={<Login />} />
@@ -35,6 +37,8 @@ function App(){
     <Route path="/notFound" element={<NotFound />} />
     </Routes>
     </BrowserRouter>
+    </SavedProvider>
+    </LoginProvider>
   );
 }
 

@@ -17,7 +17,7 @@ function Login() {
     if (login(username, password)){
       navigate("/");
       } else{
-        setError("Incorrect username or password. Please try again.");
+        setError("Your username or password are incorrect. Please try again.");
       }
     }
 
