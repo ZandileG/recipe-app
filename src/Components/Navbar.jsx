@@ -1,11 +1,12 @@
-import React from "react";
+import React, {Fragment} from "react";
+import "../Styles/Navbar.css";
 
 function Navbar() {
   return (
-    <div>
-      
-    </div>
-  )
+    <Fragment className="navbar">
+
+    </Fragment>
+  );
 }
 
 export default Navbar;

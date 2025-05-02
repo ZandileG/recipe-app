@@ -1,11 +1,14 @@
-import React from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
-function SavedContext() {
-  return (
-    <div>
-      
-    </div>
-  )
+export const SavedContext = createContext();
+
+function SavedProvider({ children }) {
+
+return (
+  <SavedContext.Provider value={{}}>
+    {children}
+  </SavedContext.Provider>
+ ); 
 }
 
-export default SavedContext;
+export default SavedProvider;

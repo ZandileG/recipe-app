@@ -1,11 +1,12 @@
-import React from "react";
+import React, {Fragment, useEffect, useState, useContext} from "react";
+import "../Styles/RecipeCard.css";
 
 function RecipeList() {
   return (
-    <div>
+    <Fragment className="recipe-list">
       
-    </div>
-  )
+    </Fragment>
+  );
 }
 
 export default RecipeList;

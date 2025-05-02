@@ -1,11 +1,12 @@
-import React from "react";
+import React, {Fragment} from "react";
+import "../Styles/RecipeCard.css";
 
 function RecipeCard() {
   return (
-    <div>
-      
-    </div>
-  )
+    <Fragment className="recipe-card">
+
+    </Fragment>
+  );
 }
 
 export default RecipeCard;

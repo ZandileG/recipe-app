@@ -1,11 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import "../Styles/UserProfile.css";
 
 function UserProfile() {
   return (
-    <div>
+    <Fragment>
       
-    </div>
-  )
+    </Fragment>
+  );
 }
 
 export default UserProfile;
