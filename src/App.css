@@ -1,6 +1,6 @@
 .login-page {
     display: grid; 
-    grid-template-columns: 1fr auto; 
+    grid-template-columns: 1fr 1fr; 
     align-items: center; 
     background-image: url("./Images/Sign In BG.webp");
     background-size: cover;
@@ -18,28 +18,33 @@
 }
 
 .logo{
+    width: 15rem;
+    height: auto;
     position: absolute;
-    margin-left: 45%;
     top: -3rem;
 }
 
 .login-form {
-    justify-self: end; 
     display: grid;
     place-items: center;
-    width: 30rem;
+    width: 28rem;
     height: 30rem;
-    border: solid 1px black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    margin-right: 12%;
-    background-color: #D9D9D9;
+    background-color: #d5c8b0;
     z-index: 1000px;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
 }
 
 .login-heading{
     font-size: 2rem;
+    font-weight: medium;
     text-align: center;
     color: black;
+    cursor: default;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .login-inputs{
@@ -55,22 +60,59 @@
     text-align: left;
     padding-left: 1.5rem;
     border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     color: black;
     background-color: white;
+    font-weight: 600;
+}
+
+.username:focus, .password:focus{
+    outline: none;
+    border: solid 1px black;
+}
+
+.username::placeholder, .password::placeholder{
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Dosis";
 }
 
 .login-submit{
     width: 5rem;
-    height: 2.5rem;
+    height: 3rem;
     border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
     background-color: white;
-    margin-top: -5rem;
-    font-weight: medium;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Dosis";
+    margin-top: -2rem;
 }
 
+.login-change{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Dosis";
+    margin-top: -2rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-change:hover{
+    color: rgb(98, 98, 98);
+}
+
+.login-submit:hover{
+    background-color: #957357;
+    cursor: pointer;
+}
 
 .login-error{
-    color: black
+    color: black;
+    font-weight: 600;
 }

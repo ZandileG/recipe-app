@@ -52,7 +52,7 @@ function logout(){
 }
 
 return (
-    <LoginContext.Provider value={{ isLoggedIn, login, logout, signUp}}>
+    <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, userDetails, setUserDetails, login, logout, signUp }}>
         {children}
     </LoginContext.Provider>
 );

@@ -8,17 +8,26 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isSigningUp, setIsSigningUp] = useState(false);
+  const [changeDetails, setChangeDetails] = useState(false);
 
-  const {login, signUp} = useContext(LoginContext);
+  const {login, signUp, userDetails, setUserDetails} = useContext(LoginContext);
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (isSigningUp) {
+    if (changeDetails) {
+      if(username && password) {
+        setUserDetails({ username, password});
+        alert("You have successfully updated your details!");
+        setChangeDetails(false);
+      } else{
+        setError("Please fill in all fields.");
+      }
+    } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
-      setIsSigningUp(true);
+      setIsSigningUp(false);
       } else{
         setError("Please try again.");
       }
@@ -34,6 +43,8 @@ function Login() {
   return (
     <Fragment>
     <main className="login-page">
+    <section>{/*This is an empty section I'm using so that the login page grid has two equal columns*/}</section>
+
     <section className="login-items">
     <img className="logo" src={Logo} alt="Zandile's Recipes"/>
     
@@ -45,6 +56,12 @@ function Login() {
     <input className="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
     {error && <p className="login-error">{error}</p>}
     </section>
+    {!isSigningUp && !changeDetails && (
+    <p className="login-change" onClick={() => 
+      {setChangeDetails(true); 
+       setUsername(""); 
+       setPassword("");
+    }}>Update Details</p>)}
 
     <button type="submit" className="login-submit">{isSigningUp ? "Sign Up" : "Log In"}</button>
     </form>
