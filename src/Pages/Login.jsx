@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Context/LoginContext";
-import Backdrop from "../Images/Sign In BG.webp";
+import Logo from "../Images/Logo.webp";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -33,20 +33,23 @@ function Login() {
 
   return (
     <Fragment>
-      <section className="login-page">
-      <img src={Backdrop} alt="Backdrop" className="backdrop"/>
+    <main className="login-page">
+    <section className="login-items">
+    <img className="logo" src={Logo} alt="Zandile's Recipes"/>
     
-    <p>Welcome to Zandile's Recipes!</p>
-
     <form className="login-form" action="" onSubmit={handleSubmit}>
     <h1 className="login-heading">Sign In</h1>
+    
+    <section className="login-inputs">
     <input className="username" type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
     <input className="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-    <button type="login-submit">{isSigningUp? "Sign Up" : "Log In"}</button>
-    
     {error && <p className="login-error">{error}</p>}
+    </section>
+
+    <button type="submit" className="login-submit">{isSigningUp ? "Sign Up" : "Log In"}</button>
     </form>
     </section>
+    </main>
     </Fragment>
   );
 }

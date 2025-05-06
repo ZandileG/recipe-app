@@ -1,32 +1,76 @@
-/*.login-page{
-
+.login-page {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background-image: url("./Images/Sign In BG.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
-.backdrop{
-
+.login-items {
+    display: grid; 
+    position: relative;
+    align-items: center;
+    justify-items: center; 
+    gap: 2rem; 
 }
 
-.login-form{
+.logo{
+    position: absolute;
+    margin-left: 45%;
+    top: -3rem;
+}
 
+.login-form {
+    justify-self: end; 
+    display: grid;
+    place-items: center;
+    width: 30rem;
+    height: 30rem;
+    border: solid 1px black;
+    border-radius: 1rem;
+    margin-right: 12%;
+    background-color: #D9D9D9;
+    z-index: 1000px;
 }
 
 .login-heading{
-
+    font-size: 2rem;
+    text-align: center;
+    color: black;
 }
 
-.username{
-
+.login-inputs{
+    display: grid;
+    margin-top: -5rem;
+    place-items: center;
+    gap: 2rem;
 }
 
-.password{
-
+.username, .password{
+    width: 15rem;
+    height: 4rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    background-color: white;
 }
 
 .login-submit{
-
+    width: 5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: white;
+    margin-top: -5rem;
+    font-weight: medium;
 }
+
 
 .login-error{
-
+    color: black
 }
-*/

@@ -6,9 +6,9 @@ import "../Styles/UserProfile.css";
 function UserProfile() {
   return (
     <Fragment>
-    <section className="user-profile-page">
+    <main className="user-profile-page">
     
-    </section> 
+    </main> 
     </Fragment>
   );
 }

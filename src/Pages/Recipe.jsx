@@ -9,9 +9,9 @@ const { recipeId } = useParams();
 
   return (
     <Fragment>
-      <section className="recipe-page">
+      <main className="recipe-page">
         
-      </section>
+      </main>
     </Fragment>
   );
 }

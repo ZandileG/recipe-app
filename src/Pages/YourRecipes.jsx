@@ -6,9 +6,9 @@ import "../Styles/YourRecipes.css";
 function YourRecipes() {
   return (
     <Fragment>
-    <section className="your-recipes-page">
+    <main className="your-recipes-page">
     
-    </section>   
+    </main>   
     </Fragment>
   );
 }
