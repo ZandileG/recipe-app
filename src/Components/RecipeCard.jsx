@@ -3,8 +3,8 @@ import "../Styles/RecipeCard.css";
 
 function RecipeCard() {
   return (
-    <Fragment className="recipe-card">
-      <section>
+    <Fragment>
+      <section className="recipe-card">
         
       </section>
     </Fragment>

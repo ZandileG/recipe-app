@@ -4,8 +4,8 @@ import Logo from "../Images/Logo.webp";
 
 function Navbar() {
   return (
-    <Fragment className="navbar">
-      <section>
+    <Fragment>
+      <section className="navbar">
 
       </section>
     </Fragment>

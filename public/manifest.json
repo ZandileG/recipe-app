@@ -3,22 +3,22 @@
   "name": "Zandile's Recipe App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "/recipe-app/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "/recipe-app/favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon.png",
+      "src": "/recipe-app/favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/recipe-app/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

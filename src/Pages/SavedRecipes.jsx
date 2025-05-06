@@ -7,8 +7,8 @@ import "../Styles/SavedRecipes.css";
 
 function SavedRecipes() {
   return (
-    <Fragment className="saved-recipes-page">
-     <section>
+    <Fragment>
+     <section className="saved-recipes-page">
     
      </section> 
     </Fragment>

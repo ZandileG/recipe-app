@@ -21,7 +21,8 @@ function Login() {
     }
 
   return (
-    <Fragment className="login-page">
+    <Fragment>
+      <section className="login-page">
       <img src={Backdrop} alt="Backdrop" className="backdrop"/>
     
     <p>Welcome to Zandile's Recipes!</p>
@@ -33,6 +34,7 @@ function Login() {
     <button type="login-submit">Enter</button>
     </form>
     {error && <p className="login-error">{error}</p>}
+    </section>
     </Fragment>
   );
 }
