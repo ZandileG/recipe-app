@@ -7,18 +7,29 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isSigningUp, setIsSigningUp] = useState(false);
 
-  const { login } = useContext(LoginContext);
+  const {login, signUp} = useContext(LoginContext);
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (login(username, password)){
-      navigate("/");
+
+    if (isSigningUp) {
+    if (signUp(username, password)) {
+      alert("You have successfully signed up!");
+      setIsSigningUp(true);
       } else{
-        setError("Your username or password are incorrect. Please try again.");
+        setError("Please try again.");
+      }
+     } else {
+      if (login(username, password)) {
+        navigate("/");
+      } else {
+        setError("Incorrect username or password. Please try again.");
       }
     }
+  }
 
   return (
     <Fragment>
@@ -31,9 +42,10 @@ function Login() {
     <h1 className="login-heading">Sign In</h1>
     <input className="username" type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
     <input className="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-    <button type="login-submit">Enter</button>
-    </form>
+    <button type="login-submit">{isSigningUp? "Sign Up" : "Log In"}</button>
+    
     {error && <p className="login-error">{error}</p>}
+    </form>
     </section>
     </Fragment>
   );
