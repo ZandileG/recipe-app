@@ -2,6 +2,7 @@ import React, { Fragment, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Context/LoginContext";
 import Logo from "../Images/Logo.webp";
+import "../Styles/Login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -20,14 +21,14 @@ function Login() {
       if(username && password) {
         setUserDetails({ username, password});
         alert("You have successfully updated your details!");
-        setChangeDetails(false);
+        setChangeDetails(true);
       } else{
         setError("Please fill in all fields.");
       }
     } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
-      setIsSigningUp(false);
+      setIsSigningUp(true);
       } else{
         setError("Please try again.");
       }
@@ -46,7 +47,7 @@ function Login() {
     <section>{/*This is an empty section I'm using so that the login page grid has two equal columns*/}</section>
 
     <section className="login-items">
-    <img className="logo" src={Logo} alt="Zandile's Recipes"/>
+    <img className="logo-login" src={Logo} alt="Zandile's Recipes"/>
     
     <form className="login-form" action="" onSubmit={handleSubmit}>
     <h1 className="login-heading">Sign In</h1>

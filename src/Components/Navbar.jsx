@@ -12,10 +12,12 @@ function Navbar() {
 
   return (
     <Fragment>
+      <header>
       <nav className="navbar">
-       <img src={Logo} className="logo" alt="Zandile's Recipes" /> 
+      <section><img src={Logo} className="logo-navbar" alt="Zandile's Recipes" /></section>
       <button onClick={handleLogOut}>Log Out</button>
       </nav>
+      </header>
     </Fragment>
   );
 }

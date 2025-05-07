@@ -2,6 +2,9 @@
     grid-area: footer; 
     padding: 10px; 
     text-align: center; 
+    background-color: #d27f5d;
+    border-top: solid 1px black;
+    font-weight: 600;
 } 
 
 @media (orientation: portrait){

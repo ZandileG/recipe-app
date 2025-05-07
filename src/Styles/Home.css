@@ -1,28 +1,111 @@
 .home-page{
     display: grid;
     grid-template-areas: 
-      "navbar navbar"
+      "header header"
       "sidebar main"
       "footer footer";
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
   }
+
+.header{
+    grid-area: header;
+    text-align: center; 
+    background-color: #d27f5d;
+    border-bottom: solid 1px black;
+  }
+
+nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
      
-  .sidebar{ 
+.navbar{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  }
+
+.logo-home{
+    width: 12rem;
+    margin-top: 1rem;
+  }
+
+.sidebar{ 
+  text-align: center;
     grid-area: sidebar; 
-    padding: 20px; 
-  } 
-     
-  .content{ 
-    grid-area: main; 
-    padding: 20px; 
+    padding: 1rem; 
+    background-color: #a6b26d;
+    border-right: solid 1px black;
   } 
 
-  @media (orientation: portrait){
+.heading2{
+  margin-top: 3rem;
+}
+
+.searchbar{
+  width: 50rem;
+  height: 2rem;
+  border-radius: 5rem;
+  font-size: 1rem;
+  border: solid 1px black;
+  padding-left: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background-color: #f7f7f7;
+  font-weight: medium;
+}
+
+.searchbar:focus{
+  outline: none;
+  box-shadow: none;
+  background-color: white;
+}
+     
+.filter{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: #d27f5d;
+  border: solid 1px black;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content{ 
+    grid-area: main; 
+    padding: 10rem;
+    background-color: #f7f7f7;
+  } 
+
+.logout{
+  background-color: #a6b26d;
+  border: solid 1px black;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logout:hover, .filter:hover{
+  background-color: #d5c8b0;
+}
+
+@media (orientation: portrait){
     
   }
   
-  @media (orientation: landscape){
+@media (orientation: landscape){
       
   }
