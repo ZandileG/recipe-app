@@ -12,12 +12,15 @@ function Navbar() {
 
   return (
     <Fragment>
-      <header>
-      <nav className="navbar">
+      <header><nav>
       <section><img src={Logo} className="logo-navbar" alt="Zandile's Recipes" /></section>
-      <button onClick={handleLogOut}>Log Out</button>
-      </nav>
-      </header>
+      <ul>
+        <li>Home</li>
+        <li>Meal Planner</li>
+        <li>User Profile</li>
+      </ul>
+      <button className="logout" onClick={handleLogOut}>Log Out</button>
+      </nav></header>
     </Fragment>
   );
 }
