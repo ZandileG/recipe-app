@@ -13,10 +13,8 @@ function YourRecipes() {
     <Fragment>
     <main className="your-recipes-page">
     <header className="header">
-      <nav>
-      <Navbar />
-      </nav>
-      </header>
+      <nav><Navbar /></nav>
+    </header>
 
     <aside className="sidebar">
    

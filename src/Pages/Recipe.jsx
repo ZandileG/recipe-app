@@ -16,9 +16,7 @@ function filterRecipes() {
     <Fragment>
       <main className="recipe-page">
       <header className="header">
-      <nav>
-      <Navbar />
-      </nav>
+      <nav><Navbar /></nav>
       </header>
 
     <section className="content">

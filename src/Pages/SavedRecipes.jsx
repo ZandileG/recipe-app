@@ -15,9 +15,7 @@ function SavedRecipes() {
     <Fragment>
      <main className="saved-recipes-page">
      <header className="header">
-      <nav>
-      <Navbar />
-      </nav>
+      <nav><Navbar /></nav>
       </header>
 
     <aside className="sidebar">
