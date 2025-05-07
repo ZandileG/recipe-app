@@ -19,7 +19,6 @@ function RecipeList() {
       .catch(error => console.error('Error fetching recipes:', error));
   }, []);
 
-
   return (
     <Fragment>
       <section className="recipe-list">

@@ -37,8 +37,7 @@ function signUp(username, password) {
 }
 
 function login(username, password) {
-    if (userDetails && username === userDetails.username && 
-                       password === userDetails.password) {
+    if (userDetails && username === userDetails.username && password === userDetails.password) {
         setIsLoggedIn(true);
         return true;
     } else {

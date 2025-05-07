@@ -14,12 +14,14 @@ function Navbar() {
     <Fragment>
       <header><nav>
       <section><img src={Logo} className="logo-navbar" alt="Zandile's Recipes" /></section>
+      <section className="navbar">
       <ul>
         <li>Home</li>
         <li>Meal Planner</li>
         <li>User Profile</li>
       </ul>
-      <button className="logout" onClick={handleLogOut}>Log Out</button>
+      <section className="logout-section"><button className="logout" onClick={handleLogOut}>Log Out</button></section>
+      </section>
       </nav></header>
     </Fragment>
   );
