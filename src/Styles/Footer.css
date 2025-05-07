@@ -1,4 +1,13 @@
-/*.footer{
+.footer{ 
+    grid-area: footer; 
+    padding: 10px; 
+    text-align: center; 
+} 
 
+@media (orientation: portrait){
+    
 }
-*/
+
+@media (orientation: landscape){
+    
+}

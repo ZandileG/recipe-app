@@ -1,3 +1,22 @@
-/*.navbar{
+.navbar{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+  }
 
-}*/
+.navbar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+
+  @media (orientation: portrait){
+    
+  }
+  
+  @media (orientation: landscape){
+      
+  }
