@@ -1,10 +1,11 @@
 import React, {Fragment} from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../Styles/Navbar.css";
 import Logo from "../Images/Logo.webp";
 
 function Navbar() {
     const navigate = useNavigate();
+    const location = useLocation();
 
     function home() {
       navigate("/");
@@ -31,9 +32,10 @@ function Navbar() {
       </section>
 
       <section className="navbar">
-        <section className="nav-item1" onClick={home}>Home</section>
-        <section className="nav-item2" onClick={mealPlanner}>Meal Planner</section>
-        <section className="nav-item3" onClick={userProfile}>User Profile</section>
+        {/*When the user is on a certain page, I will style the active nav item in a different colour*/}
+        <section className={`nav-item1 ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
+        <section className={`nav-item2 ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
+        <section className={`nav-item3 ${location.pathname === "/user-profile" ? "active" : ""}`} onClick={userProfile}>User Profile</section>
 
         <button className="logout" onClick={handleLogOut}>Log Out</button>
 

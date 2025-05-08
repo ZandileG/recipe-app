@@ -42,6 +42,10 @@ right: 2rem;
   cursor: pointer;
 }
 
+.nav-item1.active, .nav-item2.active, .nav-item3.active{
+  background-color: #a6b26d;
+}
+
 .nav-item1:hover, .nav-item2:hover, .nav-item3:hover{
   background-color: #d5c8b0;
 }
