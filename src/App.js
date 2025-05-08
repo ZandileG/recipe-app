@@ -34,7 +34,7 @@ function App(){
     <Route path="/saved-recipes" element={<SavedRecipes />} />
     <Route path="/your-recipes" element={<YourRecipes />} />
 
-    <Route path="/not-found" element={<NotFound />} />
+    <Route path="*" element={<NotFound />} />
     </Routes>
     </BrowserRouter>
     </SavedProvider>

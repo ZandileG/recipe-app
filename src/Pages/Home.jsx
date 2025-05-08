@@ -36,7 +36,7 @@ function Home() {
       
       <section className="navbar-home">
       <section><input className="searchbar" type="text" placeholder="Search..." /></section>
-      <section><button className="logout" onClick={handleLogOut}>Log Out</button></section>
+      <section><button className="logout-home" type="button" onClick={handleLogOut}>Log Out</button></section>
       </section>
     </nav>
     </header>
@@ -57,13 +57,13 @@ function Home() {
     </section>
 
     <h3 className="heading1">Difficulty</h3>
-    <button className="filter" onClick={filterRecipes}>Easy</button>
-    <button className="filter" onClick={filterRecipes}>Medium</button>
+    <button className="filter" type="button" onClick={filterRecipes}>Easy</button>
+    <button className="filter" type="button" onClick={filterRecipes}>Medium</button>
 
     <h3 className="heading2">Meal Type</h3>
-    <button className="filter" onClick={filterRecipes}>Breakfast</button>
-    <button className="filter" onClick={filterRecipes}>Lunch</button>
-    <button className="filter" onClick={filterRecipes}>Dinner</button>
+    <button className="filter" type="button" onClick={filterRecipes}>Breakfast</button>
+    <button className="filter" type="button" onClick={filterRecipes}>Lunch</button>
+    <button className="filter" type="button" onClick={filterRecipes}>Dinner</button>
     </aside>
 
     <section className="content"><RecipeList /></section>

@@ -18,6 +18,7 @@ function YourRecipes() {
     </aside>
     <section className="content">
     </section>
+    
     <Footer />
     </main>   
     </Fragment>

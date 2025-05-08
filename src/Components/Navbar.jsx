@@ -26,7 +26,7 @@ function Navbar() {
     <Fragment>
       <header>
       <nav>
-      <section>
+      <section className="logo-section">
         <img src={Logo} className="logo-navbar" alt="Zandile's Recipes" />
       </section>
 
@@ -35,9 +35,7 @@ function Navbar() {
         <section className="nav-item2" onClick={mealPlanner}>Meal Planner</section>
         <section className="nav-item3" onClick={userProfile}>User Profile</section>
 
-      <section className="logout-section">
         <button className="logout" onClick={handleLogOut}>Log Out</button>
-      </section>
 
       </section>
       </nav>

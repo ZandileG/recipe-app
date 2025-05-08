@@ -9,6 +9,12 @@
     min-height: 100vh;
   } 
 
+  .content{ 
+    grid-area: main; 
+    padding: 10rem;
+    background-color: #f7f7f7;
+} 
+
 @media (orientation: portrait){
     
 }
