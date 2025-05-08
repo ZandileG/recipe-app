@@ -55,8 +55,7 @@ function logout(){
 return (
     <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn, userDetails, setUserDetails, login, logout, signUp }}>
         {children}
-    </LoginContext.Provider>
-);
-
-}
+    </LoginContext.Provider>    
+    );
+  }
 export default LoginProvider;

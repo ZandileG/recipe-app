@@ -1,9 +1,9 @@
 .logo-navbar{
   width: 12rem;
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.nav{
+nav{
     display: flex;
     justify-content: space-between; 
     align-items: end; 
@@ -14,21 +14,27 @@
 
 .navbar{
   top: 1rem;
-  list-style: none;
   text-align: center;
   display: flex;    
   flex-direction: row;
 }
 
-.nav-item{
+.nav-item1, .nav-item2{
   border-left: solid 1.75px black;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;  
   font-weight: 600;
   cursor: pointer;
 }
 
-.nav-item:hover{
+.nav-item3{
+  border-left: solid 1.75px black;
+  border-right: solid 1.75px black;
+  padding: 2rem;  
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-item1:hover, .nav-item2:hover, .nav-item3:hover{
   background-color: #d5c8b0;
 }
 
@@ -45,6 +51,12 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logout-section{
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .logout:hover, .filter:hover{
