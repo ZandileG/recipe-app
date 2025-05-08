@@ -2,8 +2,10 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const LoginContext = createContext();
 
+/*The user can sign up on my app and their details will be stored in local storage.
+  I learnt that this is a good way of storing user data from the Netflix exercise in class.*/
 function LoginProvider({ children }) {
-const [isLoggedIn, setIsLoggedIn] = useState(() =>{
+    const [isLoggedIn, setIsLoggedIn] = useState(() =>{
         const LoginToken = localStorage.getItem("isLoggedIn");
         return LoginToken === "true";
 });

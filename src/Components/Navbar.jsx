@@ -5,22 +5,21 @@ import Logo from "../Images/Logo.webp";
 
 function Navbar() {
     const navigate = useNavigate();
+    function home() {
+      navigate("/");
+    }
   
     function handleLogOut(){
       navigate("/login");
     } 
     
-    function home() {
-      navigate("/");
-    }
-  
     function mealPlanner() {
-      navigate("/mealplanner");
+      navigate("/meal-planner");
     }
   
     
     function userProfile(){
-      navigate("/userProfile");
+      navigate("/user-profile");
     }
 
   return (

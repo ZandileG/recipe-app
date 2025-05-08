@@ -20,11 +20,11 @@ function Home() {
   }
 
   function userProfile() {
-    navigate("/userprofile");
+    navigate("/user-profile");
   }
 
   function mealPlanner() {
-    navigate("/mealplanner");
+    navigate("/meal-planner");
   }
 
   return (

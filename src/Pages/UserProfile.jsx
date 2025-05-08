@@ -9,13 +9,13 @@ function UserProfile() {
   return (
     <Fragment>
     <main className="user-profile-page">
-    <header className="header">
-      <nav><Navbar /></nav>
-      </header>
+
+    <header className="header"><nav><Navbar /></nav></header>
 
     <aside className="sidebar">
 
     </aside>
+    
     <section className="content">
     </section>
     <Footer />

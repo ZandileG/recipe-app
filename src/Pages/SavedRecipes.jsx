@@ -14,9 +14,7 @@ function SavedRecipes() {
   return (
     <Fragment>
      <main className="saved-recipes-page">
-     <header className="header">
-      <nav><Navbar /></nav>
-      </header>
+     <header className="header"><nav><Navbar /></nav></header>
 
     <aside className="sidebar">
    
@@ -30,8 +28,10 @@ function SavedRecipes() {
     <button className="filter" onClick={filterRecipes}>Dinner</button>
 
     </aside>
+
     <section className="content">
     </section>
+    
     <Footer />
      </main> 
     </Fragment>

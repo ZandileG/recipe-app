@@ -28,13 +28,13 @@ function App(){
     <Route path="/login" element={<Login />} />
     <Route path="/"element={<ProtectedRoute><Home /></ProtectedRoute>} />
     <Route path="/recipe/:recipeId" element={<Recipe />} />
-    <Route path="/mealPlanner" element={<MealPlanner />} />
+    <Route path="/meal-planner" element={<MealPlanner />} />
     
-    <Route path="/userProfile" element={<UserProfile />} />
-    <Route path="/savedRecipes" element={<SavedRecipes />} />
-    <Route path="/yourRecipes" element={<YourRecipes />} />
+    <Route path="/user-profile" element={<UserProfile />} />
+    <Route path="/saved-recipes" element={<SavedRecipes />} />
+    <Route path="/your-recipes" element={<YourRecipes />} />
 
-    <Route path="/notFound" element={<NotFound />} />
+    <Route path="/not-found" element={<NotFound />} />
     </Routes>
     </BrowserRouter>
     </SavedProvider>

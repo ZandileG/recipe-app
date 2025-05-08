@@ -48,6 +48,10 @@
   cursor: pointer;
 }
 
+.sidebar-item:hover{
+  background-color: #d5c8b0;
+}
+
 .indicator-section{
   text-align: right;
   padding-right: 0.3rem;
@@ -77,8 +81,13 @@
 
 .searchbar:focus{
   outline: none;
+  border: solid 1.75px black;
   box-shadow: none;
   background-color: white;
+}
+
+.searchbar::placeholder{
+  font-weight: 600;
 }
      
 .filter{
