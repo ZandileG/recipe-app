@@ -41,7 +41,7 @@ function Home() {
     </nav>
     </header>
 
-    <aside>
+    <aside className="sidebar">
     <section className="sidebar-item" onClick={userProfile}>
       User Profile
     <section className="indicator-section">

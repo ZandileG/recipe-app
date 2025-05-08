@@ -17,6 +17,7 @@ function UserProfile() {
     </aside>
     
     <section className="content">
+      
     </section>
     <Footer />
     </main> 

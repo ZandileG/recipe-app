@@ -18,7 +18,7 @@ function SavedRecipes() {
      <main className="saved-recipes-page">
      <header className="header"><nav><Navbar /></nav></header>
 
-    <aside>
+    <aside classNme="sidebar">
     <h3 className="heading1">Difficulty</h3>
     <button className="filter" type="button" onClick={filterRecipes}>Easy</button>
     <button className="filter" type="button" onClick={filterRecipes}>Medium</button>

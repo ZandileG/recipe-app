@@ -11,11 +11,12 @@ const { recipeId } = useParams();
   return (
     <Fragment>
       <main className="recipe-page">
-
       <header className="header"><nav><Navbar /></nav></header>
 
       <section className="content">
+        
       </section>
+
       <Footer /> 
       </main>
     </Fragment>
