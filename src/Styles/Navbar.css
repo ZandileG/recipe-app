@@ -1,17 +1,9 @@
-.header{
-  grid-area: header;
-  text-align: center; 
-  background-color: #d27f5d;
-  border-bottom: solid 1.75px black;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
 .logo-navbar{
   width: 12rem;
     margin-top: 0.5rem;
 }
 
-nav{
+.nav{
     display: flex;
     justify-content: space-between; 
     align-items: end; 
@@ -20,14 +12,15 @@ nav{
     flex-direction: row;
   }
 
-nav ul{
-    list-style: none;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-  }
+.navbar{
+  top: 1rem;
+  list-style: none;
+  text-align: center;
+  display: flex;    
+  flex-direction: row;
+}
 
-nav ul li{
+.nav-item{
   border-left: solid 1.75px black;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -35,12 +28,8 @@ nav ul li{
   cursor: pointer;
 }
 
-nav ul li:hover{
+.nav-item:hover{
   background-color: #d5c8b0;
-}
-
-.navbar{
-  top: 1rem;
 }
 
 .logout{
@@ -56,6 +45,10 @@ nav ul li:hover{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logout:hover, .filter:hover{
+  background-color: #d5c8b0;
 }
 
   @media (orientation: portrait){

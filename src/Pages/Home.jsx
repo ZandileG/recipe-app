@@ -31,17 +31,17 @@ function Home() {
     <Fragment>
     <main className="home-page">
     <header className="header">
-      <nav>
+    <nav>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
-      <section className="navbar">
+      <section className="navbar-home">
       <section><input className="searchbar" type="text" placeholder="Search..." /></section>
       <section><button className="logout" onClick={handleLogOut}>Log Out</button></section>
       </section>
-      </nav>
-      </header>
+    </nav>
+    </header>
 
-    <aside className="sidebar">
+    <aside>
     <section className="sidebar-item" onClick={userProfile}>
       User Profile
     <section className="indicator-section">

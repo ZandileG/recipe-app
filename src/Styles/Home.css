@@ -9,23 +9,15 @@
     min-height: 100vh;
   }
 
-.header{
-    grid-area: header;
-    text-align: center; 
-    background-color: #d27f5d;
-    border-bottom: solid 1.75px black;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  }
-
-nav{
+  nav{
     display: flex;
     justify-content: space-between; 
     align-items: center; 
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-     
-.navbar{
+} 
+
+.navbar-home{
   display: flex;
   flex-direction: row;
   gap: 10rem;
@@ -40,12 +32,12 @@ nav{
     margin-top: 0.5rem;
   }
 
-.sidebar{ 
-  text-align: center;
+  aside{ 
+    text-align: center;
     grid-area: sidebar; 
     background-color: #a6b26d;
     border-right: solid 1.75px black;
-  } 
+}
 
 .sidebar-item{
   padding-top: 1.5rem;
@@ -107,12 +99,6 @@ nav{
   padding-bottom: 0.5rem;  
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-
-.content{ 
-    grid-area: main; 
-    padding: 10rem;
-    background-color: #f7f7f7;
-  } 
 
 .logout{
   background-color: #a6b26d;

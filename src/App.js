@@ -12,6 +12,7 @@ import Recipe from "./Pages/Recipe";
 import YourRecipes from "./Pages/YourRecipes";
 import SavedRecipes from "./Pages/SavedRecipes";
 import SavedProvider from "./Context/SavedContext";
+import "./App.css";
 
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useContext(LoginContext);

@@ -16,28 +16,37 @@ function Login() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
+    {/*The page shouldn't reload when the login button is pressed*/}
     e.preventDefault();
 
+    {/*The user gets an alert if they didn't fill in all the input fields*/}
+    if (username.trim() === "" || password.trim() === "") {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    {/*The user can change their username or password*/}
     if (changeDetails) {
       if(username && password) {
         setUserDetails({ username, password});
         alert("You have successfully updated your details!");
         setChangeDetails(true);
-      } else{
-        setError("Please fill in all fields.");
       }
+
+    {/*The user can sign up and get a successful alert*/}
     } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
       setIsSigningUp(true);
-      } else{
-        setError("Please try again.");
-      }
+      } 
      } else {
+      {/*When they log back in, they will get an alert if they have entered inccoreect details*/}
       if (login(username, password)) {
         navigate("/");
       } else {
         setError("Incorrect username or password. Please try again.");
+        setUsername("");
+        setPassword("");
       }
     }
   }
@@ -58,6 +67,7 @@ function Login() {
     <input className="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
     {error && <p className="login-error">{error}</p>}
     </section>
+    
     {!isSigningUp && !changeDetails && (
     <p className="login-change" onClick={() => 
       {setChangeDetails(true); 
@@ -65,6 +75,7 @@ function Login() {
        setPassword("");
     }}>Update Details</p>)}
 
+    {/*The button will change from "Sign Up" to "Log In" if the user has previously signed up*/}
     <button type="submit" className="login-submit">{isSigningUp ? "Sign Up" : "Log In"}</button>
     </form>
     </section>

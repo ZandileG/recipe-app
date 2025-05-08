@@ -16,9 +16,7 @@ function MealPlanner() {
   return (
     <Fragment>
       <main className="meal-planner-page">
-      <header className="header">
-      <nav><Navbar /></nav>
-      </header>
+      <header className="header"><nav><Navbar /></nav></header>
 
     <aside className="sidebar">
 
