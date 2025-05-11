@@ -11,7 +11,12 @@ html, body{
   background-color: white;
 }
 
-button, input{
+* {
+  scrollbar-width: thin;
+  scrollbar-color: black black; 
+}
+
+button, input, select{
   font-family: inherit;
   font-size: inherit;
   color: inherit;

@@ -1,3 +1,9 @@
+.content{ 
+    grid-area: main; 
+    background-color: #d5c8b0;
+    padding: 3rem;
+} 
+
 .footer{ 
     grid-area: footer; 
     padding: 10px; 

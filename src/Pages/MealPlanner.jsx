@@ -4,7 +4,8 @@ import YourRecipes from "../Pages/YourRecipes";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-import X from "../Images/X.png";
+import Delete from "../Images/X.png";
+import Edit from "../Images/Edit.png";
 import "../Styles/MealPlanner.css";
 
 function MealPlanner() {
@@ -16,33 +17,33 @@ function MealPlanner() {
 
       <aside className="grid-sidebar">
       <section className="block">
-      <img className="delete" src={X} alt="X" />
-      <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+      <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
-        <img className="delete" src={X} alt="X" />
-        <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
-        <img className="delete" src={X} alt="X" />
-        <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
-        <img className="delete" src={X} alt="X" />
-        <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
-        <img className="delete" src={X} alt="X" />
-        <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
-        <img className="delete" src={X} alt="X" />
-        <button type="button" className="edit">Edit</button>
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
       </section>
     </aside>
 
@@ -50,9 +51,7 @@ function MealPlanner() {
         <table>
           <thead>
           <tr>
-          <th scope="col">
-            <button type="button" className="save">Save</button>
-          </th>
+          <th scope="col" className="save">Save</th>
           <th scope="col">Breakfast</th>
           <th scope="col">Lunch</th>
           <th scope="col">Dinner</th>
@@ -61,133 +60,133 @@ function MealPlanner() {
 
           <tbody>
             <tr>
-              <th scope="row">Monday</th>
+              <th scope="row" className ="col1">Monday</th>
               <td>
-                <select name="breakfast" id="breakfast">
-                  <option value="">Aretha</option>
+                <select name="breakfast" className="list">
+                  <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
-                  <option value="">Franklin</option>
+                 <select name="lunch" className="list">
+                  <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
-                  <option value="">Joy</option>
+                 <select name="dinner" className="list">
+                  <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Tuesday</th>
+              <th scope="row" className ="col1">Tuesday</th>
                <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Wednesday</th>
+              <th scope="row" className ="col1">Wednesday</th>
               <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Thursday</th>
+              <th scope="row" className ="col1">Thursday</th>
                <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Friday</th>
+              <th scope="row" className ="col1">Friday</th>
               <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Saturday</th>
+              <th scope="row" className ="col1">Saturday</th>
                <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>
             </tr>
 
             <tr>
-              <th scope="row">Sunday</th>
+              <th scope="row" className ="col1">Sunday</th>
                <td>
-                <select name="breakfast" id="breakfast">
+                <select name="breakfast" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="lunch" id="lunch">
+                 <select name="lunch" className="list">
                   <option value=""></option>
                 </select>
               </td>
               <td>
-                 <select name="dinner" id="dinner">
+                 <select name="dinner" className="list">
                   <option value=""></option>
                 </select>
               </td>

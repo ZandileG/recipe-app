@@ -50,6 +50,10 @@ right: 2rem;
   background-color: #d5c8b0;
 }
 
+.nav-item1.active:hover, .nav-item2.active:hover, .nav-item3.active:hover{
+  background-color: #a6b26d;
+}
+
 .logout{
   margin-left: 2rem; 
   margin-bottom: 1.5rem;

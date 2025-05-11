@@ -1,7 +1,4 @@
-.content{ 
-    grid-area: main; 
-    background-color: #f7f7f7;
-} 
+
 
 @media (orientation: portrait){
     
