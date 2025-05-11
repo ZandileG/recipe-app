@@ -15,38 +15,39 @@ function YourRecipes() {
     <header className="header"><nav><Navbar /></nav></header>
 
     <aside className="grid-sidebar">
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
 
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
 
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
 
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
 
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
 
-      <section>
+      <section className="block">
         <img className="delete" src={X} alt="X" />
         <button type="button" className="edit">Edit</button>
       </section>
     </aside>
 
     <section className="content">
+      
     </section>
     
     <Footer />
