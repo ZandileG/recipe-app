@@ -35,7 +35,7 @@ function Home() {
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
-      <section><input className="searchbar" type="text" placeholder="Search..." /></section>
+      <section><input className="searchbar" type="search" placeholder="Search..." /></section>
       <section><button className="logout-home" type="button" onClick={handleLogOut}>Log Out</button></section>
       </section>
     </nav>
@@ -67,6 +67,7 @@ function Home() {
     </aside>
 
     <section className="content">
+      <h1 className="page-heading">Recipes</h1>
       <RecipeList />
     </section>
 

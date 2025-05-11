@@ -22,6 +22,11 @@ button, input, select, textarea{
   color: inherit;
 }
 
+option{
+  background-color: #d5c8b0;
+  cursor: pointer;
+}
+
 button{
   cursor: pointer;
 }

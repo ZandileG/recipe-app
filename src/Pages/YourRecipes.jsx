@@ -10,7 +10,7 @@ function YourRecipes() {
 
   function increaseBox(e) {
     e.target.style.height = "auto";
-    e.target.style.height = e.target.scrollHeight + "rem";
+    e.target.style.height = e.target.scrollHeight + "px";
   }
 
   return (
@@ -49,39 +49,99 @@ function YourRecipes() {
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
+
+      <section className="slot">
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
+      </section>
+
+      <section className="slot">
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
+      </section>
+
+      <section className="slot">
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
+      </section>
+
+      <section className="slot">
+      <img className="delete" src={Delete} alt="Delete" />
+        <img className="edit" src={Edit} alt="Pencil" />
+      </section>
     </aside>
 
     <section className="content">
+      <h1 className="page-heading">New Recipe</h1>
       <form action="" className="your-recipes-form">
+
       <section className="item1">
-        <p className="form-heading">Type your recipe information</p>
+        <p className="form-heading">Enter your recipe information</p>
         <section className="item1-1">
-        <label>Difficulty: </label><input type="text"/>
+        <label>Difficulty: </label>
+        <select name="difficulty" className="difficulty-list">
+                  <option value="easy">Easy</option>
+                  <option value="easy">Medium</option>
+        </select>
         </section>
 
         <section className="item1-2">
-        <label>Servings: </label><input type="text"/>
+        <label>Servings: </label><input type="number"/>
         </section>
 
         <section className="item1-3">
-        <label>Prep Time: </label><input type="text"/>
+        <label>Prep Time: </label><input type="time"/>
         </section>
 
         <section className="item1-4">
-        <label>Cooking Time: </label><input type="text"/>
+        <label>Cooking Time: </label><input type="time"/>
         </section>
         </section>
 
-      <section classNme="item2">
-        <p className="form-heading">Type your ingredients</p>
-        <textarea className="large-input" onInput={increaseBox}></textarea>
+      <section className="item2">
+      <p className="form-heading-edit">Enter your ingredients</p>
+      <section className="item2-1">
+        <section className="item">
+        <label>Ingredient 1: </label><input type="text"/>
+        </section>
+
+        <section className="item">
+        <label>Ingredient 2: </label><input type="text"/>
+        </section>
+
+        <section className="item">
+        <label>Ingredient 3: </label><input type="text"/>
+        </section>
+
+        <section className="item">
+        <label>Ingredient 4: </label><input type="text"/>
+        </section>
+
+        <section className="item">
+        <label>Ingredient 5: </label><input type="text"/>
+        </section>
+
+         <section className="item">
+        <label>Ingredient 6: </label><input type="text"/>
+        </section>
+
+         <section className="item">
+        <label>Ingredient 7: </label><input type="text"/>
+        </section>
+
+         <section className="item">
+        <label>Ingredient 8: </label><input type="text"/>
+        </section>
+      </section>
       </section>
 
       <section className="item3">
-        <p className="form-heading">Type in your instructions</p>
+        <p className="form-heading">Enter your instructions</p>
         <textarea className="large-input" onInput={increaseBox}></textarea>
+        <section classNme="save-container">
+        <button type="submit" className="save-recipe">Save</button>
+        </section>
       </section>
-      <button type="submit" className="save-recipe">Save</button>
       </form>
     </section>
     

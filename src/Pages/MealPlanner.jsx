@@ -48,6 +48,8 @@ function MealPlanner() {
     </aside>
 
       <section className="content">
+      <h1 className="page-heading">Meal Planner</h1>
+
         <table>
           <thead>
           <tr>

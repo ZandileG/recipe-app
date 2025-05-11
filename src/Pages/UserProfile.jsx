@@ -17,7 +17,8 @@ function UserProfile() {
     </aside>
     
     <section className="content">
-      
+    <h1 className="page-heading">User Profile</h1>
+
     </section>
     <Footer />
     </main> 
