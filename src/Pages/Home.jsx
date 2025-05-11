@@ -66,7 +66,10 @@ function Home() {
     <button className="filter" type="button" onClick={filterRecipes}>Dinner</button>
     </aside>
 
-    <section className="content"><RecipeList /></section>
+    <section className="content">
+      <RecipeList />
+    </section>
+
     <Footer />
     </main> 
     </Fragment>

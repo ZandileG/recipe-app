@@ -16,7 +16,7 @@ html, body{
   scrollbar-color: black black; 
 }
 
-button, input, select{
+button, input, select, textarea{
   font-family: inherit;
   font-size: inherit;
   color: inherit;

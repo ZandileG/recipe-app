@@ -4,7 +4,7 @@ import YourRecipes from "../Pages/YourRecipes";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-import Delete from "../Images/X.png";
+import Delete from "../Images/Delete.png";
 import Edit from "../Images/Edit.png";
 import "../Styles/MealPlanner.css";
 
