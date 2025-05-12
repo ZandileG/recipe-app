@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../Context/ThemeContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -20,9 +21,7 @@ function savedRecipes(){
     navigate("/saved-recipes");
   }
 
-function darkMode(){
-
-}
+  //const {} = useContext(ThemeContext);
 
   return (
     <Fragment>
@@ -42,7 +41,7 @@ function darkMode(){
         <button type="submit" className="save-change">Save</button>
     </form>
 
-    <button type="submit" className="dark-mode" onClick={darkMode}>Dark Mode</button>
+    <button type="submit" className="dark-mode">Dark Mode</button>
     </aside>
     
     <section className="content">
