@@ -73,6 +73,7 @@ right: 2rem;
 .nav-item1.active:hover, .nav-item2.active:hover, 
 .nav-item3.active:hover, .nav-item4.active:hover{
   background-color: #a6b26d;
+  cursor: default;
 }
 
 .logout{
