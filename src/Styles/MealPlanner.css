@@ -17,6 +17,11 @@
     left: 0;
   }
 
+.week{
+  font-weight: 600;
+  padding: 3rem;
+}
+
 .grid-sidebar{
     grid-area: sidebar; 
     display: grid;

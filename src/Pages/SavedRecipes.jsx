@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { SavedContext } from "../Context/SavedContext";
 
 import RecipeList from "../Components/RecipeList";
-import RecipeCard from "../Components/RecipeCard";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
@@ -37,6 +36,7 @@ function SavedRecipes() {
     <section className="content">
     <h1 className="page-heading">Saved Recipes</h1>
      {/* <RecipeList /> */}
+     <p className="nothing">You have no saved recipes.</p>
     </section>
     
     <Footer />

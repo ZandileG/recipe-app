@@ -17,31 +17,37 @@ function MealPlanner() {
 
       <aside className="grid-sidebar">
       <section className="block">
+      <p className="week">Week 1</p>
       <img className="delete" src={Delete} alt="Delete" />
       <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
+      <p className="week">Week 2</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
+      <p className="week">Week 3</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
+      <p className="week">Week 4</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
+      <p className="week">Week 5</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="block">
+      <p className="week">Week 6</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>

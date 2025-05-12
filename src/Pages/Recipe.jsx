@@ -19,7 +19,6 @@ const { recipeId } = useParams();
             <h1 className="page-heading1">Recipe Name</h1>
             <img src="" alt="" />
             
-            <button type="button" className="save-recipe">Save Recipe</button>
             <section className="in-line"><p className="in-line-heading">Difficulty: </p>
             <p></p>
             </section>
