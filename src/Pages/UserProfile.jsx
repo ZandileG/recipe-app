@@ -5,6 +5,8 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import UserImage from "../Images/User Icon.png";
+import CreateIcon from "../Images/Create.png";
+import SavedIcon from "../Images/Save.png";
 import "../Styles/UserProfile.css";
 
 function UserProfile() {
@@ -48,12 +50,12 @@ function darkMode(){
 
     <section className="tabs">
     <section className="tab" onClick={createRecipe}>
-    <section className="tab1"></section>
+    <section className="tab1"><img className="create-icon" src={CreateIcon} alt="Create" /></section>
     <section className="tab2">Your Recipes</section>
     </section>
 
     <section className="tab" onClick={savedRecipes}>
-      <section className="tab1"></section>
+      <section className="tab1"><img className="save-icon" src={SavedIcon} alt="Save" /></section>
       <section className="tab2">Saved Recipes</section>
       </section>
     </section>

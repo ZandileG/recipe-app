@@ -29,11 +29,11 @@
   cursor: pointer;
   text-align: center;
   border: solid 1.75px black;
-  background-color: #f7f7f7;
-  font-weight: 600;
+  background-color: white;
+  font-weight: bold;
   font-size: large;
-  width: 22rem;
-  height: 24rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 0.25rem;
 }
 
@@ -47,6 +47,21 @@
   width: 15rem;
   height: 15rem;
   padding: 2rem;
+}
+
+.create-icon{
+  width: 18rem;
+  height: 16rem;
+}
+
+.save-icon{
+  width: 15rem;
+  height: 16rem;
+}
+
+.tab:hover{
+  width: 22.5rem;
+  height: 22.5rem;
 }
 
 .update-message{
@@ -115,7 +130,7 @@
 }
 
 .username-change::placeholder, .password-change::placeholder{
-    color: black;
+    color: rgb(50, 50, 50);
     font-weight: 600;
     font-size: 1rem;
 }
