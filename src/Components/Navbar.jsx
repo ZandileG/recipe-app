@@ -1,6 +1,8 @@
 import React, {Fragment} from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../Styles/Navbar.css";
+
+import UserImage from "../Images/User Icon.webp";
 import Logo from "../Images/Logo.webp";
 
 function Navbar() {
@@ -23,6 +25,18 @@ function Navbar() {
       navigate("/user-profile");
     }
 
+      function savedRecipes() {
+    navigate("/saved-recipes");
+  }
+
+  function mealPlanner() {
+    navigate("/meal-planner");
+  }
+
+  function createRecipe() {
+    navigate("/your-recipes");
+  }
+
   return (
     <Fragment>
       <header>
@@ -35,10 +49,13 @@ function Navbar() {
         {/*When the user is on a certain page, I will style the active nav item in a different colour*/}
         <section className={`nav-item1 ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
         <section className={`nav-item2 ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
-        <section className={`nav-item3 ${location.pathname === "/user-profile" ? "active" : ""}`} onClick={userProfile}>User Profile</section>
+        <section className={`nav-item3 ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
+        <section className={`nav-item4 ${location.pathname === "/your-recipes" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
 
         <button className="logout" onClick={handleLogOut}>Log Out</button>
-
+        <section className="nav-item5">
+        <button className="user-profile-nav" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
+        </section>
       </section>
       </nav>
       </header>

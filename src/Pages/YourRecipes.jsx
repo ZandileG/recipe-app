@@ -72,7 +72,7 @@ function YourRecipes() {
     </aside>
 
     <section className="content">
-      <h1 className="page-heading">New Recipe</h1>
+      <h1 className="page-heading">Create Recipe</h1>
       <form action="" className="your-recipes-form">
 
       <section className="item1">

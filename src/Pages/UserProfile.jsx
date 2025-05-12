@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-import UserImage from "../Images/User Icon.webp";
+import UserImage from "../Images/User Icon.png";
 import "../Styles/UserProfile.css";
 
 function UserProfile() {
