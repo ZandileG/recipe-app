@@ -36,7 +36,7 @@ function SavedRecipes() {
 
     <section className="content">
     <h1 className="page-heading">Saved Recipes</h1>
-      <RecipeList />
+     {/* <RecipeList /> */}
     </section>
     
     <Footer />

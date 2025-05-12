@@ -22,7 +22,7 @@ function RecipeList() {
   return (
     <Fragment>
       <section className="recipe-list">
-        
+       <RecipeCard /> 
       </section>
     </Fragment>
   );

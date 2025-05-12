@@ -1,4 +1,38 @@
-/*.recipe-card{
-
+.recipe-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  text-align: center;
+  border: solid 1.75px black;
+  background-color: white;
+  font-weight: bold;
+  font-size: large;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 0.25rem;
+  margin: auto;
+  margin-bottom: 3.5rem;
 }
-*/
+
+.card2{
+  border-top: solid 1.75px black;
+  background-color: #a6b26d;
+  padding: 0.5rem;
+}
+
+.card2 h4{
+  margin: 0;
+}
+
+.card1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}

@@ -32,8 +32,8 @@
   background-color: white;
   font-weight: bold;
   font-size: large;
-  width: 20rem;
-  height: 20rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 0.25rem;
 }
 
@@ -50,18 +50,20 @@
 }
 
 .create-icon{
-  width: 18rem;
-  height: 16rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .save-icon{
-  width: 15rem;
-  height: 16rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tab:hover{
-  width: 22.5rem;
-  height: 22.5rem;
+  width: 25rem;
+  height: 25rem;
 }
 
 .update-message{
