@@ -9,7 +9,7 @@ import NotFound from "./Pages/NotFound";
 import UserProfile from "./Pages/UserProfile";
 
 import Recipe from "./Pages/Recipe";
-import YourRecipes from "./Pages/YourRecipes";
+import CreateRecipe from "./Pages/CreateRecipe";
 import SavedRecipes from "./Pages/SavedRecipes";
 import SavedProvider from "./Context/SavedContext";
 import "./App.css";
@@ -32,7 +32,7 @@ function App(){
     
     <Route path="/user-profile" element={<UserProfile />} />
     <Route path="/saved-recipes" element={<SavedRecipes />} />
-    <Route path="/your-recipes" element={<YourRecipes />} />
+    <Route path="/create-recipe" element={<CreateRecipe />} />
 
     <Route path="*" element={<NotFound />} />
     </Routes>

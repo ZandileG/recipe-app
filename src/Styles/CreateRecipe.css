@@ -1,4 +1,4 @@
-.your-recipes-page{
+.create-recipe-page{
     display: grid;
     grid-template-areas: 
       "header header"
@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-.your-recipes-form{
+.create-recipe-form{
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import YourRecipes from "../Pages/YourRecipes";
+import CreateRecipe from "../Pages/CreateRecipe";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 

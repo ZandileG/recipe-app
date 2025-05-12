@@ -26,7 +26,7 @@ function SavedRecipes() {
     <h3 className="heading">Difficulty</h3>
     <button className="filter" type="button" onClick={filterRecipes}>Easy</button>
     <button className="filter" type="button" onClick={filterRecipes}>Medium</button>
-    <button className="filter" type="button" onClick={returnDefault}>Default</button>
+    <button className="filter" type="reset" onClick={returnDefault}>Default</button>
 
     <h3 className="heading">Meal Type</h3>
     <button className="filter" type="button" onClick={filterRecipes}>Breakfast</button>

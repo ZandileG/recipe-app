@@ -4,9 +4,9 @@ import Footer from "../Components/Footer";
 
 import Delete from "../Images/Delete.png";
 import Edit from "../Images/Edit.png";
-import "../Styles/YourRecipes.css";
+import "../Styles/CreateRecipe.css";
 
-function YourRecipes() {
+function CreateRecipe() {
 
   function increaseBox(e) {
     e.target.style.height = "auto";
@@ -15,7 +15,7 @@ function YourRecipes() {
 
   return (
     <Fragment>
-    <main className="your-recipes-page">
+    <main className="create-recipe-page">
 
     <header className="header"><nav><Navbar /></nav></header>
 
@@ -73,7 +73,7 @@ function YourRecipes() {
 
     <section className="content">
       <h1 className="page-heading">Create Recipe</h1>
-      <form action="" className="your-recipes-form">
+      <form action="" className="create-recipe-form">
 
       <section className="item1">
         <p className="form-heading">Enter your recipe information</p>
@@ -151,4 +151,4 @@ function YourRecipes() {
   );
 }
 
-export default YourRecipes;
+export default CreateRecipe;

@@ -6,7 +6,13 @@ function RecipeCard() {
     <Fragment>
       <main className="recipe-card">
         {/*<img src={recipeImage} alt="Recipe Image" />
-        <h1>{recipeName}</h1>*/}
+        <h1>{recipeName}</h1>
+        <section className="tabs">
+        <section className="tab" onClick={createRecipe}>
+        <section className="tab1"></section>
+        <section className="tab2">Your Recipes</section>
+        </section>
+        */}
       </main>
     </Fragment>
   );

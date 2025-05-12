@@ -29,12 +29,8 @@ function Navbar() {
     navigate("/saved-recipes");
   }
 
-  function mealPlanner() {
-    navigate("/meal-planner");
-  }
-
   function createRecipe() {
-    navigate("/your-recipes");
+    navigate("/create-recipe");
   }
 
   return (
@@ -50,7 +46,7 @@ function Navbar() {
         <section className={`nav-item1 ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
         <section className={`nav-item2 ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
         <section className={`nav-item3 ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
-        <section className={`nav-item4 ${location.pathname === "/your-recipes" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
+        <section className={`nav-item4 ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
 
         <button className="logout" onClick={handleLogOut}>Log Out</button>
         <section className="nav-item5">
