@@ -20,6 +20,12 @@
   border: solid 1.75px black;
 }
 
+.your-recipe-name{
+  font-weight: 600;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .item1 {
   display: flex;
   width: 20rem;

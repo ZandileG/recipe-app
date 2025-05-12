@@ -21,51 +21,61 @@ function CreateRecipe() {
 
     <aside className="grid-sidebar">
     <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
       <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
 
       <section className="slot">
+      <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
         <img className="edit" src={Edit} alt="Pencil" />
       </section>
