@@ -12,6 +12,15 @@ import "../Styles/Home.css";
 function Home() {
   const navigate = useNavigate();
 
+/*   const [search, setSearch] = useState("");
+
+function handleSearch(e){
+  setSearch(e.target.value);
+  onSearch(e.target.value);
+}*/
+
+const [searchQuery, setSearchQuery] = useState("");
+
   function filterRecipes() {
       
   }
@@ -48,7 +57,7 @@ function Home() {
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
-      <section><input className="searchbar" type="search" placeholder="Search..." /></section>
+      <section><input className="searchbar" type="search" placeholder="Search..." onSearch={setSearchQuery}/></section>
       <section><button className="logout-home" type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
       </section>
@@ -90,7 +99,7 @@ function Home() {
 
     <section className="content">
       <h1 className="page-heading">Recipes</h1>
-      <RecipeList />
+      <RecipeList searchQuery={searchQuery}/>
     </section>
 
     <Footer />
