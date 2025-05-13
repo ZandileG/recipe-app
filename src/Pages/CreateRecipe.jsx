@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from '../Context/ThemeContext';
+
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
@@ -7,6 +9,7 @@ import Edit from "../Images/Edit.png";
 import "../Styles/CreateRecipe.css";
 
 function CreateRecipe() {
+const {theme} = useContext(ThemeContext);
 
   function increaseBox(e) {
     e.target.style.height = "auto";
@@ -80,7 +83,7 @@ function CreateRecipe() {
       </section>
     </aside>
 
-    <section className="content">
+    <section className={`content ${theme}`}>
       <h1 className="page-heading">Create Recipe</h1>
       <form action="" className="create-recipe-form">
 

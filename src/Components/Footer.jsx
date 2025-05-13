@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Arrow from "../Images/Arrow.webp";
+import { ThemeContext } from '../Context/ThemeContext';
 
 function Footer() {
+const {theme} = useContext(ThemeContext);
 
   function scrollToTop() {
     window.scrollTo({
@@ -11,12 +13,12 @@ function Footer() {
   }
 
   return (
-      <section className="footer">
+      <section className={`footer ${theme}`}>
       <section className="container">
       <img src={Arrow} alt="Arrow" className="back-top" onClick={scrollToTop}/>
       </section>
       
-      <p className="footer-text">Brought to you by Zandile Gebuza 2025</p>
+      <p className={`footer-text ${theme}`}>Brought to you by Zandile Gebuza 2025</p>
       </section>
   );
 }

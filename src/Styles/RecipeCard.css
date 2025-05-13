@@ -1,4 +1,4 @@
-.recipe-card{
+.recipe-card.light{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -118,7 +118,7 @@
   height: 2.5rem;
 }
 
-.card2{
+.card2.light{
   border-top: solid 1.75px black;
   background-color: #a6b26d;
   padding: 0.5rem;

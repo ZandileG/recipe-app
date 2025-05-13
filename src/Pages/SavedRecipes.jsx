@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SavedContext } from "../Context/SavedContext";
+import { ThemeContext } from '../Context/ThemeContext';
 
 import RecipeList from "../Components/RecipeList";
 import Navbar from "../Components/Navbar";
@@ -8,6 +9,8 @@ import Footer from "../Components/Footer";
 import "../Styles/SavedRecipes.css";
 
 function SavedRecipes() {
+  const {theme} = useContext(ThemeContext);
+  
   function filterRecipes() {
       
   }
@@ -34,7 +37,7 @@ function SavedRecipes() {
     <button className="filter" type="button" onClick={filterRecipes}>Snack</button>
     </aside>
 
-    <section className="content">
+    <section className={`content ${theme}`}>
     <h1 className="page-heading">Saved Recipes</h1>
      {/* <RecipeList /> */}
      <p className="nothing">You have no saved recipes.</p>

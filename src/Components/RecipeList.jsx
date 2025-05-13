@@ -12,6 +12,7 @@ import Delete from "../Images/Delete.png";
 
 function RecipeList({ searchQuery }) {
   const navigate = useNavigate();
+  
   const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
 
   const [recipes, setRecipes] = useState([]);

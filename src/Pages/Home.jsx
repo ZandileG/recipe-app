@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from '../Context/ThemeContext';
 
 import RecipeList from "../Components/RecipeList";
 import Footer from "../Components/Footer";
@@ -11,22 +12,18 @@ import "../Styles/Home.css";
 
 function Home() {
   const navigate = useNavigate();
+  const {theme} = useContext(ThemeContext);
 
-/*   const [search, setSearch] = useState("");
+const [search, setSearch] = useState("");
+const [searchQuery, setSearchQuery] = useState("");
 
 function handleSearch(e){
   setSearch(e.target.value);
-  onSearch(e.target.value);
-}*/
-
-const [searchQuery, setSearchQuery] = useState("");
+  //onSearch(e.target.value);
+}
 
   function filterRecipes() {
       
-  }
-
-  function returnDefault(){
-    
   }
 
   function handleLogOut(){
@@ -102,7 +99,7 @@ const [searchQuery, setSearchQuery] = useState("");
     <button className="filter" type="button" onClick={filterRecipes}>Snack</button>
     </aside>
 
-    <section className="content">
+    <section className={`content ${theme}`}>
       <h1 className="page-heading">Recipes</h1>
       <RecipeList searchQuery={searchQuery}/>
     </section>

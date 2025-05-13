@@ -11,7 +11,7 @@
     margin: 0;
 }
 
-.recipe-page-grid{
+.recipe-page-grid.light{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -24,7 +24,7 @@
     list-style: none;
 }
 
-.grid-col1, .grid-col2{
+.grid-col1.light, .grid-col2.light{
     border-right: solid 1.75px black;
 }
 

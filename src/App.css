@@ -1,4 +1,4 @@
-.content{ 
+.content.light{ 
     grid-area: main; 
     background-color: #d5c8b0;
     padding: 3rem;
@@ -9,7 +9,7 @@
     padding-bottom: 1rem;
 }
 
-.footer{ 
+.footer.light{ 
     grid-area: footer; 
     padding: 10px; 
     text-align: center; 

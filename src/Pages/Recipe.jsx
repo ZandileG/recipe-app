@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -7,12 +8,13 @@ import "../Styles/Recipe.css";
 
 function Recipe() {
 const { recipeId } = useParams();
+const {theme} = useContext(ThemeContext);
 
   return (
       <main className="recipe-page">
       <header className="header"><nav><Navbar /></nav></header>
 
-      <section className="content">
+      <section className={`content ${theme}`}>
         <section className="recipe-page-grid">
           <section className="grid-col1">
             <h1 className="page-heading1">Recipe Name</h1>

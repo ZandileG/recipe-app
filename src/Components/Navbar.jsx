@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { ThemeContext } from '../Context/ThemeContext';
+
 import "../Styles/Navbar.css";
 
 import UserImage from "../Images/User Icon.webp";
 import Logo from "../Images/Logo.webp";
 
 function Navbar() {
+  const {theme} = useContext(ThemeContext);
+  
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -42,12 +46,12 @@ function Navbar() {
 
       <section className="navbar">
         {/*When the user is on a certain page, I will style the active nav item in a different colour*/}
-        <section className={`nav-item1 ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
-        <section className={`nav-item2 ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
-        <section className={`nav-item3 ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
-        <section className={`nav-item4 ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
+        <section className={`nav-item1 ${theme} ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
+        <section className={`nav-item2 ${theme} ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
+        <section className={`nav-item3 ${theme} ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
+        <section className={`nav-item4 ${theme} ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
 
-        <button className="logout" onClick={handleLogOut}>Log Out</button>
+        <button className={`logout ${theme}`} onClick={handleLogOut}>Log Out</button>
         <section className="nav-item5">
         <button className="user-profile-nav" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
         </section>

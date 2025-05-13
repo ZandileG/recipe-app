@@ -39,17 +39,17 @@
   width: 17rem;
 }
 
-th, td{
+th.light, td.light{
     border: solid 1.75px black;  
     padding: 0.5rem;
   }
   
-  th{
+  th.light{
     font-weight: 600;
     background-color: #f7f7f7;
   }
 
-  table{
+  table.light{
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
@@ -59,7 +59,7 @@ th, td{
     border-collapse: collapse;
   }
 
-.list{
+.list.light{
   border: none;
   background-color: white;
   padding: 0.5rem;
@@ -71,13 +71,13 @@ th, td{
   cursor: pointer;
 }
 
-.list:focus{
+.list.light:focus{
   outline: none;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.block{
+.block.light{
     border: solid 1px black;
     background-color: #f7f7f7;
     border-radius: 0.5rem;
@@ -121,13 +121,13 @@ th, td{
   z-index: 1;
 }
 
-.save{
+.save.light{
   border-bottom: solid 1.75px black;
   background-color: #a6b26d;
   cursor: pointer;
 }
 
-.save:hover{
+.save.light:hover{
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
     font-weight: bold;
 }

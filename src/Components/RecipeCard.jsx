@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Styles/RecipeCard.css";
+import { ThemeContext } from '../Context/ThemeContext';
 
 function RecipeCard({recipe, onSelect}) {
+const {theme} = useContext(ThemeContext);
 
   return (
       <main className="recipe-card" onClick={onSelect}>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from '../Context/ThemeContext';
 
 import CreateRecipe from "../Pages/CreateRecipe";
 import Navbar from "../Components/Navbar";
@@ -9,6 +10,7 @@ import Edit from "../Images/Edit.png";
 import "../Styles/MealPlanner.css";
 
 function MealPlanner() {
+const {theme} = useContext(ThemeContext);
 
   return (
       <main className="meal-planner-page">
@@ -52,7 +54,7 @@ function MealPlanner() {
       </section>
     </aside>
 
-      <section className="content">
+      <section className={`content ${theme}`}>
       <h1 className="page-heading">Meal Planner</h1>
 
         <table>

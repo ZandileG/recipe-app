@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-  .header{
+  .header.light{
     grid-area: header;
     text-align: center; 
     background-color: #d27f5d;
@@ -54,7 +54,7 @@
     margin-top: 0.5rem;
   }
 
-  aside{ 
+  aside.light{ 
     text-align: center;
     grid-area: sidebar; 
     background-color: #a6b26d;
@@ -62,7 +62,7 @@
     padding-bottom: 3rem;
 }
 
-.sidebar-item{
+.sidebar-item.light{
   padding-top: 1.5rem;
   border-bottom: solid 1.75px black;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.sidebar-item:hover{
+.sidebar-item.light:hover{
   background-color: #d5c8b0;
 }
 
@@ -90,7 +90,7 @@
   margin-top: 3rem;
 }
 
-.searchbar{
+.searchbar.light{
   width: 50rem;
   height: 2rem;
   border-radius: 5rem;
@@ -102,7 +102,7 @@
   font-weight: medium;
 }
 
-.searchbar:focus{
+.searchbar.light:focus{
   outline: none;
   border: solid 1.75px black;
   box-shadow: none;
@@ -113,7 +113,7 @@
   font-weight: 600;
 }
      
-.filter{
+.filter.light{
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -132,7 +132,7 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.logout-home{
+.logout-home.light{
   background-color: #a6b26d;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   border-right: solid 1.75px black;
@@ -147,7 +147,7 @@
   padding-bottom: 0.5rem;
 }
 
-.logout-home:hover, .filter:hover{
+.logout-home.light:hover, .filter.light:hover{
   background-color: #d5c8b0;
 }
 

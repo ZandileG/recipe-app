@@ -13,6 +13,7 @@ import CreateRecipe from "./Pages/CreateRecipe";
 import SavedRecipes from "./Pages/SavedRecipes";
 import SavedProvider from "./Context/SavedContext";
 import "./App.css";
+import ThemeProvider from "./Context/ThemeContext";
 
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useContext(LoginContext);
@@ -22,6 +23,7 @@ function ProtectedRoute({ children }) {
 function App(){
   return( 
     <LoginProvider>
+    <ThemeProvider>
     <SavedProvider>
     <BrowserRouter basename="/recipe-app">
     <Routes>
@@ -38,6 +40,7 @@ function App(){
     </Routes>
     </BrowserRouter>
     </SavedProvider>
+    </ThemeProvider>
     </LoginProvider>
   );
 }

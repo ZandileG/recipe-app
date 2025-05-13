@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-  aside{ 
+  aside.light{ 
     text-align: center;
     grid-area: sidebar; 
     background-color: #a6b26d;
@@ -26,7 +26,7 @@
   margin-top: 3rem;
 }
 
-.filter{
+.filter.light{
   display: flex;
   flex-direction: column;
   margin: auto;
