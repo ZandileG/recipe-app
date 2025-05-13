@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import Arrow from "../Images/Arrow.webp";
 
 function Footer() {
@@ -11,7 +11,6 @@ function Footer() {
   }
 
   return (
-    <Fragment>
       <section className="footer">
       <section className="container">
       <img src={Arrow} alt="Arrow" className="back-top" onClick={scrollToTop}/>
@@ -19,7 +18,6 @@ function Footer() {
       
       <p className="footer-text">Brought to you by Zandile Gebuza 2025</p>
       </section>
-    </Fragment>
   );
 }
 

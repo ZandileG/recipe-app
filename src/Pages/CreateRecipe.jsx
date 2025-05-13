@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
@@ -14,7 +14,6 @@ function CreateRecipe() {
   }
 
   return (
-    <Fragment>
     <main className="create-recipe-page">
 
     <header className="header"><nav><Navbar /></nav></header>
@@ -157,7 +156,6 @@ function CreateRecipe() {
     
     <Footer />
     </main>   
-    </Fragment>
   );
 }
 

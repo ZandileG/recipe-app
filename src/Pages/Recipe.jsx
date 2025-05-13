@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../Components/Navbar";
@@ -9,7 +9,6 @@ function Recipe() {
 const { recipeId } = useParams();
 
   return (
-    <Fragment>
       <main className="recipe-page">
       <header className="header"><nav><Navbar /></nav></header>
 
@@ -50,7 +49,6 @@ const { recipeId } = useParams();
 
       <Footer /> 
       </main>
-    </Fragment>
   );
 }
 

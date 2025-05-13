@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import CreateRecipe from "../Pages/CreateRecipe";
 import Navbar from "../Components/Navbar";
@@ -11,7 +11,6 @@ import "../Styles/MealPlanner.css";
 function MealPlanner() {
 
   return (
-    <Fragment>
       <main className="meal-planner-page">
       <header className="header"><nav><Navbar /></nav></header>
 
@@ -204,7 +203,6 @@ function MealPlanner() {
       </section>
       <Footer />
       </main>
-    </Fragment>
   );
 }
 

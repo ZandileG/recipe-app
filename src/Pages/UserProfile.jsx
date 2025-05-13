@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 
@@ -24,7 +24,6 @@ function savedRecipes(){
   //const {} = useContext(ThemeContext);
 
   return (
-    <Fragment>
     <main className="user-profile-page">
 
     <header className="header"><nav><Navbar /></nav></header>
@@ -61,7 +60,6 @@ function savedRecipes(){
     </section>
     <Footer />
     </main> 
-    </Fragment>
   );
 }
 

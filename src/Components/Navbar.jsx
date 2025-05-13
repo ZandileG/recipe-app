@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../Styles/Navbar.css";
 
@@ -34,7 +34,6 @@ function Navbar() {
   }
 
   return (
-    <Fragment>
       <header>
       <nav>
       <section className="logo-section">
@@ -55,7 +54,6 @@ function Navbar() {
       </section>
       </nav>
       </header>
-    </Fragment>
   );
 }
 

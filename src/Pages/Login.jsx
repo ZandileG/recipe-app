@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Context/LoginContext";
 
@@ -52,7 +52,6 @@ function Login() {
   }
 
   return (
-    <Fragment>
     <main className="login-page">
     <section>{/*This is an empty section I'm using so that the login page grid has two equal columns*/}</section>
 
@@ -80,7 +79,6 @@ function Login() {
     </form>
     </section>
     </main>
-    </Fragment>
   );
 }
 
