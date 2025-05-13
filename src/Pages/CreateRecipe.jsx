@@ -27,60 +27,6 @@ const {theme} = useContext(ThemeContext);
       <img className="delete" src={Delete} alt="Delete" />
       <img className="edit" src={Edit} alt="Pencil" />
       </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-    <section className={`slot ${theme}`}>
-      <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
     </aside>
 
     <section className={`content ${theme}`}>

@@ -14,13 +14,13 @@ function Home() {
   const navigate = useNavigate();
   const {theme} = useContext(ThemeContext);
 
-const [search, setSearch] = useState("");
+//const [search, setSearch] = useState("");
 const [searchQuery, setSearchQuery] = useState("");
 
-function handleSearch(e){
+/*function handleSearch(e){
   setSearch(e.target.value);
-  //onSearch(e.target.value);
-}
+  onSearch(e.target.value);
+}*/
 
   function filterRecipes() {
       

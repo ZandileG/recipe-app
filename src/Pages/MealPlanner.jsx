@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from '../Context/ThemeContext';
 
-import CreateRecipe from "../Pages/CreateRecipe";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 

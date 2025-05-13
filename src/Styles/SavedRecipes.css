@@ -16,10 +16,17 @@
     border-right: solid 1.75px black;
 }
 
-.nothing{
+.nothing.light{
   text-align: center;
   font-size: large;
   font-weight: 600;
+}
+
+.nothing.dark{
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+  color: white;
 }
 
 .heading{

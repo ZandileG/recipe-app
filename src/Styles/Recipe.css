@@ -1,14 +1,29 @@
-.page-heading1{
+.page-heading1.light{
     font-size: x-large;
     text-align: center;
     padding-bottom: 1rem;
     margin: 0;
 }
 
-.page-heading2{
+.page-heading1.dark{
+    font-size: x-large;
     text-align: center;
     padding-bottom: 1rem;
     margin: 0;
+    color: white;
+}
+
+.page-heading2.light{
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.page-heading2.dark{
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 0;
+    color: white;
 }
 
 .recipe-page-grid.light{
@@ -20,22 +35,47 @@
     border-radius: 0.5rem;
 }
 
-.info-p{
+.recipe-page-grid.dark{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: black;
+    border: solid 1.75px white;
+    border-radius: 0.5rem;
+}
+
+.info-p.light{
     list-style: none;
+}
+
+.info-p.dark{
+    list-style: none;
+    color: white;
 }
 
 .grid-col1.light, .grid-col2.light{
     border-right: solid 1.75px black;
 }
 
+.grid-col1.dark, .grid-col2.dark{
+    border-right: solid 1.75px white;
+}
+
 .grid-col1, .grid-col2, .grid-col3{
     padding: 2.5rem;
 }
 
-.in-line{
+.in-line.light{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+}
+
+.in-line.dark{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: white;
 }
 
 .in-line-heading{

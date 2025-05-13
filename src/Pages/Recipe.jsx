@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 import "../Styles/Recipe.css";
 
 function Recipe() {
-const { recipeId } = useParams();
+const { id } = useParams();
 const {theme} = useContext(ThemeContext);
 
   return (
@@ -15,36 +15,37 @@ const {theme} = useContext(ThemeContext);
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
       <section className={`content ${theme}`}>
-        <section className="recipe-page-grid">
-          <section className="grid-col1">
-            <h1 className={`page-heading1 ${theme}`}>Recipe Name</h1>
-            <img src="" alt="" />
+        <section className={`recipe-page-grid ${theme}`}>
+          <section className={`grid-col1 ${theme}`}>
+            <h1 className={`page-heading1 ${theme}`}>{SelectedRecipe.name}</h1>
+            <img src={recipe.image} alt="Recipe" />
             
-            <section className="in-line"><p className="in-line-heading">Difficulty: </p>
-            <p></p>
+            <section className={`in-line ${theme}`}><p className="in-line-heading">Difficulty: </p>
+            <p>{recipe.difficulty}</p>
             </section>
 
-            <section className="in-line"><p className="in-line-heading">Servings: </p>
-            <p></p>
+            <section className={`in-line ${theme}`}><p className="in-line-heading">Servings: </p>
+            <p>{recipe.servings}</p>
             </section>
 
-            <section className="in-line"><p className="in-line-heading">Prep Time: </p>
-            <p></p>
+            <section className={`in-line ${theme}`}><p className="in-line-heading">Prep Time: </p>
+            <p>{recipe.prepTime}</p>
             </section>
 
-            <section className="in-line"><p className="in-line-heading">Cooking Time: </p>
-            <p></p>
+            <section className={`in-line ${theme}`}><p className="in-line-heading">Cooking Time: </p>
+            <p>{recipe.cookingTime}</p>
             </section>
           </section>
 
-          <section className="grid-col2">
+          <section className={`grid-col2 ${theme}`}>
             <h2 className={`page-heading2 ${theme}`}>Ingredients</h2>
-            <ul className="info-p"></ul>
+            <ul className={`info-p  ${theme}`}>
+            </ul>
           </section>
 
-          <section className="grid-col3">
+          <section className={`grid-col3 ${theme}`}>
             <h2 className={`page-heading2 ${theme}`}>Instructions</h2>
-            <ul className="info-p"></ul>
+            <ul className={`info-p  ${theme}`}></ul>
           </section>
         </section>
       </section>

@@ -4,7 +4,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { SavedContext } from "../Context/SavedContext";
 
 import RecipeCard from "./RecipeCard";
-import Recipe from "../Pages/Recipe";
 import "../Styles/RecipeCard.css";
 
 import Save from "../Images/Icon.webp";
