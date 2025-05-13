@@ -16,46 +16,19 @@ const {theme} = useContext(ThemeContext);
       <main className="meal-planner-page">
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-      <aside className={`grid-sidebar ${theme}`}>
+      <aside className={`aside ${theme}`}>
+      <h3 className="heading-center">Meal Plans</h3>
+      <section className="grid-sidebar">
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>
       <img className="delete" src={Delete} alt="Delete" />
       <img className="edit" src={Edit} alt="Pencil" />
       </section>
-
-      <section className={`block ${theme}`}>
-      <p className="week">Week 2</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-      <section className={`block ${theme}`}>
-      <p className="week">Week 3</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-      <section className={`block ${theme}`}>
-      <p className="week">Week 4</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-      <section className={`block ${theme}`}>
-      <p className="week">Week 5</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
-      </section>
-
-      <section className={`block ${theme}`}>
-      <p className="week">Week 6</p>
-      <img className="delete" src={Delete} alt="Delete" />
-        <img className="edit" src={Edit} alt="Pencil" />
       </section>
     </aside>
 
       <section className={`content ${theme}`}>
-      <h1 className="page-heading">Meal Planner</h1>
+      <h1 className={`page-heading ${theme}`}>Meal Planner</h1>
 
         <table className={`table ${theme}`}>
           <thead>

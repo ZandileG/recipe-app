@@ -17,6 +17,15 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+.header.dark{
+    grid-area: header;
+    text-align: center; 
+    background-color: black;
+    border-bottom: solid 1.75px white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
   nav{
     display: flex;
     justify-content: space-between; 
@@ -42,11 +51,11 @@
 .user-profile img{
   width: 2rem;
   height: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .user-profile img:hover{
-  width: 2.125rem;
-  height: 2.125rem;
+  transform: scale(1.05);
 }
 
 .logo-home{
@@ -62,6 +71,15 @@
     padding-bottom: 3rem;
 }
 
+  aside.dark{ 
+    text-align: center;
+    grid-area: sidebar; 
+    background-color: black;
+    border-right: solid 1.75px white;
+    padding-bottom: 3rem;
+    color: white;
+}
+
 .sidebar-item.light{
   padding-top: 1.5rem;
   border-bottom: solid 1.75px black;
@@ -71,8 +89,21 @@
   cursor: pointer;
 }
 
+.sidebar-item.dark{
+  padding-top: 1.5rem;
+  border-bottom: solid 1.75px white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
 .sidebar-item.light:hover{
   background-color: #d5c8b0;
+}
+
+.sidebar-item.dark:hover{
+  background-color: black;
 }
 
 .indicator-section{
@@ -102,7 +133,7 @@
   font-weight: medium;
 }
 
-.searchbar.light:focus{
+.searchbar:focus{
   outline: none;
   border: solid 1.75px black;
   box-shadow: none;
@@ -132,6 +163,25 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
+.filter.dark{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: black;
+  border-right: solid 1.75px white;
+  border-bottom: solid 1.75px white;
+  border-top: none;
+  border-left: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;  
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
 .logout-home.light{
   background-color: #a6b26d;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -147,8 +197,27 @@
   padding-bottom: 0.5rem;
 }
 
+.logout-home.dark{
+  background-color: black;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  border-right: solid 1.75px white;
+  border-bottom: solid 1.75px white;
+  border-top: none;
+  border-left: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .logout-home.light:hover, .filter.light:hover{
   background-color: #d5c8b0;
+}
+
+.logout-home.dark:hover, .filter.dark:hover{
+  background-color: black;
 }
 
 @media (orientation: portrait){

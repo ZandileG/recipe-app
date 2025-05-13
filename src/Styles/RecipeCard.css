@@ -17,6 +17,24 @@
   transition: transform 0.3s ease;
 }
 
+.recipe-card.dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+  font-weight: bold;
+  font-size: large;
+  width: 18rem;
+  height: 20.75rem;
+  border-radius: 0.25rem;
+  margin: auto;
+  margin-bottom: 3.5rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
 .recipe-card:hover{
   transform: scale(1.05);
 }
@@ -93,6 +111,7 @@
   padding: 0.125rem;
   position: absolute;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .delete-shortcut{
@@ -106,22 +125,23 @@
   padding: 0.125rem;
   position: absolute;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.save-shortcut:hover{
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-.delete-shortcut:hover{
-  width: 2.5rem;
-  height: 2.5rem;
+.save-shortcut:hover, .delete-shortcut:hover{
+  transform: scale(1.05);
 }
 
 .card2.light{
   border-top: solid 1.75px black;
   background-color: #a6b26d;
   padding: 0.5rem;
+}
+
+.card2.dark{
+  background-color: black;
+  padding: 0.5rem;
+  color: white;
 }
 
 .card2 h4{

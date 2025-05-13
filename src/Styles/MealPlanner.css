@@ -26,9 +26,24 @@
     grid-area: sidebar; 
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     gap: 1.5rem;
-    padding: 1.5rem
+    padding: 1.5rem;
+}
+
+  aside.light{  
+    background-color: #a6b26d;
+    border-right: solid 1.75px black;
+}
+
+  aside.dark{  
+    background-color: black;
+    border-right: solid 1.75px white;
+}
+
+.heading-center{
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .col1{
@@ -87,8 +102,8 @@ th.light, td.light{
 }
 
 .delete{
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.35rem;
+  height: 1.35rem;
   border-radius: 0.125rem;
   cursor: pointer;
   top: 0;
@@ -96,22 +111,17 @@ th.light, td.light{
   padding: 0.125rem;
   position: absolute;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.delete:hover{
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
-.edit:hover{
-  width: 2rem;
-  height: 2rem;
+.delete:hover, .edit:hover{
+  transform: scale(1);
 }
 
 .edit{
   border-radius: 1rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 0.125rem;
   cursor: pointer; 
   bottom: 0;
@@ -119,6 +129,7 @@ th.light, td.light{
   padding: 0.125rem;
   position: absolute;
   z-index: 1;
+   transition: transform 0.3s ease;
 }
 
 .save.light{

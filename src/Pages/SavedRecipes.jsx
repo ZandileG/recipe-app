@@ -39,7 +39,7 @@ function SavedRecipes() {
     </aside>
 
     <section className={`content ${theme}`}>
-    <h1 className="page-heading">Saved Recipes</h1>
+    <h1 className={`page-heading ${theme}`}>Saved Recipes</h1>
      {/* <RecipeList /> */}
      <p className="nothing">You have no saved recipes.</p>
     </section>

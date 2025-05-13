@@ -100,7 +100,7 @@ function handleSearch(e){
     </aside>
 
     <section className={`content ${theme}`}>
-      <h1 className="page-heading">Recipes</h1>
+      <h1 className={`page-heading ${theme}`}>Recipes</h1>
       <RecipeList searchQuery={searchQuery}/>
     </section>
 

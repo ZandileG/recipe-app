@@ -84,7 +84,7 @@ const {theme} = useContext(ThemeContext);
     </aside>
 
     <section className={`content ${theme}`}>
-      <h1 className="page-heading">Create Recipe</h1>
+      <h1 className={`page-heading ${theme}`}>Create Recipe</h1>
       <form action="" className={`create-recipe-form ${theme}`}>
 
       <section className={`item1 ${theme}`}>

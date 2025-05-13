@@ -54,12 +54,13 @@ right: 2rem;
 .user-profile-nav img{
   width: 2rem;
   height: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .user-profile-nav img:hover{
-  width: 2.125rem;
-  height: 2.125rem;
+  transform: scale(1.05);
 }
+
 .nav-item1.light.active, .nav-item2.light.active, 
 .nav-item3.light.active, .nav-item4.light.active{
   background-color: #a6b26d;

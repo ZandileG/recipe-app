@@ -17,7 +17,7 @@ const {theme} = useContext(ThemeContext);
       <section className={`content ${theme}`}>
         <section className="recipe-page-grid">
           <section className="grid-col1">
-            <h1 className="page-heading1">Recipe Name</h1>
+            <h1 className={`page-heading1 ${theme}`}>Recipe Name</h1>
             <img src="" alt="" />
             
             <section className="in-line"><p className="in-line-heading">Difficulty: </p>
@@ -38,12 +38,12 @@ const {theme} = useContext(ThemeContext);
           </section>
 
           <section className="grid-col2">
-            <h2 className="page-heading2">Ingredients</h2>
+            <h2 className={`page-heading2 ${theme}`}>Ingredients</h2>
             <ul className="info-p"></ul>
           </section>
 
           <section className="grid-col3">
-            <h2 className="page-heading2">Instructions</h2>
+            <h2 className={`page-heading2 ${theme}`}>Instructions</h2>
             <ul className="info-p"></ul>
           </section>
         </section>

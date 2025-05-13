@@ -43,7 +43,7 @@ function savedRecipes(){
     </aside>
     
     <section className={`content ${theme}`}>
-    <h1 className="page-heading">User Profile</h1>
+    <h1 className={`page-heading ${theme}`}>User Profile</h1>
 
     <section className="tabs">
     <section className={`tab ${theme}`} onClick={createRecipe}>
