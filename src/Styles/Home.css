@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-  .header.light{
+.header.light{
     grid-area: header;
     text-align: center; 
     background-color: #d27f5d;
@@ -90,7 +90,7 @@
   margin-top: 3rem;
 }
 
-.searchbar.light{
+.searchbar{
   width: 50rem;
   height: 2rem;
   border-radius: 5rem;

@@ -12,7 +12,7 @@ const {theme} = useContext(ThemeContext);
 
   return (
       <main className="recipe-page">
-      <header className="header"><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
       <section className={`content ${theme}`}>
         <section className="recipe-page-grid">

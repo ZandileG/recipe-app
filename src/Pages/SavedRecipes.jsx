@@ -17,24 +17,25 @@ function SavedRecipes() {
 
   return (
      <main className="saved-recipes-page">
-     <header className="header"><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-    <aside classNme="sidebar">
+    <aside className={`sidebar ${theme}`}>
+   
     <h3 className="heading">Difficulty</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Easy</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Medium</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Easy</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Medium</button>
 
     <h3 className="heading">Meal Type</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Breakfast</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Lunch</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Dinner</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Dessert</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Breakfast</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Lunch</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dinner</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dessert</button>
 
     <h3 className="heading">Other Categories</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Appetizer</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Beverage</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Side Dish</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Snack</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Appetizer</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Beverage</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Side Dish</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Snack</button>
     </aside>
 
     <section className={`content ${theme}`}>

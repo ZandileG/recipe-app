@@ -48,34 +48,34 @@ function handleSearch(e){
 
   return (
     <main className="home-page">
-    <header className="header">
+    <header className={`header ${theme}`}>
     <nav>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
       <section><input className="searchbar" type="search" placeholder="Search..." onSearch={setSearchQuery}/></section>
-      <section><button className="logout-home" type="button" onClick={handleLogOut}>Log Out</button></section>
+      <section><button className={`logout-home  ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
       </section>
     </nav>
     </header>
 
-    <aside className="sidebar">
-    <section className="sidebar-item" onClick={mealPlanner}>
+    <aside className={`sidebar ${theme}`}>
+    <section className={`sidebar-item ${theme}`} onClick={mealPlanner}>
       Meal Planner
     <section className="indicator-section">
         <img onClick={mealPlanner} src={Indicator} className="indicator" alt="Indicator" />
     </section>
     </section>
 
-    <section className="sidebar-item" onClick={savedRecipes}>
+    <section className={`sidebar-item ${theme}`} onClick={savedRecipes}>
       Saved Recipes
     <section className="indicator-section">
         <img onClick={savedRecipes} src={Indicator} className="indicator" alt="Indicator" />
     </section>
     </section>
 
-     <section className="sidebar-item" onClick={createRecipe}>
+     <section className={`sidebar-item ${theme}`} onClick={createRecipe}>
       Create Recipe
     <section className="indicator-section">
         <img onClick={createRecipe} src={Indicator} className="indicator" alt="Indicator" />
@@ -83,20 +83,20 @@ function handleSearch(e){
     </section>
 
     <h3 className="heading">Difficulty</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Easy</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Medium</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Easy</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Medium</button>
 
     <h3 className="heading">Meal Type</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Breakfast</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Lunch</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Dinner</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Dessert</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Breakfast</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Lunch</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dinner</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dessert</button>
 
     <h3 className="heading">Other Categories</h3>
-    <button className="filter" type="button" onClick={filterRecipes}>Appetizer</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Beverage</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Side Dish</button>
-    <button className="filter" type="button" onClick={filterRecipes}>Snack</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Appetizer</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Beverage</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Side Dish</button>
+    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Snack</button>
     </aside>
 
     <section className={`content ${theme}`}>

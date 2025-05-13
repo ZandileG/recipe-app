@@ -25,7 +25,7 @@ function savedRecipes(){
   return (
     <main className="user-profile-page">
 
-    <header className="header"><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
     <aside className={`sidebar ${theme}`}>
     <section>
