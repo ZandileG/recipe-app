@@ -5,7 +5,7 @@ export const SavedContext = createContext();
 function SavedProvider({ children }) {
   const [savedRecipes, setSavedRecipes] = useState([]);
 
-  const saveRecipe = (recipe) => {
+  function saveRecipe (recipe) {
     setSavedRecipes ((prev) => {
   //I don't want the same recipe to be saved multiple times
       if (prev.some((r) => r.id === recipe.id)) return prev;
@@ -13,11 +13,11 @@ function SavedProvider({ children }) {
     });
   };
 
- const removeRecipe = (recipeId) => {
-    setSavedRecipes ((prev) => prev.filter((recipe) => recipe.id !== recipeId));
+ function removeRecipe (id) {
+    setSavedRecipes ((prev) => prev.filter((recipe) => recipe.id !== id));
   };
 
-  const isSaved = (recipeId) => savedRecipes.some((recipe) => recipe.id === recipeId);
+  const isSaved = (id) => savedRecipes.some((recipe) => recipe.id === id);
   
 return (
   <SavedContext.Provider value={{savedRecipes, saveRecipe, removeRecipe, isSaved}}>

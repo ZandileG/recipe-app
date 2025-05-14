@@ -1,19 +1,16 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect, useState, useContext } from "react";
-import { SavedContext } from "../Context/SavedContext";
+import React, { useEffect, useState } from "react";
 
 import RecipeCard from "./RecipeCard";
-import "../Styles/RecipeCard.css";
+import Back from "../Images/Arrow1.webp";
+import Next from "../Images/Arrow2.webp";
 
-import Save from "../Images/Icon.webp";
-import Delete from "../Images/Delete.png";
+import "../Styles/RecipeCard.css";
 
 function RecipeList({ searchQuery }) {
   const navigate = useNavigate();
   
-  const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
-
   const [recipes, setRecipes] = useState([]);
   const [page, setPage] = useState(0); 
   
@@ -35,8 +32,7 @@ function RecipeList({ searchQuery }) {
                                 : `https://dummyjson.com/recipes?limit=${limit}&skip=${page * limit}`;
         const { data } = await axios.get(url);
 
-      //I want the search to work for all the recipes in the API not just the ones on the current page
-        setRecipes((prevRecipes) => [...prevRecipes, ...data.recipes]);
+      setRecipes(data.recipes);
         
       //The button will be disabled when the limit is reached
         setHasMore((page + 1) * limit < data.total); 
@@ -44,12 +40,6 @@ function RecipeList({ searchQuery }) {
         console.error(error);
       }
     }
-
-/*useEffect(() => {
-    axios.get('https://dummyjson.com/products')
-      .then(res => setProducts(res.data.products))
-      .catch(err => console.error(err));
-  }, []); */
 
 //This is a debounced function that will save processing power
     const timeOutFunction = setTimeout(() => {
@@ -65,19 +55,22 @@ function RecipeList({ searchQuery }) {
     <section className="recipe-list">
       {recipes.map((recipe) => (
         <section key={recipe.id} onClick={() => openRecipe(recipe)}>
-          <RecipeCard recipe={recipe} />
+        <RecipeCard recipe={recipe} />
         </section>
       ))}
 
-      {/* Pagination Button */}
-      <section style={{ textAlign: "center", marginTop: "20px" }}>
-        <button
-          className="next-button"
-          onClick={() => setPage((prev) => prev + 1)} disabled={!hasMore}>
+      <section>{/*This is an empty section I'm using to center the pagination buttons*/}</section>      
+      <section className="pagination">
+        <button className="back-button" onClick={() => setPage((prev) => prev - 1)} disabled={page === 0}>
+          <img src={Back} alt="Back"/>
+        </button>
 
+        <button className="next-button" onClick={() => setPage((prev) => prev + 1)} disabled={!hasMore}>
+          <img src={Next} alt="Next" />
         </button>
       </section>
-    </section>
+      <section>{/*Empty section*/}</section>      
+      </section>
   );
 }
 

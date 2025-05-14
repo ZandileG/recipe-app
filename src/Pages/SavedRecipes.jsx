@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-//import { SavedContext } from "../Context/SavedContext";
+import React, { useContext, useState, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
+import { SavedContext } from "../Context/SavedContext";
 import { ThemeContext } from '../Context/ThemeContext';
 
-//import RecipeList from "../Components/RecipeList";
+import RecipeCard from "../Components/RecipeCard";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
@@ -10,13 +11,20 @@ import "../Styles/SavedRecipes.css";
 
 function SavedRecipes() {
   const {theme} = useContext(ThemeContext);
-  
+  const { savedRecipes } = useContext(SavedContext);
+
+  const navigate = useNavigate();
+
+  function openRecipe(recipe) {
+    navigate(`/recipe/${recipe.id}`);
+  }
+
   function filterRecipes() {
       
   }
 
   return (
-     <main className="saved-recipes-page">
+    <main className="saved-recipes-page">
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
     <aside className={`sidebar ${theme}`}>
@@ -40,9 +48,24 @@ function SavedRecipes() {
 
     <section className={`content ${theme}`}>
     <h1 className={`page-heading ${theme}`}>Saved Recipes</h1>
-     {/* <RecipeList /> */}
-     <p className={`nothing ${theme}`}>You have no saved recipes.</p>
-    </section>
+
+{/*This displays the user's saved recipes*/}
+  <section className="recipe-list">
+      {savedRecipes.length > 0 ? (
+            savedRecipes.map((recipe) => (
+              <section key={recipe.id} onClick={() => openRecipe(recipe)}>
+                <RecipeCard recipe={recipe} />
+              </section>
+            ))
+          ) : (
+            <Fragment>
+            <section>{/*Empty section*/}</section>
+            <p className={`nothing ${theme}`}>You have no saved recipes.</p>
+            <section>{/*Empty section*/}</section>
+            </Fragment>
+          )}
+        </section>
+      </section>
     
     <Footer />
      </main> 

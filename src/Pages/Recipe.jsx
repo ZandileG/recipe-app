@@ -39,11 +39,11 @@ useEffect(() => {
             </section>
 
             <section className={`in-line ${theme}`}><p className="in-line-heading">Prep Time: </p>
-            <p>{recipe.prepTimeMinutes}</p>
+            <p>{recipe.prepTimeMinutes} Minutes</p>
             </section>
 
             <section className={`in-line ${theme}`}><p className="in-line-heading">Cooking Time: </p>
-            <p>{recipe.cookiTimeMinutes}</p>
+            <p>{recipe.cookTimeMinutes} Minutes</p>
             </section>
           </section>
 
