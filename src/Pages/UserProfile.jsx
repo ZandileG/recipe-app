@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
+import { LoginContext } from "../Context/LoginContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -15,6 +16,10 @@ import SavedIcon2 from "../Images/Save2.png";
 import "../Styles/UserProfile.css";
 
 function UserProfile() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const {setUserDetails} = useContext(LoginContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
 
@@ -24,6 +29,29 @@ function createRecipe(){
 
 function savedRecipes(){
     navigate("/saved-recipes");
+  }
+
+function handleSubmit(e) {
+    e.preventDefault();
+
+    if (username.trim() === "" || password.trim() === "") {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+  //The user can change their username or password
+    const updatedDetails = { username, password };
+    setUserDetails(updatedDetails);
+    localStorage.setItem("userDetails", JSON.stringify(updatedDetails)); 
+
+//The user will be logged out and they have to log back in with their new details
+  localStorage.removeItem("isLoggedIn");
+  alert("You have successfully updated your details! Please log in again.");
+  
+  setUsername("");
+  setPassword("");
+  
+  navigate("/login");
   }
 
   return (
@@ -37,9 +65,9 @@ function savedRecipes(){
       <img src={UserImage2} alt="User" className={`user-image2 ${theme}`}  />
     </section>
 
-    <form action="">
-      <input className={`username-change ${theme}`} type="text" placeholder="Change Username"/>
-      <input className={`password-change ${theme}`} type="password" placeholder="Change Password"/>
+    <form onSubmit={handleSubmit}>
+      <input className={`username-change ${theme}`} type="text" placeholder="Change Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
+      <input className={`password-change ${theme}`} type="password" placeholder="Change Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
       <p className={`update-message ${theme}`}>Your details have been successfully updated!</p>
         <button type="submit" className={`save-change ${theme}`}>Save</button>
     </form>

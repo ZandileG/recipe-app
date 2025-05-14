@@ -15,11 +15,6 @@ import SavedProvider from "./Context/SavedContext";
 import "./App.css";
 import ThemeProvider from "./Context/ThemeContext";
 
-function ProtectedRoute({ children }) {
-  const { isLoggedIn } = useContext(LoginContext);
-  return isLoggedIn ? children : <Navigate to="/login" />;
-}
-
 function App(){
   return( 
     <LoginProvider>
@@ -28,8 +23,8 @@ function App(){
     <BrowserRouter basename="/recipe-app">
     <Routes>
     <Route path="/login" element={<Login />} />
-    <Route path="/"element={<ProtectedRoute><Home /></ProtectedRoute>} />
-    <Route path="/recipe/:recipeId" element={<Recipe />} />
+    <Route path="/"element={<Home />} />
+    <Route path="/recipe/:id" element={<Recipe />} />
     <Route path="/meal-planner" element={<MealPlanner />} />
     
     <Route path="/user-profile" element={<UserProfile />} />

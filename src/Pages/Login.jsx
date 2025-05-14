@@ -12,7 +12,7 @@ function Login() {
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [changeDetails, setChangeDetails] = useState(false);
 
-  const {login, signUp, userDetails, setUserDetails} = useContext(LoginContext);
+  const {login, signUp, setUserDetails} = useContext(LoginContext);
   const navigate = useNavigate();
 
   function handleSubmit(e) {
@@ -31,7 +31,7 @@ function Login() {
         const updatedDetails ={username, password};
         setUserDetails(updatedDetails);
         localStorage.setItem("userDetails", JSON.stringify(updatedDetails)); 
-        alert("You have successfully updated your details!");
+        alert("You have successfully updated your details! Please re-enter them and log in.");
         setChangeDetails(false);
         setUsername("");
         setPassword("");
@@ -42,7 +42,7 @@ function Login() {
     } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
-      setIsSigningUp(false);
+      setIsSigningUp(true);
       } 
      } else {
       //When they log back in, they will get an alert if they have entered inccoreect details
@@ -63,8 +63,8 @@ function Login() {
     <section className="login-items">
     <img className="logo-login" src={Logo} alt="Zandile's Recipes"/>
     
-    <form className="login-form" action="" onSubmit={handleSubmit}>
-    <h1 className="login-heading">Sign In</h1>
+    <form className="login-form" onSubmit={handleSubmit}>
+    <h1 className="login-heading">{isSigningUp ? "Sign Up" : "Log In"}</h1>
     
     <section className="login-inputs">
     <input className="username" type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>

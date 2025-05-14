@@ -80,7 +80,7 @@
 }
 
 .modal-backdrop{
-  width: 100%;
+  width: 50%;
   border-radius: 8px;
   filter: brightness(60%);
 }

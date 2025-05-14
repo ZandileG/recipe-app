@@ -15,12 +15,10 @@ function RecipeList({ searchQuery }) {
   const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
 
   const [recipes, setRecipes] = useState([]);
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
-  const [fadeOut, setFadeOut] = useState(false);
   const [page, setPage] = useState(0); 
   
-  function openRecipe() {
-    navigate(`/recipe/${selectedRecipe.id}`);
+  function openRecipe(recipe) {
+    navigate(`/recipe/${recipe.id}`);
   }
 
 /*This works together with the pagination button and checks if there is more data to display
@@ -47,6 +45,12 @@ function RecipeList({ searchQuery }) {
       }
     }
 
+/*useEffect(() => {
+    axios.get('https://dummyjson.com/products')
+      .then(res => setProducts(res.data.products))
+      .catch(err => console.error(err));
+  }, []); */
+
 //This is a debounced function that will save processing power
     const timeOutFunction = setTimeout(() => {
     fetchRecipes();
@@ -57,62 +61,11 @@ function RecipeList({ searchQuery }) {
   }
   }, [searchQuery, page]);
 
-  function handleClose() {
-    setFadeOut(true);
-    setTimeout(() => {
-      setSelectedRecipe(null);
-      setFadeOut(false);
-    }, 500);
-  }
-
-//I used the re-used the code from the Netflix exercise 
   return (
     <section className="recipe-list">
       {recipes.map((recipe) => (
-        <section key={recipe.id}>
-
-          <RecipeCard recipe={recipe} onSelect={() => setSelectedRecipe(selectedRecipe?.id === recipe.id ? null : recipe)} />
-          
-          {selectedRecipe?.id === recipe.id && (  
-            <section className={`modal-overlay ${fadeOut ? "fade-out" : ""}`} onClick={handleClose}>
-            
-            <section className="modal-content" onClick={(e) => e.stopPropagation()}>
-          
-            <img className="modal-backdrop" src={selectedRecipe.image} alt="Recipe Background" />
-            
-            <button className="delete" onClick={handleClose}></button>
-
-            <section className="modal-info">
-            <button onClick={openRecipe} className="open-recipe">Open Recipe</button>
-            
-            <button className="save-recipe" onClick={() => saveRecipe(selectedRecipe)}
-                    style={{
-                      display: isSaved(selectedRecipe.id)
-                        ? "none"
-                        : "inline-block",
-                    }}
-                  >
-                    <img className="save-shortcut" src={Save} alt="Save" />
-                  </button>
-                  <button
-                    className="remove-recipe"
-                    onClick={() => removeRecipe(selectedRecipe.id)}
-                    style={{
-                      display: isSaved(selectedRecipe.id)
-                        ? "inline-block"
-                        : "none",
-                    }}
-                  >
-                          <img className="delete-shortcut" src={Delete} alt="Delete" />
-
-                  </button>
-                  <h1>{selectedRecipe.name}</h1>
-                  <p><strong>Ingredients:</strong> {selectedRecipe.ingredients.join(", ")}</p>
-                  <p>{selectedRecipe.instructions}</p>
-                </section>
-              </section>
-            </section>
-          )}
+        <section key={recipe.id} onClick={() => openRecipe(recipe)}>
+          <RecipeCard recipe={recipe} />
         </section>
       ))}
 
@@ -120,10 +73,8 @@ function RecipeList({ searchQuery }) {
       <section style={{ textAlign: "center", marginTop: "20px" }}>
         <button
           className="next-button"
-          onClick={() => setPage((prev) => prev + 1)}
-          disabled={!hasMore}
-        >
-          Next 6 Recipes
+          onClick={() => setPage((prev) => prev + 1)} disabled={!hasMore}>
+
         </button>
       </section>
     </section>
