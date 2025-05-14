@@ -18,10 +18,11 @@ useEffect(() => {
       .catch(err => console.error(err));
   }, [id]);
 
+//This is just a way to give the user feedback if it takes long for the data to load
   if (!recipe) return <p>Loading...</p>;
 
   return (
-      <main className="recipe-page">
+    <main className="recipe-page">
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
     <section className={`content ${theme}`}>

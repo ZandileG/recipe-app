@@ -11,16 +11,16 @@ import "../Styles/RecipeCard.css";
 function RecipeList({ searchQuery }) {
   const navigate = useNavigate();
   
+/*This works together with the pagination button and checks if there is more data to display
+  This is because my API limits me to 30 items so I want to know when I've reached the limit.*/
+  const [hasMore, setHasMore] = useState(true);
+
   const [recipes, setRecipes] = useState([]);
   const [page, setPage] = useState(0); 
   
   function openRecipe(recipe) {
     navigate(`/recipe/${recipe.id}`);
   }
-
-/*This works together with the pagination button and checks if there is more data to display
-  This is because my API limits me to 30 items so I want to know when I've reached the limit.*/
-  const [hasMore, setHasMore] = useState(true);
 
 //This is the number of recipes I want to see per page
   const limit = 6;
@@ -34,7 +34,7 @@ function RecipeList({ searchQuery }) {
 
       setRecipes(data.recipes);
         
-      //The button will be disabled when the limit is reached
+      //The pagination buttons will be disabled when the limit is reached
         setHasMore((page + 1) * limit < data.total); 
       } catch (error) {
         console.error(error);

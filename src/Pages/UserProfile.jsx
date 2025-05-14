@@ -44,19 +44,16 @@ function handleSubmit(e) {
     setUserDetails(updatedDetails);
     localStorage.setItem("userDetails", JSON.stringify(updatedDetails)); 
 
-//The user will be logged out and they have to log back in with their new details
+//After saving their new details, they will be logged out and they have to log back in with their new details
   localStorage.removeItem("isLoggedIn");
   alert("You have successfully updated your details! Please log in again.");
-  
   setUsername("");
   setPassword("");
-  
   navigate("/login");
-  }
+}
 
   return (
     <main className="user-profile-page">
-
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
     <aside className={`sidebar ${theme}`}>
@@ -66,13 +63,18 @@ function handleSubmit(e) {
     </section>
 
     <form onSubmit={handleSubmit}>
-      <input className={`username-change ${theme}`} type="text" placeholder="Change Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
-      <input className={`password-change ${theme}`} type="password" placeholder="Change Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-      <p className={`update-message ${theme}`}>Your details have been successfully updated!</p>
+      <input className={`username-change ${theme}`} type="text" placeholder="Change Username" 
+              onChange={(e) => setUsername(e.target.value)} value={username}/>
+
+      <input className={`password-change ${theme}`} type="password" placeholder="Change Password" 
+              onChange={(e) => setPassword(e.target.value)} value={password}/>
+
         <button type="submit" className={`save-change ${theme}`}>Save</button>
     </form>
 
-    <button type="button" className={`dark-mode ${theme}`} onClick={toggleTheme}>{theme === "light" ? "Dark Mode" : "Light Mode"}</button>
+    <button type="button" className={`dark-mode ${theme}`} onClick={toggleTheme}>
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
+    </button>
     </aside>
     
     <section className={`content ${theme}`}>

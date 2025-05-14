@@ -13,6 +13,7 @@ function Navbar() {
     const navigate = useNavigate();
     const location = useLocation();
 
+  //These are functions to navigate to different pages when the nav items are clicked
     function home() {
       navigate("/");
     }

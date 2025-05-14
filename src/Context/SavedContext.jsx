@@ -7,6 +7,7 @@ function SavedProvider({ children }) {
 
   function saveRecipe (recipe) {
     setSavedRecipes ((prev) => {
+
   //I don't want the same recipe to be saved multiple times
       if (prev.some((r) => r.id === recipe.id)) return prev;
       return [...prev, recipe];
@@ -17,7 +18,9 @@ function SavedProvider({ children }) {
     setSavedRecipes ((prev) => prev.filter((recipe) => recipe.id !== id));
   };
 
-  const isSaved = (id) => savedRecipes.some((recipe) => recipe.id === id);
+  function isSaved (id) {
+    savedRecipes.some((recipe) => recipe.id === id);
+  };
   
 return (
   <SavedContext.Provider value={{savedRecipes, saveRecipe, removeRecipe, isSaved}}>

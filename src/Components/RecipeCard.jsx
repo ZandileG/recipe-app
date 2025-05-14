@@ -10,18 +10,19 @@ function RecipeCard({recipe}) {
 const {theme} = useContext(ThemeContext);
 const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
 
-  const saved = isSaved(recipe.id); 
+//I don't want to write the full thing so I'm using saved as a shorthand
+const saved = isSaved(recipe.id); 
 
   return (
       <main className={`recipe-card ${theme}`}>
         <section className="card1">
-           <img className={`save-shortcut ${isSaved (recipe) ? "hidden" : "inline-block"}`} src={Save} alt="Save"  
-           onClick={e => { 
+           <img className={`save-shortcut ${saved ? "hidden" : "inline-block"}`} src={Save} alt="Save"  
+           onClick={e => { /*This makes sure that the recipe doesn't open when the recipe is being saved*/
             e.stopPropagation();
             saveRecipe(recipe);
             }}/>
 
-           <img className={`delete-shortcut ${isSaved (recipe.id) ? "inline-block" : "hidden"}`} src={Delete} alt="Delete" 
+           <img className={`delete-shortcut ${saved ? "inline-block" : "hidden"}`} src={Delete} alt="Delete" 
            onClick={e => {
             e.stopPropagation();
             removeRecipe(recipe.id);

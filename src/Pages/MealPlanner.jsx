@@ -12,11 +12,12 @@ function MealPlanner() {
 const {theme} = useContext(ThemeContext);
 
   return (
-      <main className="meal-planner-page">
+    <main className="meal-planner-page">
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
       <aside className={`aside ${theme}`}>
       <h3 className="heading-center">Meal Plans</h3>
+      
       <section className="grid-sidebar">
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>

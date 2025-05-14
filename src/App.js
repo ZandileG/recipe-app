@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LoginProvider, { LoginContext } from "./Context/LoginContext";
+import React  from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -12,8 +11,10 @@ import Recipe from "./Pages/Recipe";
 import CreateRecipe from "./Pages/CreateRecipe";
 import SavedRecipes from "./Pages/SavedRecipes";
 import SavedProvider from "./Context/SavedContext";
-import "./App.css";
+import LoginProvider  from "./Context/LoginContext";
 import ThemeProvider from "./Context/ThemeContext";
+import "./App.css";
+import "./index.css";
 
 function App(){
   return( 

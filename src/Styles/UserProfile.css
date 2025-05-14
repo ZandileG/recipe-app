@@ -104,11 +104,6 @@
   display: none;
 }
 
-.update-message{
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
 .save-change.light{
   background-color: #d27f5d;
   border-right: solid 1.75px black;

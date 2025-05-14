@@ -16,16 +16,16 @@ function Login() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
-    //The page shouldn't reload when the login button is pressed
+  //The page shouldn't reload when the login button is pressed
     e.preventDefault();
 
-    //The user gets an alert if they didn't fill in all the input fields
+  //The user gets an alert if they didn't fill in all the input fields
     if (username.trim() === "" || password.trim() === "") {
       alert("Please fill in all fields.");
       return;
     }
 
-    //The user can change their username or password
+  //The user can change their username or password
     if (changeDetails) {
       if(username && password) {
         const updatedDetails ={username, password};
@@ -38,14 +38,15 @@ function Login() {
         return;
       }
 
-    //The user can sign up and get a successful alert
+  //The user can sign up and get a successful alert
     } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
       setIsSigningUp(true);
       } 
      } else {
-      //When they log back in, they will get an alert if they have entered inccoreect details
+      
+    //When they log back in, they will get an alert if they have entered incorrect details
       if (login(username, password)) {
         navigate("/");
       } else {

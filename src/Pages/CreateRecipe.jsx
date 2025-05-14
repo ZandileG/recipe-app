@@ -11,19 +11,25 @@ import "../Styles/CreateRecipe.css";
 function CreateRecipe() {
 const {theme} = useContext(ThemeContext);
 
+//This is a function that makes sure that the input box increases line by line as the user types
   function increaseBox(e) {
     e.target.style.height = "auto";
     e.target.style.height = e.target.scrollHeight + "px";
   }
 
+//When the user saves the form, the recipe appears on the sidebar and the recipe is added to the recipe list
+function addRecipe(){
+
+}
+
   return (
     <main className="create-recipe-page">
-
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
     <aside className={`aside ${theme}`}>
 
     <h3 className="heading-center">Your Recipes</h3>
+
     <section className={`grid-sidebar ${theme}`}>
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
@@ -35,10 +41,11 @@ const {theme} = useContext(ThemeContext);
 
     <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Create Recipe</h1>
-      <form action="" className={`create-recipe-form ${theme}`}>
+      <form onSubmit={addRecipe} className={`create-recipe-form ${theme}`}>
 
       <section className={`item1 ${theme}`}>
         <p className="form-heading">Enter your recipe information</p>
+
         <section className={`item1-1 ${theme}`}>
         <label>Difficulty: </label>
         <select name="difficulty" className={`difficulty-list ${theme}`}>
@@ -64,35 +71,43 @@ const {theme} = useContext(ThemeContext);
       <p className="form-heading-edit">Enter your ingredients</p>
       <section className="item2-1">
         <section>
-        <label>Ingredient 1: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 1: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
         <section>
-        <label>Ingredient 2: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 2: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
         <section>
-        <label>Ingredient 3: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 3: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
         <section>
-        <label>Ingredient 4: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 4: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
         <section>
-        <label>Ingredient 5: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 5: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
          <section>
-        <label>Ingredient 6: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 6: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
          <section>
-        <label>Ingredient 7: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 7: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
 
          <section>
-        <label>Ingredient 8: </label><input className={`item ${theme}`} type="text"/>
+        <label>Ingredient 8: </label>
+        <input className={`item ${theme}`} type="text"/>
         </section>
       </section>
       </section>
@@ -100,10 +115,12 @@ const {theme} = useContext(ThemeContext);
       <section className={`item3 ${theme}`}>
         <p className="form-heading">Enter your instructions</p>
         <textarea className={`large-input ${theme}`} onInput={increaseBox}></textarea>
+        
         <section classNme="save-container">
         <button type="submit" className={`save-recipe ${theme}`}>Save</button>
         </section>
       </section>
+      
       </form>
     </section>
     

@@ -14,14 +14,15 @@ function Home() {
   const navigate = useNavigate();
   const {theme} = useContext(ThemeContext);
 
-//const [search, setSearch] = useState("");
+const [search, setSearch] = useState("");
 const [searchQuery, setSearchQuery] = useState("");
 
-/*function handleSearch(e){
+function handleSearch(e){
   setSearch(e.target.value);
   onSearch(e.target.value);
-}*/
+}
 
+//This is a function for filtering the recipes according to difficulty and meal types
   function filterRecipes() {
       
   }

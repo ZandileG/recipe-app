@@ -5,6 +5,7 @@ import { ThemeContext } from '../Context/ThemeContext';
 function Footer() {
 const {theme} = useContext(ThemeContext);
 
+//This is a function for the return to top button
   function scrollToTop() {
     window.scrollTo({
       top: 0,

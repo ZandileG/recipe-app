@@ -2,10 +2,10 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const LoginContext = createContext();
 
-//The user can sign up on my app and their details will be stored in local storage.
 function LoginProvider({ children }) {
-    const [isLoggedIn, setIsLoggedIn] = useState(false); 
+const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
+//if a user was previously logged in, their details would be saved in localStorage so those details will be loaded
 const [userDetails, setUserDetails] = useState(() => {
   const storedDetails = localStorage.getItem("userDetails");
   return storedDetails ? JSON.parse(storedDetails) : null;
@@ -19,6 +19,7 @@ useEffect(() => {
   }
 }, [userDetails]);
 
+//A new user can sign up on my app and their details will be stored in local storage.
 function signUp(username, password) {
     if (username && password){
         const newUser = { username, password };
@@ -29,6 +30,7 @@ function signUp(username, password) {
     return false;
 }
 
+//This checks if the user entered correct details
 function login(username, password) {
     if (userDetails && username === userDetails.username && password === userDetails.password) {
         setIsLoggedIn(true);
@@ -49,4 +51,5 @@ return (
     </LoginContext.Provider>    
     );
   }
+
 export default LoginProvider;
