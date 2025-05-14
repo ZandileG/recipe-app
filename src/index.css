@@ -12,7 +12,7 @@ html, body{
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: black black; 
+  scrollbar-color: #f7f7f7 black; 
 }
 
 button, input, select, textarea{

@@ -64,14 +64,10 @@
 .item1-2.light input, 
 .item1-3.light input,
 .item1-4.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input, 
-.item.light input{
+.item.light, .item.light, 
+.item.light, .item.light, 
+.item.light, .item.light, 
+.item.light, .item.light{
   border: solid 1px black;
   padding: 0.25rem;
   border-radius: 0.25rem;
@@ -82,17 +78,17 @@
 .item1-2.dark input, 
 .item1-3.dark input,
 .item1-4.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input, 
-.item.dark input{
+.item.dark, .item.dark, 
+.item.dark, .item.dark, 
+.item.dark, .item.dark, 
+.item.dark, .item.dark{
   border: solid 1px white;
   padding: 0.25rem;
   border-radius: 0.25rem;
+}
+
+.item1.dark, .item2.dark, .item3.dark{
+  color: white;
 }
 
 .item1-2 input{

@@ -9,9 +9,7 @@
 .header.dark{
   grid-area: header;
   text-align: center; 
-  background-color: black;
-  border-bottom: solid 1.75px white;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
+  background-color: #3c3c3b;
 }
 
 .logo-navbar{
@@ -43,7 +41,7 @@ right: 2rem;
 }
 
 .nav-item1.dark, .nav-item2.dark, .nav-item3.dark{
-  border-left: solid 1.75px white;
+  border-left: solid 1.75px black;
   padding: 2rem;  
   font-weight: 600;
   cursor: pointer;
@@ -58,8 +56,8 @@ right: 2rem;
 }
 
 .nav-item4.dark{
-  border-left: solid 1.75px white;
-  border-right: solid 1.75px white;
+  border-left: solid 1.75px black;
+  border-right: solid 1.75px black;
   padding: 2rem;  
   font-weight: 600;
   cursor: pointer;
@@ -91,7 +89,8 @@ right: 2rem;
 
 .nav-item1.dark.active, .nav-item2.dark.active, 
 .nav-item3.dark.active, .nav-item4.dark.active{
-  background-color: white;
+  background-color: #d5c8b0;
+  color: black;
 }
 
 .nav-item1.light:hover, .nav-item2.light:hover, 
@@ -101,7 +100,8 @@ right: 2rem;
 
 .nav-item1.dark:hover, .nav-item2.dark:hover, 
 .nav-item3.dark:hover, .nav-item4.dark:hover{
-  background-color: white;
+  background-color: #d5c8b0;
+  color: black;
 }
 
 .nav-item1.light.active:hover, .nav-item2.light.active:hover, 
@@ -112,7 +112,7 @@ right: 2rem;
 
 .nav-item1.dark.active:hover, .nav-item2.dark.active:hover, 
 .nav-item3.dark.active:hover, .nav-item4.dark.active:hover{
-  background-color: black;
+  background-color: #d5c8b0;
   cursor: default;
 }
 

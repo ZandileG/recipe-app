@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
@@ -14,7 +14,7 @@ const {theme} = useContext(ThemeContext);
       <main className="recipe-page">
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-      <section className={`content ${theme}`}>
+    {/*  <section className={`content ${theme}`}>
         <section className={`recipe-page-grid ${theme}`}>
           <section className={`grid-col1 ${theme}`}>
             <h1 className={`page-heading1 ${theme}`}>{SelectedRecipe.name}</h1>
@@ -48,7 +48,7 @@ const {theme} = useContext(ThemeContext);
             <ul className={`info-p  ${theme}`}></ul>
           </section>
         </section>
-      </section>
+      </section>*/}
 
       <Footer /> 
       </main>

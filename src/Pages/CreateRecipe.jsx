@@ -21,11 +21,15 @@ const {theme} = useContext(ThemeContext);
 
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-    <aside className={`grid-sidebar ${theme}`}>
+    <aside className={`aside ${theme}`}>
+
+    <h3 className="heading-center">Your Recipes</h3>
+    <section className={`grid-sidebar ${theme}`}>
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
       <img className="edit" src={Edit} alt="Pencil" />
+      </section>
       </section>
     </aside>
 
@@ -56,38 +60,38 @@ const {theme} = useContext(ThemeContext);
         </section>
         </section>
 
-      <section className="item2">
+      <section className={`item2 ${theme}`}>
       <p className="form-heading-edit">Enter your ingredients</p>
       <section className="item2-1">
-        <section className="item">
+        <section>
         <label>Ingredient 1: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section className="item">
+        <section>
         <label>Ingredient 2: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section className="item">
+        <section>
         <label>Ingredient 3: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section className="item">
+        <section>
         <label>Ingredient 4: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section className="item">
+        <section>
         <label>Ingredient 5: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-         <section className="item">
+         <section>
         <label>Ingredient 6: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-         <section className="item">
+         <section>
         <label>Ingredient 7: </label><input className={`item ${theme}`} type="text"/>
         </section>
 
-         <section className="item">
+         <section>
         <label>Ingredient 8: </label><input className={`item ${theme}`} type="text"/>
         </section>
       </section>
