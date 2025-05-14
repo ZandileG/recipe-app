@@ -1,9 +1,18 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const SavedContext = createContext();
 
 function SavedProvider({ children }) {
-  const [savedRecipes, setSavedRecipes] = useState([]);
+
+//This is so that the saved recipes don't disappear when the page is reloaded
+  const [savedRecipes, setSavedRecipes] = useState(() => {
+    const stored = localStorage.getItem("savedRecipes");
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
+  }, [savedRecipes]);
 
   function saveRecipe (recipe) {
     setSavedRecipes ((prev) => {
@@ -18,9 +27,9 @@ function SavedProvider({ children }) {
     setSavedRecipes ((prev) => prev.filter((recipe) => recipe.id !== id));
   };
 
-  function isSaved (id) {
-    savedRecipes.some((recipe) => recipe.id === id);
-  };
+ function isSaved(id) {
+  return savedRecipes.some((recipe) => recipe.id === id);
+}
   
 return (
   <SavedContext.Provider value={{savedRecipes, saveRecipe, removeRecipe, isSaved}}>

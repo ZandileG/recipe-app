@@ -19,7 +19,7 @@ const [searchQuery, setSearchQuery] = useState("");
 
 function handleSearch(e){
   setSearch(e.target.value);
-  onSearch(e.target.value);
+  setSearchQuery(e.target.value);
 }
 
 //This is a function for filtering the recipes according to difficulty and meal types
@@ -50,11 +50,11 @@ function handleSearch(e){
   return (
     <main className="home-page">
     <header className={`header ${theme}`}>
-    <nav>
+    <nav onSearch={setSearchQuery}>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
-      <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onSearch={setSearchQuery}/></section>
+      <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
       <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
       </section>
