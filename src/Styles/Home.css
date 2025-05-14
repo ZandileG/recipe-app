@@ -101,7 +101,8 @@
 }
 
 .sidebar-item.dark:hover{
-  background-color: black;
+  background-color: #d5c8b0;
+  color: black;
 }
 
 .indicator-section{
@@ -210,7 +211,8 @@
 }
 
 .logout-home.dark:hover, .filter.dark:hover{
-  background-color: black;
+  background-color: #d5c8b0;
+  color: black;
 }
 
 @media (orientation: portrait){

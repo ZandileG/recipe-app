@@ -60,7 +60,7 @@ th.light, td.light{
   }
 
   th.dark, td.dark{
-    border: solid 1.75px white;  
+    border: solid 1.75px #3c3c3b;  
     padding: 0.5rem;
   }
   
@@ -71,7 +71,7 @@ th.light, td.light{
 
   th.dark{
     font-weight: 600;
-    background-color: black;
+    background-color: #d5c8b0;
   }
 
   table.light{
@@ -88,11 +88,10 @@ th.light, td.light{
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    border: solid 1.75px white; 
-    background-color: black;
+    border: solid 1.75px #3c3c3b; 
+    background-color: #d5c8b0;
     border-radius: 0.5rem;
     border-collapse: collapse;
-    color: white;
   }
 
 .list.light{
@@ -109,7 +108,7 @@ th.light, td.light{
 
 .list.dark{
   border: none;
-  background-color: black;
+  background-color: #d5c8b0;
   padding: 0.5rem;
   display: flex; 
   justify-content: center; 
@@ -141,8 +140,9 @@ th.light, td.light{
 }
 
 .block.dark{
-    border: solid 1px white;
-    background-color: black;
+    border: solid 1px #3c3c3b;
+    color: black;
+    background-color: #d5c8b0;
     border-radius: 0.5rem;
     position: relative;
     width: 10rem;
@@ -187,6 +187,7 @@ th.light, td.light{
 
 .save.dark{
   background-color: #3c3c3b;
+  color: white;
   cursor: pointer;
 }
 

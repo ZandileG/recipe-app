@@ -116,6 +116,10 @@ right: 2rem;
   cursor: default;
 }
 
+.user-profile-nav.active:hover{
+  cursor: default;
+}
+
 .logout.light{
   margin-left: 2rem; 
   margin-bottom: 1.5rem;
@@ -137,25 +141,23 @@ right: 2rem;
   margin-left: 2rem; 
   margin-bottom: 1.5rem;
   background-color: black;
-  border-right: solid 1.75px white;
-  border-bottom: solid 1.75px white;
-  border-top: none;
-  border-left: none;
+  border: none;
   font-weight: 600;
   border-radius: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.37);
 }
 
-.logout.light:hover, .filter.light:hover{
+.logout.light:hover{
   background-color: #d5c8b0;
 }
 
-.logout.dark:hover, .filter.dark:hover{
-  background-color: white;
+.logout.dark:hover{
+  background-color: #d5c8b0;
+  color: black;
 }
 
   @media (orientation: portrait){

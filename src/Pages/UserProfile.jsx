@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import UserImage from "../Images/User Icon.png";
+import UserImage2 from "../Images/User Icon Dark.png";
 import CreateIcon from "../Images/Create.png";
 import SavedIcon from "../Images/Save.png";
 import "../Styles/UserProfile.css";
@@ -29,7 +30,8 @@ function savedRecipes(){
 
     <aside className={`sidebar ${theme}`}>
     <section>
-      <img src={UserImage} alt="User" className="user-image" />
+      <img src={UserImage} alt="User" className={`user-image1 ${theme}`}  />
+      <img src={UserImage2} alt="User" className={`user-image2 ${theme}`}  />
     </section>
 
     <form action="">

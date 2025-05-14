@@ -44,7 +44,7 @@
   justify-content: flex-end;
   cursor: pointer;
   text-align: center;
-  border: solid 1.75px white;
+  border: solid 1.75px #3c3c3b;
   background-color: black;
   font-weight: bold;
   font-size: large;
@@ -66,12 +66,12 @@
 
 .tab2.dark{
   padding: 0.5rem;
-  border-top: solid 1.75px white;
-  background-color: black;
+  background-color: #3c3c3b;
+  box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.175);
   color: white;
 }
 
-.user-image{
+.user-image1, .user-image2{
   width: 15rem;
   height: 15rem;
   padding: 2rem;
@@ -112,20 +112,17 @@
 }
 
 .save-change.dark{
-  background-color: black;
-  border-right: solid 1.75px white;
-  border-bottom: solid 1.75px white;
-  border-top: none;
-  border-left: none;
+  background-color: #3c3c3b;
+  border: none;
   font-weight: 600;
   border-radius: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   margin: auto;
   display: block;
+  box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.37);
 }
 
 .save-change:hover.light{
@@ -154,20 +151,17 @@
 }
 
 .dark-mode.dark{
-  background-color: black;
-  border-right: solid 1.75px white;
-  border-bottom: solid 1.75px white;
-  border-top: none;
-  border-left: none;
+background-color: #3c3c3b;
+  border: none;
   font-weight: 600;
   border-radius: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
   margin: auto;
   display: block;
+  box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.37);
 }
 
 .dark-mode.light:hover{
@@ -176,6 +170,19 @@
 
 .dark-mode.dark:hover{
   background-color: black;
+}
+
+.user-image2.light{
+  display: none;
+}
+
+.user-image2.dark{
+  display: block;
+  margin: auto;
+}
+
+.user-image1.dark{
+  display: none;
 }
 
 .username-change.light, .password-change.light{
