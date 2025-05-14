@@ -177,28 +177,30 @@ th.light, td.light{
   padding: 0.125rem;
   position: absolute;
   z-index: 1;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .save.light{
   background-color: #a6b26d;
   cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
 .save.dark{
   background-color: #3c3c3b;
   color: white;
   cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 
 .save.light:hover{
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
     font-weight: bold;
+    background-color: #d27f5d;
 }
 
 .save.dark:hover{
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
     font-weight: bold;
+    background-color: black;
 }
 
 @media (orientation: portrait){

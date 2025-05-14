@@ -28,16 +28,21 @@ function Login() {
     //The user can change their username or password
     if (changeDetails) {
       if(username && password) {
-        setUserDetails({ username, password});
+        const updatedDetails ={username, password};
+        setUserDetails(updatedDetails);
+        localStorage.setItem("userDetails", JSON.stringify(updatedDetails)); 
         alert("You have successfully updated your details!");
-        setChangeDetails(true);
+        setChangeDetails(false);
+        setUsername("");
+        setPassword("");
+        return;
       }
 
     //The user can sign up and get a successful alert
     } else if (isSigningUp) {
     if (signUp(username, password)) {
       alert("You have successfully signed up!");
-      setIsSigningUp(true);
+      setIsSigningUp(false);
       } 
      } else {
       //When they log back in, they will get an alert if they have entered inccoreect details
