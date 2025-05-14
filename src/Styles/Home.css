@@ -101,7 +101,7 @@
 }
 
 .sidebar-item.dark:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
 }
 
@@ -120,7 +120,7 @@
   margin-top: 3rem;
 }
 
-.searchbar{
+.searchbar.light{
   width: 50rem;
   height: 2rem;
   border-radius: 5rem;
@@ -132,15 +132,41 @@
   font-weight: medium;
 }
 
-.searchbar:focus{
+.searchbar.light:focus{
   outline: none;
   border: solid 1.75px black;
   box-shadow: none;
   background-color: white;
 }
 
-.searchbar::placeholder{
+.searchbar.dark{
+  width: 50rem;
+  height: 2rem;
+  border-radius: 5rem;
+  font-size: 1rem;
+  border: solid 1px black;
+  padding-left: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background-color: #7f8080;
   font-weight: 600;
+  color: black;
+}
+
+.searchbar.dark:focus{
+  outline: none;
+  border: solid 1.75px black;
+  box-shadow: none;
+  background-color: #7f8080;
+
+}
+
+.searchbar.light::placeholder{
+  font-weight: 600;
+}
+
+.searchbar.dark::placeholder{
+  font-weight: 600;
+  color: black;
 }
      
 .filter.light{
@@ -211,8 +237,12 @@
 }
 
 .logout-home.dark:hover, .filter.dark:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
+}
+
+.logout-home.dark:hover{
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.37);
 }
 
 @media (orientation: portrait){

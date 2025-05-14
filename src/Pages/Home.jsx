@@ -53,8 +53,8 @@ const [searchQuery, setSearchQuery] = useState("");
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
-      <section><input className="searchbar" type="search" placeholder="Search..." onSearch={setSearchQuery}/></section>
-      <section><button className={`logout-home  ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
+      <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onSearch={setSearchQuery}/></section>
+      <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
       </section>
     </nav>

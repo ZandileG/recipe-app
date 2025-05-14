@@ -89,7 +89,7 @@ right: 2rem;
 
 .nav-item1.dark.active, .nav-item2.dark.active, 
 .nav-item3.dark.active, .nav-item4.dark.active{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
 }
 
@@ -100,7 +100,7 @@ right: 2rem;
 
 .nav-item1.dark:hover, .nav-item2.dark:hover, 
 .nav-item3.dark:hover, .nav-item4.dark:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
 }
 
@@ -112,7 +112,7 @@ right: 2rem;
 
 .nav-item1.dark.active:hover, .nav-item2.dark.active:hover, 
 .nav-item3.dark.active:hover, .nav-item4.dark.active:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   cursor: default;
 }
 
@@ -156,7 +156,8 @@ right: 2rem;
 }
 
 .logout.dark:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.37);
   color: black;
 }
 

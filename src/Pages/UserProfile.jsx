@@ -8,7 +8,10 @@ import Footer from "../Components/Footer";
 import UserImage from "../Images/User Icon.png";
 import UserImage2 from "../Images/User Icon Dark.png";
 import CreateIcon from "../Images/Create.png";
+import CreateIcon2 from "../Images/Create2.png";
+
 import SavedIcon from "../Images/Save.png";
+import SavedIcon2 from "../Images/Save2.png";
 import "../Styles/UserProfile.css";
 
 function UserProfile() {
@@ -49,12 +52,14 @@ function savedRecipes(){
 
     <section className="tabs">
     <section className={`tab ${theme}`} onClick={createRecipe}>
-    <section className="tab1"><img className="create-icon" src={CreateIcon} alt="Create" /></section>
+    <section className="tab1"><img className={`create-icon ${theme}`} src={CreateIcon} alt="Create" /></section>
+    <section className="tab1"><img className={`create-icon2 ${theme}`} src={CreateIcon2} alt="Create" /></section>
     <section className={`tab2 ${theme}`}>Your Recipes</section>
     </section>
 
     <section className={`tab ${theme}`} onClick={savedRecipes}>
-      <section className="tab1"><img className="save-icon" src={SavedIcon} alt="Save" /></section>
+      <section className="tab1"><img className={`save-icon ${theme}`} src={SavedIcon} alt="Save" /></section>
+      <section className="tab1"><img className={`save-icon2 ${theme}`} src={SavedIcon2} alt="Save" /></section>
       <section className={`tab2 ${theme}`}>Saved Recipes</section>
       </section>
     </section>

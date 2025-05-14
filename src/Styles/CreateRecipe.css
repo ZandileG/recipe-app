@@ -27,7 +27,7 @@
   gap: 1rem;
   padding: 2rem;
   margin: 1rem;
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   border: solid 1.75px black;
 }
 
@@ -223,7 +223,7 @@ label{
 
 .slot.dark{
     border: solid 1px #3c3c3b;
-    background-color: #d5c8b0;
+    background-color: #7f8080;
     color: black;
     border-radius: 0.5rem;
     position: relative;
