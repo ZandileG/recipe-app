@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ThemeContext } from '../Context/ThemeContext';
 
-import "../Styles/Navbar.css";
-
 import UserImage from "../Images/User Icon.webp";
+import Hamburger from "../Images/Hamburger.png";
 import Logo from "../Images/Logo.webp";
+import "../Styles/Navbar.css";
 
 function Navbar() {
   const {theme} = useContext(ThemeContext);
+  const [isOpen, setIsOpen] = useState(true);
   
     const navigate = useNavigate();
     const location = useLocation();
@@ -38,6 +39,10 @@ function Navbar() {
     navigate("/create-recipe");
   }
 
+  function openSidebar(){
+    setIsOpen(true);
+  }
+
   return (
       <header>
       <nav>
@@ -51,7 +56,11 @@ function Navbar() {
         <section className={`nav-item2 ${theme} ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
         <section className={`nav-item3 ${theme} ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
         <section className={`nav-item4 ${theme} ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
-
+        
+        <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <img src={Hamburger} alt="Hamburger" />
+        </button>
+        
         <button className={`logout ${theme}`} onClick={handleLogOut}>Log Out</button>
         <section className="nav-item5">
         <button className={`user-profile-nav ${theme} ${location.pathname === "/user-profile" ? "active" : ""}`} type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>

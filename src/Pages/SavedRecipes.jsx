@@ -7,6 +7,7 @@ import RecipeCard from "../Components/RecipeCard";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
+import Close from "../Images/Close.png";
 import "../Styles/SavedRecipes.css";
 
 function SavedRecipes() {

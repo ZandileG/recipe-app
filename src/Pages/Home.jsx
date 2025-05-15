@@ -5,11 +5,12 @@ import { ThemeContext } from '../Context/ThemeContext';
 import RecipeList from "../Components/RecipeList";
 import Footer from "../Components/Footer";
 
-import Logo from "../Images/Logo.webp";
 import Indicator from "../Images/Indicator.webp";
 import UserImage from "../Images/User Icon.webp";
 import Hamburger from "../Images/Hamburger.png";
 import Close from "../Images/Close.png";
+import Logo from "../Images/Logo.webp";
+
 import "../Styles/Home.css";
 
 function Home() {

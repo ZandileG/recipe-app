@@ -5,6 +5,7 @@ import { LoginContext } from "../Context/LoginContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Close from "../Images/Close.png";
 
 import UserImage from "../Images/User Icon.png";
 import UserImage2 from "../Images/User Icon Dark.png";

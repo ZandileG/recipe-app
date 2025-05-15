@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import Delete from "../Images/Delete.png";
+import Close from "../Images/Close.png";
 import "../Styles/CreateRecipe.css";
 
 function CreateRecipe() {
 const {theme} = useContext(ThemeContext);
+const [isOpen, setIsOpen] = useState(true);
 
 //This is a function that makes sure that the input box increases line by line as the user types
   function increaseBox(e) {
@@ -21,15 +23,23 @@ function addRecipe(){
 
 }
 
+function closeSidebar(){
+    setIsOpen(false);
+  }
+
   return (
-    <main className="create-recipe-page">
+    <main className={`create-recipe-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-    <aside className={`aside ${theme}`}>
-
+    <aside className={`aside ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <h3 className="heading-center">Your Recipes</h3>
 
     <section className={`grid-sidebar ${theme}`}>
+    <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
+            e.stopPropagation();
+            closeSidebar();
+            }}>
+      <img src={Close} alt="Close" /></button>
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
