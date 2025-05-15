@@ -20,13 +20,16 @@
 .back-button, .next-button{
     background-color: rgba(255, 255, 255, 0);
     border: none;
+    transition: transform 0.3s ease;
 }
 
 .pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .back-button img, .next-button img{
@@ -34,8 +37,18 @@
     height: 2rem;
 }
 
-.back-button.disabled img, .next-button.disabled img{
- opacity: 0;
+.back-button:hover,
+.next-button:hover{
+  transform: scale(1.1);
+}
+
+.back-button:disabled img, .next-button:disabled img{
+ opacity: 0.5;
+ cursor: not-allowed;
+}
+
+.back-button:disabled:hover, .next-button:disabled:hover{
+  transform: none;
 }
 
 .recipe-card.dark{
@@ -126,8 +139,14 @@
 
 .recipe-list{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+}
+
+.recipe-list.with-sidebar {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.recipe-list.full-width {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /*This is for really small devices such as phones less than 576px)*/

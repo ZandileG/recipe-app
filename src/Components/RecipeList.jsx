@@ -8,7 +8,7 @@ import Next from "../Images/Arrow2.webp";
 
 import "../Styles/RecipeCard.css";
 
-function RecipeList({ searchQuery }) {
+function RecipeList({ searchQuery, isSidebarOpen }) {
   const navigate = useNavigate();
   
 /*This works together with the pagination button and checks if there is more data to display
@@ -22,8 +22,9 @@ function RecipeList({ searchQuery }) {
     navigate(`/recipe/${recipe.id}`);
   }
 
-//This is the number of recipes I want to see per page
-  const limit = 6;
+/*This is the number of recipes I want to see per page.
+  When the sidebar is closed, 8 and when it is open, 6.*/
+  const limit = isSidebarOpen ? 6 : 8;
 
   useEffect(() => {
     async function fetchRecipes() {
@@ -49,17 +50,16 @@ function RecipeList({ searchQuery }) {
   return() => {
     clearTimeout(timeOutFunction);
   }
-  }, [searchQuery, page]);
+  }, [searchQuery, page, limit]);
 
   return (
-    <section className="recipe-list">
+    <section className={`recipe-list ${isSidebarOpen ? "with-sidebar" : "full-width"}`}>
       {recipes.map((recipe) => (
         <section key={recipe.id} onClick={() => openRecipe(recipe)}>
         <RecipeCard recipe={recipe} />
         </section>
       ))}
 
-      <section>{/*This is an empty section I'm using to center the pagination buttons*/}</section>      
       <section className="pagination">
         <button className="back-button" onClick={() => setPage((prev) => prev - 1)} disabled={page === 0}>
           <img src={Back} alt="Back"/>
@@ -69,7 +69,6 @@ function RecipeList({ searchQuery }) {
           <img src={Next} alt="Next" />
         </button>
       </section>
-      <section>{/*Empty section*/}</section>      
       </section>
   );
 }

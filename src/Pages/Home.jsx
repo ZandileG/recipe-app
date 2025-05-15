@@ -59,15 +59,16 @@ function handleSearch(e){
   }
 
   return (
-    <main className="home-page">
+    <main className={`home-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}>
     <nav onSearch={setSearchQuery}>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
-      <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
-        <img src={Hamburger} alt="Hamburger" /></button>
       <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
+      <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <img src={Hamburger} alt="Hamburger" />
+      </button>
       <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
       </section>
@@ -122,7 +123,8 @@ function handleSearch(e){
 
     <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Recipes</h1>
-      <RecipeList searchQuery={searchQuery}/>
+
+      <RecipeList searchQuery={searchQuery} isSidebarOpen={isOpen} />
     </section>
 
     <Footer />

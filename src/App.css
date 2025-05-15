@@ -10,6 +10,12 @@
     padding: 3rem;
 } 
 
+.full-width .content {
+  grid-area: main;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .page-heading.light{
     text-align: center;
     padding-bottom: 1rem;
