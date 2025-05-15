@@ -17,6 +17,8 @@ import ThemeProvider from "./Context/ThemeContext";
 import "./App.css";
 import "./index.css";
 
+/*The user can only access the homepage if they have logged in
+  This means they have to log in each time they close and open the app*/
 function ProtectedRoute({ children }) {
   const { isLoggedIn } = useContext(LoginContext);
     return isLoggedIn ? children : <Navigate to="/" />;
@@ -28,18 +30,20 @@ function App(){
     <ThemeProvider>
     <SavedProvider>
     <BrowserRouter basename="/recipe-app">
+
     <Routes>
     <Route path="/" element={<Login />} />
     <Route path="/home"element={<ProtectedRoute><Home /></ProtectedRoute>} />
     <Route path="/recipe/:id" element={<Recipe />} />
     <Route path="/meal-planner" element={<MealPlanner />} />
     
-    <Route path="/user-profile" element={<UserProfile />} />
     <Route path="/saved-recipes" element={<SavedRecipes />} />
     <Route path="/create-recipe" element={<CreateRecipe />} />
+    <Route path="/user-profile" element={<UserProfile />} />
 
     <Route path="*" element={<NotFound />} />
     </Routes>
+
     </BrowserRouter>
     </SavedProvider>
     </ThemeProvider>

@@ -84,7 +84,7 @@
 .item.dark, .item.dark{
   border: solid 1px black;
   background-color: #3c3c3b;
-  color: white;
+  color: #f7f7f7;
   padding: 0.25rem;
   border-radius: 0.25rem;
 }
@@ -130,7 +130,7 @@
   overflow: hidden;
   border: solid 1px black;
   background-color: #3c3c3b;
-  color: white;
+  color: #f7f7f7;
   padding: 0.25rem;
   border-radius: 0.25rem;
   margin-bottom: 1rem;
@@ -169,7 +169,7 @@
 
 .save-recipe.dark{
   background-color: black;
-  color: white;
+  color: #f7f7f7;
   border: none;
   font-weight: 600;
   border-radius: 0.5rem;

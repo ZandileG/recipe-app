@@ -27,7 +27,7 @@ const saved = isSaved(recipe.id);
             e.stopPropagation();
             removeRecipe(recipe.id);
             }}/>
-          <img className="recipe-image" src={`https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp`} alt="Recipe" />
+          <img className={`recipe-image ${theme}`} src={`https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp`} alt="Recipe" />
         </section>
         <section className={`card2 ${theme}`}><h4>{recipe.name}</h4></section>
       </main>
