@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { SavedContext } from "../Context/SavedContext";
 import { ThemeContext } from '../Context/ThemeContext';
@@ -13,7 +13,8 @@ import "../Styles/SavedRecipes.css";
 function SavedRecipes() {
   const {theme} = useContext(ThemeContext);
   const { savedRecipes } = useContext(SavedContext);
-
+  const [isOpen, setIsOpen] = useState(true);
+  
   const navigate = useNavigate();
 
   function openRecipe(recipe) {
@@ -24,12 +25,23 @@ function SavedRecipes() {
       
   }
 
+  function closeSidebar(){
+    setIsOpen(false);
+  }
+
   return (
-    <main className="saved-recipes-page">
+    <main className={`saved-recipes-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-    <aside className={`sidebar ${theme}`}>
-   
+    <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
+    <section className="sidebar">
+      <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
+            e.stopPropagation();
+            closeSidebar();
+            }}>
+      <img src={Close} alt="Close" /></button>
+   </section>
+
     <h3 className="heading">Difficulty</h3>
     <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Easy</button>
     <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Medium</button>

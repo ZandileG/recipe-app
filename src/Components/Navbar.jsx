@@ -57,13 +57,13 @@ function Navbar() {
         <section className={`nav-item3 ${theme} ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
         <section className={`nav-item4 ${theme} ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
         
-        <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
-        <img src={Hamburger} alt="Hamburger" />
-        </button>
-        
         <button className={`logout ${theme}`} onClick={handleLogOut}>Log Out</button>
+
         <section className="nav-item5">
         <button className={`user-profile-nav ${theme} ${location.pathname === "/user-profile" ? "active" : ""}`} type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
+         <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <img src={Hamburger} alt="Hamburger" />
+        </button>
         </section>
       </section>
       </nav>

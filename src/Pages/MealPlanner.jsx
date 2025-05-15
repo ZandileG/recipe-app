@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
@@ -10,14 +10,27 @@ import "../Styles/MealPlanner.css";
 
 function MealPlanner() {
 const {theme} = useContext(ThemeContext);
+const [isOpen, setIsOpen] = useState(true);
+
+function closeSidebar(){
+    setIsOpen(false);
+  }
 
   return (
-    <main className="meal-planner-page">
+    <main className={`meal-planner-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-      <aside className={`aside ${theme}`}>
+      <aside className={`aside ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
+    <section className="sidebar">
+            <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
+            e.stopPropagation();
+            closeSidebar();
+            }}>
+      <img src={Close} alt="Close" /></button>
+      </section>
+
       <h3 className="heading-center">Meal Plans</h3>
-      
+
       <section className="grid-sidebar">
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>

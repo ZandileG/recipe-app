@@ -20,6 +20,10 @@
   min-height: 100vh;
 }
 
+.sidebar{
+    position: relative;
+}
+
 .full-width {
   display: grid;
   grid-template-areas: 

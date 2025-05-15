@@ -19,7 +19,8 @@ import "../Styles/UserProfile.css";
 function UserProfile() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [isOpen, setIsOpen] = useState(true);
+  
   const {setUserDetails} = useContext(LoginContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
@@ -30,6 +31,10 @@ function createRecipe(){
 
 function savedRecipes(){
     navigate("/saved-recipes");
+  }
+
+function closeSidebar(){
+    setIsOpen(false);
   }
 
 function handleSubmit(e) {
@@ -54,11 +59,17 @@ function handleSubmit(e) {
 }
 
   return (
-    <main className="user-profile-page">
+    <main className={`user-profile-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}><nav><Navbar /></nav></header>
 
-    <aside className={`sidebar ${theme}`}>
-    <section>
+    <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
+    <section className="sidebar">
+            <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
+            e.stopPropagation();
+            closeSidebar();
+            }}>
+      <img src={Close} alt="Close" /></button>
+      
       <img src={UserImage} alt="User" className={`user-image1 ${theme}`}  />
       <img src={UserImage2} alt="User" className={`user-image2 ${theme}`}  />
     </section>

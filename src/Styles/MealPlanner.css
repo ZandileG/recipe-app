@@ -20,6 +20,10 @@
   min-height: 100vh;
 }
 
+.sidebar{
+    position: relative;
+}
+
 .full-width {
   display: grid;
   grid-template-areas: 
@@ -45,7 +49,6 @@
   border: none;
   position: absolute;
   right: 0rem;
-  top: 0.25rem;
   transition: transform 0.3s ease;
 }
 
@@ -99,7 +102,6 @@
 
 .heading-center{
   text-align: center;
-  padding-top: 1rem;
 }
 
 .col1{
