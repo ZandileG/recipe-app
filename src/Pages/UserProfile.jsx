@@ -49,7 +49,7 @@ function handleSubmit(e) {
   alert("You have successfully updated your details! Please log in again.");
   setUsername("");
   setPassword("");
-  navigate("/login");
+  navigate("/");
 }
 
   return (

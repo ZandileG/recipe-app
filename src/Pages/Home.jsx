@@ -28,7 +28,7 @@ function handleSearch(e){
   }
 
   function handleLogOut(){
-    navigate("/login");
+    navigate("/");
   }
 
   function userProfile() {

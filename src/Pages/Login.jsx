@@ -48,7 +48,7 @@ function Login() {
       
     //When they log back in, they will get an alert if they have entered incorrect details
       if (login(username, password)) {
-        navigate("/");
+        navigate("/home");
       } else {
         setError("Incorrect username or password. Please try again.");
         setUsername("");

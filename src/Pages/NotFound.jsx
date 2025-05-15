@@ -10,7 +10,7 @@ function NotFound() {
 //When the user enters an incorrect file path, they will land on this page
 //They can then click on the Home button to get back to the app 
   function home(){
-    navigate("/");
+    navigate("/home");
   }
 
   return (

@@ -1,5 +1,6 @@
-import React  from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, {useContext}  from "react";
+import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
+import { LoginContext } from "./Context/LoginContext";
 
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -16,6 +17,11 @@ import ThemeProvider from "./Context/ThemeContext";
 import "./App.css";
 import "./index.css";
 
+function ProtectedRoute({ children }) {
+  const { isLoggedIn } = useContext(LoginContext);
+    return isLoggedIn ? children : <Navigate to="/" />;
+}
+
 function App(){
   return( 
     <LoginProvider>
@@ -23,8 +29,8 @@ function App(){
     <SavedProvider>
     <BrowserRouter basename="/recipe-app">
     <Routes>
-    <Route path="/login" element={<Login />} />
-    <Route path="/"element={<Home />} />
+    <Route path="/" element={<Login />} />
+    <Route path="/home"element={<ProtectedRoute><Home /></ProtectedRoute>} />
     <Route path="/recipe/:id" element={<Recipe />} />
     <Route path="/meal-planner" element={<MealPlanner />} />
     

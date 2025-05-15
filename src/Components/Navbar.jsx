@@ -15,11 +15,11 @@ function Navbar() {
 
   //These are functions to navigate to different pages when the nav items are clicked
     function home() {
-      navigate("/");
+      navigate("/home");
     }
   
     function handleLogOut(){
-      navigate("/login");
+      navigate("/");
     } 
     
     function mealPlanner() {
@@ -47,7 +47,7 @@ function Navbar() {
 
       <section className="navbar">
         {/*When the user is on a certain page, I will style the active nav item in a different colour*/}
-        <section className={`nav-item1 ${theme} ${location.pathname === "/" ? "active" : ""}`} onClick={home}>Home</section>
+        <section className={`nav-item1 ${theme}`} onClick={home}>Home</section>
         <section className={`nav-item2 ${theme} ${location.pathname === "/meal-planner" ? "active" : ""}`} onClick={mealPlanner}>Meal Planner</section>
         <section className={`nav-item3 ${theme} ${location.pathname === "/saved-recipes" ? "active" : ""}`} onClick={savedRecipes}>Saved Recipes</section>
         <section className={`nav-item4 ${theme} ${location.pathname === "/create-recipe" ? "active" : ""}`} onClick={createRecipe}>Create Recipe</section>
