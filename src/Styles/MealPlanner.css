@@ -162,22 +162,31 @@ th.light, td.light{
   transition: transform 0.3s ease;
 }
 
-.delete:hover, .edit:hover{
+.delete:hover{
   transform: scale(1);
 }
 
+.edit:hover{
+  background-color: #d5c8b0;
+}
+
 .edit{
-  border-radius: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 0.125rem;
+  background-color: #d27f5d;
+  border-radius: 0.3rem;
+  border-left: none;
+  border-bottom: none;
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  height: 1.75rem;
+  width: 3rem;
   cursor: pointer; 
   bottom: 0;
-  left: 0;
-  padding: 0.125rem;
+  margin: auto;
+  right: 2rem;
+  left: 2rem;
   position: absolute;
   z-index: 1;
-  transition: transform 0.3s ease;
+  font-weight: 600;
 }
 
 .save.light{
@@ -203,10 +212,35 @@ th.light, td.light{
     background-color: black;
 }
 
-@media (orientation: portrait){
-    
+/*This is for really small devices such as phones less than 576px)*/
+@media (max-width: 575.98px){
+
 }
 
-@media (orientation: landscape){
-    
+/*This is for small devices that are 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px){
+
 }
+
+/*This is for medium devices such as tablets that are 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+
+/*This is for large devices such as desktops that are 992px and up*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+}
+
+/*This is for extra large devices that are 1200px and up*/
+@media (min-width: 1200px){
+
+}
+
+@media (orientation: portrait){
+    
+  }
+  
+@media (orientation: landscape){
+      
+  }

@@ -25,6 +25,42 @@
     color: #f7f7f7;
 }
 
+.hidden{
+  display: none;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.close{
+  z-index: 1;
+  background-color: #3c3c3b00;
+  border: none;
+  position: absolute;
+  right: 0rem;
+  top: 0.25rem;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+.hamburger{
+  background-color: #3c3c3b00;
+  border: none;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+.hamburger img{
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.close img{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
   nav{
     display: flex;
     justify-content: space-between; 
@@ -53,7 +89,7 @@
   transition: transform 0.3s ease;
 }
 
-.user-profile img:hover{
+.user-profile img:hover, .close:hover, .hamburger:hover{
   transform: scale(1.05);
 }
 
@@ -80,6 +116,7 @@
 }
 
 .sidebar-item.light{
+  position: relative;
   padding-top: 1.5rem;
   border-bottom: solid 1.75px black;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -89,6 +126,7 @@
 }
 
 .sidebar-item.dark{
+  position: relative;
   padding-top: 1.5rem;
   border-bottom: solid 1.75px #3c3c3b;
   font-weight: bold;
@@ -248,6 +286,31 @@
 
 .logout-home.dark:hover{
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.37);
+}
+
+/*This is for really small devices such as phones less than 576px)*/
+@media (max-width: 575.98px){
+
+}
+
+/*This is for small devices that are 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px){
+
+}
+
+/*This is for medium devices such as tablets that are 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+
+/*This is for large devices such as desktops that are 992px and up*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+}
+
+/*This is for extra large devices that are 1200px and up*/
+@media (min-width: 1200px){
+
 }
 
 @media (orientation: portrait){

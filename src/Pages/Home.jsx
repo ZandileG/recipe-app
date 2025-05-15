@@ -8,6 +8,8 @@ import Footer from "../Components/Footer";
 import Logo from "../Images/Logo.webp";
 import Indicator from "../Images/Indicator.webp";
 import UserImage from "../Images/User Icon.webp";
+import Hamburger from "../Images/Hamburger.png";
+import Close from "../Images/Close.png";
 import "../Styles/Home.css";
 
 function Home() {
@@ -16,6 +18,7 @@ function Home() {
 
 const [search, setSearch] = useState("");
 const [searchQuery, setSearchQuery] = useState("");
+const [isOpen, setIsOpen] = useState(true);
 
 function handleSearch(e){
   setSearch(e.target.value);
@@ -47,6 +50,14 @@ function handleSearch(e){
     navigate("/create-recipe");
   }
 
+  function closeSidebar(){
+    setIsOpen(false);
+  }
+
+  function openSidebar(){
+    setIsOpen(true);
+  }
+
   return (
     <main className="home-page">
     <header className={`header ${theme}`}>
@@ -54,6 +65,8 @@ function handleSearch(e){
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
+      <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <img src={Hamburger} alt="Hamburger" /></button>
       <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
       <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
@@ -61,8 +74,13 @@ function handleSearch(e){
     </nav>
     </header>
 
-    <aside className={`sidebar ${theme}`}>
+    <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className={`sidebar-item ${theme}`} onClick={mealPlanner}>
+      <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
+            e.stopPropagation();
+            closeSidebar();
+            }}>
+      <img src={Close} alt="Close" /></button>
       Meal Planner
     <section className="indicator-section">
         <img onClick={mealPlanner} src={Indicator} className="indicator" alt="Indicator" />
@@ -81,6 +99,8 @@ function handleSearch(e){
     <section className="indicator-section">
         <img onClick={createRecipe} src={Indicator} className="indicator" alt="Indicator" />
     </section>
+    
+    <section className="sidebar-item-hidden"></section>
     </section>
 
     <h3 className="heading">Difficulty</h3>

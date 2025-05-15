@@ -238,10 +238,35 @@ background-color: #3c3c3b;
     margin-bottom: 1rem;
 }
 
-@media (orientation: portrait){
-    
+/*This is for really small devices such as phones less than 576px)*/
+@media (max-width: 575.98px){
+
 }
 
-@media (orientation: landscape){
-    
+/*This is for small devices that are 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px){
+
 }
+
+/*This is for medium devices such as tablets that are 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px){
+
+}
+
+/*This is for large devices such as desktops that are 992px and up*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+}
+
+/*This is for extra large devices that are 1200px and up*/
+@media (min-width: 1200px){
+
+}
+
+@media (orientation: portrait){
+    
+  }
+  
+@media (orientation: landscape){
+      
+  }

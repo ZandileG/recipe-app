@@ -5,7 +5,6 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import Delete from "../Images/Delete.png";
-import Edit from "../Images/Edit.png";
 import "../Styles/CreateRecipe.css";
 
 function CreateRecipe() {
@@ -34,7 +33,7 @@ function addRecipe(){
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
       <img className="delete" src={Delete} alt="Delete" />
-      <img className="edit" src={Edit} alt="Pencil" />
+      <button className="edit">Edit</button>
       </section>
       </section>
     </aside>

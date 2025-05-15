@@ -5,7 +5,6 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 import Delete from "../Images/Delete.png";
-import Edit from "../Images/Edit.png";
 import "../Styles/MealPlanner.css";
 
 function MealPlanner() {
@@ -22,7 +21,7 @@ const {theme} = useContext(ThemeContext);
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>
       <img className="delete" src={Delete} alt="Delete" />
-      <img className="edit" src={Edit} alt="Pencil" />
+      <button className="edit">Edit</button>
       </section>
       </section>
     </aside>
