@@ -7,9 +7,8 @@ import Hamburger from "../Images/Hamburger.png";
 import Logo from "../Images/Logo.webp";
 import "../Styles/Navbar.css";
 
-function Navbar() {
+function Navbar({isOpen, openSidebar}) {
   const {theme} = useContext(ThemeContext);
-  const [isOpen, setIsOpen] = useState(true);
   
     const navigate = useNavigate();
     const location = useLocation();
@@ -37,10 +36,6 @@ function Navbar() {
 
   function createRecipe() {
     navigate("/create-recipe");
-  }
-
-  function openSidebar(){
-    setIsOpen(true);
   }
 
   return (

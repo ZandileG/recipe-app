@@ -23,13 +23,17 @@ function addRecipe(){
 
 }
 
+function openSidebar(){
+    setIsOpen(true);
+  }
+
 function closeSidebar(){
     setIsOpen(false);
   }
 
   return (
     <main className={`create-recipe-page ${isOpen ? "with-sidebar" : "full-width"}`}>
-    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar isOpen={isOpen} openSidebar={openSidebar} /></nav></header>
 
     <aside className={`aside ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className="sidebar">
@@ -41,7 +45,8 @@ function closeSidebar(){
     </section>
 
     <h3 className="heading-center">Your Recipes</h3>
-    
+    <p className="bold">You have not created any recipes.</p>
+
     <section className={`grid-sidebar ${theme}`}>
 
     <section className={`slot ${theme}`}>

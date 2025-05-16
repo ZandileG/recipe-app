@@ -12,13 +12,17 @@ function MealPlanner() {
 const {theme} = useContext(ThemeContext);
 const [isOpen, setIsOpen] = useState(true);
 
+function openSidebar(){
+    setIsOpen(true);
+  }
+
 function closeSidebar(){
     setIsOpen(false);
   }
 
   return (
     <main className={`meal-planner-page ${isOpen ? "with-sidebar" : "full-width"}`}>
-    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar isOpen={isOpen} openSidebar={openSidebar} /></nav></header>
 
       <aside className={`aside ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className="sidebar">
@@ -30,6 +34,7 @@ function closeSidebar(){
       </section>
 
       <h3 className="heading-center">Meal Plans</h3>
+      <p className="bold">You have not created any meal plans.</p>
 
       <section className="grid-sidebar">
       <section className={`block ${theme}`}>

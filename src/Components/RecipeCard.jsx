@@ -14,7 +14,7 @@ const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
 const saved = isSaved(recipe.id); 
 
   return (
-      <main className={`recipe-card ${theme}`}>
+      <main className={`recipe-card ${theme} ${saved}`}>
         <section className="card1">
            <img className={`save-shortcut ${saved ? "hidden" : "inline-block"}`} src={Save} alt="Save"  
            onClick={e => { /*This makes sure that the recipe doesn't open when the recipe is being saved*/

@@ -10,7 +10,7 @@ import Footer from "../Components/Footer";
 import Close from "../Images/Close.png";
 import "../Styles/SavedRecipes.css";
 
-function SavedRecipes() {
+function SavedRecipes({isSidebarOpen}) {
   const {theme} = useContext(ThemeContext);
   const { savedRecipes } = useContext(SavedContext);
   const [isOpen, setIsOpen] = useState(true);
@@ -25,13 +25,17 @@ function SavedRecipes() {
       
   }
 
+  function openSidebar(){
+    setIsOpen(true);
+  }
+
   function closeSidebar(){
     setIsOpen(false);
   }
 
   return (
     <main className={`saved-recipes-page ${isOpen ? "with-sidebar" : "full-width"}`}>
-    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar isOpen={isOpen} openSidebar={openSidebar} /></nav></header>
 
     <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className="sidebar">
@@ -63,7 +67,7 @@ function SavedRecipes() {
     <h1 className={`page-heading ${theme}`}>Saved Recipes</h1>
 
 {/*This displays the user's saved recipes*/}
-  <section className="recipe-list">
+  <section className={`recipe-list ${isSidebarOpen ? "with-sidebar" : "full-width"}`}>
       {savedRecipes.length > 0 ? (
             savedRecipes.map((recipe) => (
               <section key={recipe.id} onClick={() => openRecipe(recipe)}>
@@ -72,9 +76,7 @@ function SavedRecipes() {
             ))
           ) : (
             <Fragment>
-            <section>{/*Empty section*/}</section>
             <p className={`nothing ${theme}`}>You have no saved recipes.</p>
-            <section>{/*Empty section*/}</section>
             </Fragment>
           )}
         </section>

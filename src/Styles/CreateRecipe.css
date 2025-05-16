@@ -9,6 +9,10 @@
     min-height: 100vh;
   }
 
+.bold{
+  font-weight: 600;
+}
+
 .with-sidebar {
   display: grid;
   grid-template-areas: 
@@ -304,9 +308,9 @@ label{
 .edit{
   background-color: #d27f5d;
   border-radius: 0.3rem;
-  border-left: none;
   border-bottom: none;
   border-top: solid 1px black;
+  border-left: solid 1px black;
   border-right: solid 1px black;
   height: 1.75rem;
   width: 3rem;

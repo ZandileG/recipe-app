@@ -33,6 +33,10 @@ function savedRecipes(){
     navigate("/saved-recipes");
   }
 
+function openSidebar(){
+    setIsOpen(true);
+  }
+
 function closeSidebar(){
     setIsOpen(false);
   }
@@ -60,7 +64,7 @@ function handleSubmit(e) {
 
   return (
     <main className={`user-profile-page ${isOpen ? "with-sidebar" : "full-width"}`}>
-    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}><nav><Navbar isOpen={isOpen} openSidebar={openSidebar} /></nav></header>
 
     <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className="sidebar">

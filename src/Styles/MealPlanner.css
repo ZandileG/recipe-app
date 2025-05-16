@@ -231,9 +231,9 @@ th.light, td.light{
 .edit{
   background-color: #d27f5d;
   border-radius: 0.3rem;
-  border-left: none;
   border-bottom: none;
   border-top: solid 1px black;
+  border-left: solid 1px black;
   border-right: solid 1px black;
   height: 1.75rem;
   width: 3rem;
