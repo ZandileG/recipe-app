@@ -63,7 +63,7 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Monday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option name="" value=""></option>
                 </select>
               </td>
 

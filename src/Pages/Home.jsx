@@ -17,12 +17,10 @@ function Home() {
   const navigate = useNavigate();
   const {theme} = useContext(ThemeContext);
 
-const [search, setSearch] = useState("");
 const [searchQuery, setSearchQuery] = useState("");
 const [isOpen, setIsOpen] = useState(true);
 
 function handleSearch(e){
-  setSearch(e.target.value);
   setSearchQuery(e.target.value);
 }
 
