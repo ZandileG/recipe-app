@@ -68,7 +68,7 @@
   height: 1.25rem;
 } 
 
-  .meal{
+.meal{
     width: 12rem;
     height: 12rem;
     position: absolute;
@@ -228,7 +228,7 @@ th.light, td.light{
   background-color: #d5c8b0;
 }
 
-.edit{
+.edit.light{
   background-color: #d27f5d;
   border-radius: 0.3rem;
   border-bottom: none;
@@ -245,6 +245,26 @@ th.light, td.light{
   position: absolute;
   z-index: 1;
   font-weight: 600;
+}
+
+.edit.dark{
+  background-color: #3c3c3b;
+  color: white;
+  border-radius: 0.3rem;
+  border-bottom: none;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  height: 1.75rem;
+  width: 3rem;
+  cursor: pointer; 
+  bottom: 0;
+  margin: auto;
+  right: 2rem;
+  left: 2rem;
+  position: absolute;
+  z-index: 1;
+  font-weight: 600; 
 }
 
 .save.light{

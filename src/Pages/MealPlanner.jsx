@@ -40,7 +40,7 @@ function closeSidebar(){
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>
       <img className="delete" src={Delete} alt="Delete" />
-      <button className="edit">Edit</button>
+      <button className={`edit ${theme}`}>Edit</button>
       </section>
       </section>
     </aside>

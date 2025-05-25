@@ -2,11 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ThemeContext } from '../Context/ThemeContext';
 
-import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import Navbar from "../Components/Navbar";
 import axios from "axios";
 import "../Styles/Recipe.css";
+import "../Styles/Navbar.css";
 
 function Recipe() {
 const { id } = useParams();
@@ -19,12 +19,20 @@ useEffect(() => {
       .catch(err => console.error(err));
   }, [id]);
 
-//This is just a way to give the user feedback if it takes long for the data to load
-  if (!recipe) return <p>Loading...</p>;
+   const [isOpen, setIsOpen] = useState(true);
+   
+   function openSidebar(){
+       setIsOpen(true);
+     }
+
+//This is a loading text to give the user feedback if it takes long for the data to load
+  if (!recipe) return <p className={`loading ${theme}`}>Loading...</p>;
 
   return (
     <main className="recipe-page">
-    <header className={`header ${theme}`}><nav><Navbar /></nav></header>
+    <header className={`header ${theme}`}>
+      <nav><Navbar isOpen={isOpen} openSidebar={openSidebar} /></nav>
+    </header>
 
     <section className={`content ${theme}`}>
         <section className={`recipe-page-grid ${theme}`}>
