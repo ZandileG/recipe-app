@@ -5,7 +5,6 @@ import { ThemeContext } from '../Context/ThemeContext';
 import RecipeList from "../Components/RecipeList";
 import Footer from "../Components/Footer";
 
-import Indicator from "../Images/Indicator.webp";
 import UserImage from "../Images/User Icon.webp";
 import Hamburger from "../Images/Hamburger.png";
 import Close from "../Images/Close.png";
@@ -65,41 +64,32 @@ function handleSearch(e){
       
       <section className="navbar-home">
       <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
-      <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
-        <img src={Hamburger} alt="Hamburger" />
-      </button>
+      
       <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
       <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
+      <button type="button" className={`hamburger-home ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <img src={Hamburger} alt="Hamburger" />
+      </button>
       </section>
     </nav>
     </header>
 
     <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
-    <section className={`sidebar-item ${theme}`} onClick={mealPlanner}>
+    <section className={`sidebar-item ${theme}`} onClick={savedRecipes}>
       <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
             e.stopPropagation();
             closeSidebar();
             }}>
       <img src={Close} alt="Close" /></button>
-      Meal Planner
-    <section className="indicator-section">
-        <img onClick={mealPlanner} src={Indicator} className="indicator" alt="Indicator" />
-    </section>
+      Saved Recipes
     </section>
 
-    <section className={`sidebar-item ${theme}`} onClick={savedRecipes}>
-      Saved Recipes
-    <section className="indicator-section">
-        <img onClick={savedRecipes} src={Indicator} className="indicator" alt="Indicator" />
-    </section>
+    <section className={`sidebar-item ${theme}`} onClick={mealPlanner}>
+      Meal Planner
     </section>
 
      <section className={`sidebar-item ${theme}`} onClick={createRecipe}>
-      Create Recipe
-    <section className="indicator-section">
-        <img onClick={createRecipe} src={Indicator} className="indicator" alt="Indicator" />
-    </section>
-    
+      Create Recipe    
     <section className="sidebar-item-hidden"></section>
     </section>
 

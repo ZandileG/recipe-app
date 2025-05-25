@@ -7,14 +7,25 @@
 }
 
 .hamburger{
-  background-color: #3c3c3b00;
+  background-color: transparent;
   border: none;
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.75rem;
   transition: transform 0.3s ease;
 }
 
 .hamburger img{
-  width: 1.75rem;
-  height: 1.75rem;
+  background-color: white;
+  padding: 0.25rem;
+  border: solid 2.25px black;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.hamburger:hover{
+  transform: scale(1.05);
 }
 
 .header.light{
@@ -80,6 +91,12 @@ right: 2rem;
   padding: 2rem;  
   font-weight: 600;
   cursor: pointer;
+}
+
+.nav-item5{
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .user-profile-nav{

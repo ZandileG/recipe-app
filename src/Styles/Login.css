@@ -49,17 +49,6 @@
   transition: transform 0.3s ease;
 }
 
-.hamburger{
-  background-color: #3c3c3b00;
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.hamburger img{
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
 .close img{
   width: 1.25rem;
   height: 1.25rem;

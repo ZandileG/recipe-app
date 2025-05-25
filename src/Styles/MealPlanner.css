@@ -58,21 +58,10 @@
   transition: transform 0.3s ease;
 }
 
-.hamburger{
-  background-color: #3c3c3b00;
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.hamburger img{
+.close img{
   width: 1.75rem;
   height: 1.75rem;
 }
-
-.close img{
-  width: 1.25rem;
-  height: 1.25rem;
-} 
 
 .meal{
     width: 12rem;
@@ -139,8 +128,8 @@ th.light, td.light{
   }
 
   table.light{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    width: 100%;
+    height: auto;
     margin-bottom: 1rem;
     border: solid 1.75px black; 
     background-color: white;
@@ -149,8 +138,8 @@ th.light, td.light{
   }
   
   table.dark{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    width: 100%;
+    height: auto;
     margin-bottom: 1rem;
     border: solid 1.75px #3c3c3b; 
     background-color: #7f8080;
