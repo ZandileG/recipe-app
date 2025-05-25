@@ -51,7 +51,7 @@ function closeSidebar(){
         <table className={`table ${theme}`}>
           <thead>
           <tr>
-          <th scope="col" className={`save ${theme}`}>Save</th>
+          <th scope="col" className={`save ${theme}`}><button>Save</button></th>
           <th scope="col" className={`th ${theme}`}>Breakfast</th>
           <th scope="col" className={`th ${theme}`}>Lunch</th>
           <th scope="col" className={`th ${theme}`}>Dinner</th>

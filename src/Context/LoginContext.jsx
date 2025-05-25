@@ -3,7 +3,9 @@ import React, { createContext, useEffect, useState } from "react";
 export const LoginContext = createContext();
 
 function LoginProvider({ children }) {
-const [isLoggedIn, setIsLoggedIn] = useState(false); 
+const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
 
 //if a user was previously logged in, their details would be saved in localStorage so those details will be loaded
 const [userDetails, setUserDetails] = useState(() => {
@@ -18,6 +20,11 @@ useEffect(() => {
     localStorage.removeItem("userDetails");
   }
 }, [userDetails]);
+
+//This makes sure that when th epage reloads, the user is still logged in
+  useEffect(() => {
+    localStorage.setItem("isLoggedIn", isLoggedIn);
+  }, [isLoggedIn]);
 
 //A new user can sign up on my app and their details will be stored in local storage.
 function signUp(username, password) {
@@ -42,6 +49,7 @@ function login(username, password) {
 
 function logout(){
     setIsLoggedIn(false);
+    localStorage.setItem("isLoggedIn", "false");
     localStorage.removeItem("isLoggedIn");
 }
 

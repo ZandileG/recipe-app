@@ -17,6 +17,11 @@
   transition: transform 0.3s ease;
 }
 
+.recipe-card button{
+  background-color: transparent;
+  border: none;
+}
+
 .back-button, .next-button{
     background-color: rgba(255, 255, 255, 0);
     border: none;

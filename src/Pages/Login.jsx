@@ -74,8 +74,7 @@ function Login() {
     </section>
     
     {!isSigningUp && !changeDetails && (
-    <p className="login-change" onClick={() => 
-      {setChangeDetails(true); 
+    <p className="login-change" onClick={() => {setChangeDetails(true); 
        setUsername(""); 
        setPassword("");
     }}>Update Details</p>)}

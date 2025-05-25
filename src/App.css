@@ -56,11 +56,16 @@
     width: 1.75rem;
     height: 1.75rem;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .back-top:hover{
-    width: 2rem;
-    height: 2rem;
+    transform: scale(1.1);
+}
+
+.footer button{
+    background-color: transparent;
+    border: none;
 }
 
 .container{
@@ -69,18 +74,20 @@
 
 .not-found-page{
     text-align: center;
+    background-color: #d5c8b0;
+    min-height: 100vh;
 }
 
 .not-found-page img{
     margin-top: 5rem;
     width: 25rem;
     height: 25rem;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     border: solid 1.75px black;
 }
 
 .back-home{
-  background-color: #d5c8b0;
+  background-color: #a6b26d;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   border-right: solid 1.75px black;
   border-bottom: solid 1.75px black;
@@ -95,8 +102,7 @@
 }
 
 .back-home:hover{
-    background-color: #957357;
-    color: white;
+    background-color: #d27f5d;
 }
 
 /*This is for really small devices such as phones less than 576px)*/

@@ -52,6 +52,21 @@ function RecipeList({ searchQuery, isSidebarOpen }) {
   }
   }, [searchQuery, page, limit]);
 
+
+//This is keyboard navigation for the pagination buttons
+useEffect(() => {
+  function handleKeyDown(e) {
+    if (e.key === "ArrowLeft" && page > 0) {
+      setPage((prev) => prev - 1);
+    }
+    if (e.key === "ArrowRight" && hasMore) {
+      setPage((prev) => prev + 1);
+    }
+  }
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [page, hasMore]);
+
   return (
     <section className={`recipe-list ${isSidebarOpen ? "with-sidebar" : "full-width"}`}>
       {recipes.map((recipe) => (

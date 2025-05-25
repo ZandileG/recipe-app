@@ -16,7 +16,7 @@ const {theme} = useContext(ThemeContext);
   return (
       <section className={`footer ${theme}`}>
       <section className="container">
-      <img src={Arrow} alt="Arrow" className="back-top" onClick={scrollToTop}/>
+      <button><img src={Arrow} alt="Arrow" className="back-top" onClick={scrollToTop}/></button>
       </section>
       
       <p className={`footer-text ${theme}`}>Brought to you by Zandile Gebuza 2025</p>

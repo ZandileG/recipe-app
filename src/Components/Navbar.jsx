@@ -55,8 +55,8 @@ function Navbar({isOpen, openSidebar}) {
         <button className={`logout ${theme}`} onClick={handleLogOut}>Log Out</button>
 
         <section className="nav-item5">
-        <button className={`user-profile-nav ${theme} ${location.pathname === "/user-profile" ? "active" : ""}`} type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
-         <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
+        <button className="user-profile-nav" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
+        <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
         <img src={Hamburger} alt="Hamburger" />
         </button>
         </section>

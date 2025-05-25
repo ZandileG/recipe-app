@@ -16,17 +16,17 @@ const saved = isSaved(recipe.id);
   return (
       <main className={`recipe-card ${theme} ${saved}`}>
         <section className="card1">
-           <img className={`save-shortcut ${saved ? "hidden" : "inline-block"}`} src={Save} alt="Save"  
+           <button><img className={`save-shortcut ${saved ? "hidden" : "inline-block"}`} src={Save} alt="Save"  
            onClick={e => { /*This makes sure that the recipe doesn't open when the recipe is being saved*/
             e.stopPropagation();
             saveRecipe(recipe);
-            }}/>
+            }}/></button>
 
-           <img className={`delete-shortcut ${saved ? "inline-block" : "hidden"}`} src={Delete} alt="Delete" 
+           <button><img className={`delete-shortcut ${saved ? "inline-block" : "hidden"}`} src={Delete} alt="Delete" 
            onClick={e => {
             e.stopPropagation();
             removeRecipe(recipe.id);
-            }}/>
+            }}/></button>
           <img className={`recipe-image ${theme}`} src={`https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp`} alt="Recipe" />
         </section>
         <section className={`card2 ${theme}`}><h4>{recipe.name}</h4></section>

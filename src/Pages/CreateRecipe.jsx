@@ -3,6 +3,7 @@ import { ThemeContext } from '../Context/ThemeContext';
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Add from "../Images/Add.png";
 
 import Delete from "../Images/Delete.png";
 import Close from "../Images/Close.png";
@@ -118,23 +119,84 @@ function closeSidebar(){
         <input className={`item ${theme}`} type="text"/>
         </section>
 
-         <section>
+        <section>
         <label>Ingredient 7: </label>
         <input className={`item ${theme}`} type="text"/>
         </section>
 
-         <section>
+        <section>
         <label>Ingredient 8: </label>
         <input className={`item ${theme}`} type="text"/>
         </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 9: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 10: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 11: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 12: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 13: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 14: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 15: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 16: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 17: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+         <section className="hidden-ingredient">
+        <label>Ingredient 18: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 19: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
+
+        <section className="hidden-ingredient">
+        <label>Ingredient 20: </label>
+        <input className={`item ${theme}`} type="text"/>
+        </section>
       </section>
+      <button><img src={Add} alt="Add" /></button>
       </section>
 
       <section className={`item3 ${theme}`}>
         <p className="form-heading">Enter your instructions</p>
         <textarea className={`large-input ${theme}`} onInput={increaseBox}></textarea>
         
-        <section classNme="save-container">
+        <section className="save-container">
         <button type="submit" className={`save-recipe ${theme}`}>Save</button>
         </section>
       </section>

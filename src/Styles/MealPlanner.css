@@ -20,6 +20,12 @@
   min-height: 100vh;
 }
 
+.save button{
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+}
+
 .sidebar{
     position: relative;
 }
