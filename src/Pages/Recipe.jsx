@@ -37,9 +37,9 @@ useEffect(() => {
     <section className={`content ${theme}`}>
         <section className={`recipe-page-grid ${theme}`}>
           <section className={`grid-col1 ${theme}`}>
+            <img src={recipe.image} className="recipe-details-image" alt="Recipe" />
             <h1 className={`page-heading1 ${theme}`}>{recipe.name}</h1>
-            <img src={recipe.image} alt="Recipe" />
-            
+
             <section className={`in-line ${theme}`}><p className="in-line-heading">Difficulty: </p>
             <p>{recipe.difficulty}</p>
             </section>
@@ -60,12 +60,18 @@ useEffect(() => {
           <section className={`grid-col2 ${theme}`}>
             <h2 className={`page-heading2 ${theme}`}>Ingredients</h2>
             <ul className={`info-p  ${theme}`}>
-            </ul>
+            {recipe.ingredients && recipe.ingredients.map((ingredient, i) => (
+            <li key={i}>{ingredient}</li>
+            ))}</ul>
           </section>
 
           <section className={`grid-col3 ${theme}`}>
             <h2 className={`page-heading2 ${theme}`}>Instructions</h2>
-            <ul className={`info-p  ${theme}`}></ul>
+            <ul className={`info-p  ${theme}`}>
+            {recipe.instructions && recipe.instructions.map((instruction, i) => (
+            <li key={i}>{instruction}</li>
+            ))}   
+            </ul>
           </section>
         </section>
       </section>

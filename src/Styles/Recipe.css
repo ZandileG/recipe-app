@@ -21,6 +21,13 @@
     color: white;
 }
 
+.recipe-details-image{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: solid 1.75px black;
+}
+
 .page-heading1.light{
     font-size: x-large;
     text-align: center;
@@ -77,11 +84,11 @@
 }
 
 .grid-col1.light, .grid-col2.light{
-    border-right: solid 1.75px black;
+    border-right: none;
 }
 
 .grid-col1.dark, .grid-col2.dark{
-    border-right: solid 1.75px #f7f7f7;
+    border-right: none;
 }
 
 .grid-col1, .grid-col2, .grid-col3{

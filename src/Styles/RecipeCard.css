@@ -127,6 +127,8 @@
   object-fit: cover;
   border-top-right-radius: 0.65rem;
   border-top-left-radius: 0.65rem;
+  border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
 }
 
 .recipe-image.dark{
@@ -137,6 +139,8 @@
   object-fit: cover;
   border-top-right-radius: 0.65rem;
   border-top-left-radius: 0.65rem;
+   border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
 }
 
 .recipe-list{
