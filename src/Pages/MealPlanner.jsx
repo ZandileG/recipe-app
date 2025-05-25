@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";

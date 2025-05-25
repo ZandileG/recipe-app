@@ -13,6 +13,30 @@
   font-weight: 600;
 }
 
+.add-ingredient{
+  background-color: white;
+  border: solid 1.75px black;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  margin: auto;
+  margin-top: 2rem;
+  margin-left: 43.25%;
+}
+
+.add-ingredient:hover{
+  transform: scale(1.05);
+}
+
+.add-ingredient img{
+  padding-top: 0.25rem;
+  width: 1rem;
+  height: auto;
+}
+
+.hidden-ingredient{
+  display: none;
+}
+
 .with-sidebar {
   display: grid;
   grid-template-areas: 

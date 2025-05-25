@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 import UserImage from "../Images/User Icon.webp";
 import Hamburger from "../Images/Hamburger.png";

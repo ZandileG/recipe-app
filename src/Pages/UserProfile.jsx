@@ -3,17 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import { LoginContext } from "../Context/LoginContext";
 
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import Close from "../Images/Close.png";
-
 import UserImage from "../Images/User Icon.png";
 import UserImage2 from "../Images/User Icon Dark.png";
 import CreateIcon from "../Images/Create.png";
 import CreateIcon2 from "../Images/Create2.png";
-
 import SavedIcon from "../Images/Save.png";
 import SavedIcon2 from "../Images/Save2.png";
+
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import Close from "../Images/Close.png";
 import "../Styles/UserProfile.css";
 
 function UserProfile() {

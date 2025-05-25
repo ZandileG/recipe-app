@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -22,6 +22,10 @@ const [isOpen, setIsOpen] = useState(true);
 //When the user saves the form, the recipe appears on the sidebar and the recipe is added to the recipe list
 function addRecipe(){
 
+}
+
+function addMoreIngredients(e){
+  e.preventDefault();
 }
 
 function openSidebar(){
@@ -119,12 +123,12 @@ function closeSidebar(){
         <input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section>
+        <section className="hidden-ingredient">
         <label>Ingredient 7: </label>
         <input className={`item ${theme}`} type="text"/>
         </section>
 
-        <section>
+        <section className="hidden-ingredient">
         <label>Ingredient 8: </label>
         <input className={`item ${theme}`} type="text"/>
         </section>
@@ -189,7 +193,7 @@ function closeSidebar(){
         <input className={`item ${theme}`} type="text"/>
         </section>
       </section>
-      <button><img src={Add} alt="Add" /></button>
+      <button className="add-ingredient" onClick={addMoreIngredients}><img src={Add} alt="Add" /></button>
       </section>
 
       <section className={`item3 ${theme}`}>

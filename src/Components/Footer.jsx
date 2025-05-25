@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Arrow from "../Images/Arrow.webp";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 function Footer() {
 const {theme} = useContext(ThemeContext);

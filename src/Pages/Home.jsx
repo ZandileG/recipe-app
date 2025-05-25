@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 import RecipeList from "../Components/RecipeList";
 import Footer from "../Components/Footer";
@@ -18,15 +18,21 @@ function Home() {
 
 const [searchQuery, setSearchQuery] = useState("");
 const [isOpen, setIsOpen] = useState(true);
+const [difficulty, setDifficulty] = useState("");
+const [mealType, setMealType] = useState("");
 
 function handleSearch(e){
   setSearchQuery(e.target.value);
 }
 
 //This is a function for filtering the recipes according to difficulty and meal types
-  function filterRecipes() {
-      
-  }
+ function filterDifficulty(diff) {
+  setDifficulty(diff);
+}
+
+function filterMealType(type) {
+  setMealType(type);
+}
 
   function handleLogOut(){
     navigate("/");
@@ -59,7 +65,7 @@ function handleSearch(e){
   return (
     <main className={`home-page ${isOpen ? "with-sidebar" : "full-width"}`}>
     <header className={`header ${theme}`}>
-    <nav onSearch={setSearchQuery}>
+    <nav>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
       
       <section className="navbar-home">
@@ -94,26 +100,26 @@ function handleSearch(e){
     </section>
 
     <h3 className="heading">Difficulty</h3>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Easy</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Medium</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterDifficulty("Easy")}>Easy</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterDifficulty("Medium")}>Medium</button>
 
     <h3 className="heading">Meal Type</h3>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Breakfast</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Lunch</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dinner</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Dessert</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Breakfast")}>Breakfast</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Lunch")}>Lunch</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Dinner")}>Dinner</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Dessert")}>Dessert</button>
 
     <h3 className="heading">Other Categories</h3>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Appetizer</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Beverage</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Side Dish</button>
-    <button className={`filter ${theme}`} type="button" onClick={filterRecipes}>Snack</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Appetizer")}>Appetizer</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Beverage")}>Beverage</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Side Dish")}>Side Dish</button>
+    <button className={`filter ${theme}`} type="button" onClick={() => filterMealType("Snack")}>Snack</button>
     </aside>
 
     <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Recipes</h1>
 
-      <RecipeList searchQuery={searchQuery} isSidebarOpen={isOpen} />
+      <RecipeList searchQuery={searchQuery} isSidebarOpen={isOpen} difficulty={difficulty} mealType={mealType}/>
     </section>
 
     <Footer />

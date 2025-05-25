@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
@@ -8,7 +7,7 @@ import Next from "../Images/Arrow2.webp";
 
 import "../Styles/RecipeCard.css";
 
-function RecipeList({ searchQuery, isSidebarOpen }) {
+function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
   const navigate = useNavigate();
   
 /*This works together with the pagination button and checks if there is more data to display
@@ -29,14 +28,29 @@ function RecipeList({ searchQuery, isSidebarOpen }) {
   useEffect(() => {
     async function fetchRecipes() {
       try {
-        const url = searchQuery ? `https://dummyjson.com/recipes/search?q=${searchQuery}&limit=${limit}&skip=${page * limit}`
-                                : `https://dummyjson.com/recipes?limit=${limit}&skip=${page * limit}`;
-        const { data } = await axios.get(url);
+        let url;
+      if (searchQuery) {
+        url = `https://dummyjson.com/recipes/search?q=${searchQuery}&limit=${limit}&skip=${page * limit}`;
+      } 
+    
+      //Meal type filter
+      else if (mealType) {
+        url = `https://dummyjson.com/recipes/meal-type/${mealType.toLowerCase()}?limit=${limit}&skip=${page * limit}`;
+      } else {
+        url = `https://dummyjson.com/recipes?limit=${limit}&skip=${page * limit}`;
+      }
 
-      setRecipes(data.recipes);
-        
+      const { recipes, total } = await (await fetch(url)).json();
+
+      //Difficulty filter
+      let filtered = recipes;
+      if (difficulty) {
+        filtered = filtered.filter(r => r.difficulty === difficulty);
+      }
+
+      setRecipes(filtered);        
       //The pagination buttons will be disabled when the limit is reached
-        setHasMore((page + 1) * limit < data.total); 
+        setHasMore((page + 1) * limit < total); 
       } catch (error) {
         console.error(error);
       }
@@ -50,7 +64,7 @@ function RecipeList({ searchQuery, isSidebarOpen }) {
   return() => {
     clearTimeout(timeOutFunction);
   }
-  }, [searchQuery, page, limit]);
+  }, [searchQuery, page, limit, difficulty, mealType]);
 
 
 //This is keyboard navigation for the pagination buttons

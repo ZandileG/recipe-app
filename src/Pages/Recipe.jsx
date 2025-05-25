@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { ThemeContext } from '../Context/ThemeContext';
+import { ThemeContext } from "../Context/ThemeContext";
 
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
+
 import "../Styles/Recipe.css";
 import "../Styles/Navbar.css";
 
