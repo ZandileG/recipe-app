@@ -95,6 +95,7 @@
   margin: 1rem;
   background-color: #f7f7f7;
   border: solid 1.75px black;
+  border-radius: 0.5rem;
 }
 
 .create-recipe-form.dark{
@@ -106,6 +107,7 @@
   margin: 1rem;
   background-color: #7f8080;
   border: solid 1.75px black;
+  border-radius: 0.5rem;
 }
 
 .your-recipe-name{

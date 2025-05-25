@@ -48,6 +48,7 @@ function closeSidebar(){
       <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Meal Planner</h1>
 
+      <section className={`table-wrapper ${theme}`}>
         <table className={`table ${theme}`}>
           <thead>
           <tr>
@@ -207,6 +208,7 @@ function closeSidebar(){
             </tr>
           </tbody>
         </table>
+        </section>
       </section>
       <Footer />
       </main>

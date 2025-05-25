@@ -1,3 +1,36 @@
+.recipe-page{
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+  }
+
+.with-sidebar {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.full-width {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 .loading.light{
     display: flex;
     justify-content: center;
@@ -56,6 +89,21 @@
     color: #f7f7f7;
 }
 
+.page-heading3.light{
+    text-align: center;
+    padding-bottom: 1.5rem;
+    padding-top: 6rem;
+    margin: 0;
+}
+
+.page-heading3.dark{
+    text-align: center;
+    padding-bottom: 1.5rem;
+    padding-top: 6rem;
+    margin: 0;
+    color: #f7f7f7;
+}
+
 .recipe-page-grid.light{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -63,6 +111,8 @@
     background-color: #f7f7f7;
     border: solid 1.75px black;
     border-radius: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .recipe-page-grid.dark{
@@ -72,15 +122,55 @@
     background-color: black;
     border: solid 1.75px #f7f7f7;
     border-radius: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .info-p.light{
     list-style: none;
+    margin-left: -2rem;
 }
 
 .info-p.dark{
     list-style: none;
     color: #f7f7f7;
+    margin-left: -2rem;
+}
+
+.info-p input[type="checkbox"] {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.7em;
+  cursor: pointer;
+  border-radius: 0.2em;
+}
+
+.info-p input[type="checkbox"]:checked{
+  accent-color: #d27f5d;
+}
+
+.info-p2.light{
+    list-style-type: decimal;
+    margin-left: -3rem;
+}
+
+.info-p li{
+  padding-bottom: 1rem;
+  font-size: large;
+  font-weight: 500;
+}
+
+.info-p2 li{
+    padding-bottom: 1.5rem;
+    font-size: large;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.info-p2.dark{
+    list-style-type: decimal;
+    color: #f7f7f7;
+    margin-left: -3rem;
 }
 
 .grid-col1.light, .grid-col2.light{
@@ -99,13 +189,38 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 5.5rem;
 }
 
 .in-line.dark{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 5.5rem;
     color: #f7f7f7;
+}
+
+.in-line2.light{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: -0.5rem;
+}
+
+.in-line2.dark{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-size: large;
+    font-weight: 500;
+    color: #f7f7f7;
+    margin-bottom: -0.5rem;
 }
 
 .in-line-heading{
