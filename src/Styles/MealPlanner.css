@@ -20,6 +20,11 @@
   min-height: 100vh;
 }
 
+.delete-btn{
+  background-color: transparent;
+  border: none;
+}
+
 .save button{
   background-color: transparent;
   border: none;
@@ -51,7 +56,7 @@
 
 .close{
   z-index: 1;
-  background-color: #3c3c3b00;
+  background-color: transparent;
   border: none;
   position: absolute;
   right: 0rem;

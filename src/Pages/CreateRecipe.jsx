@@ -56,7 +56,7 @@ function closeSidebar(){
 
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
-      <img className="delete" src={Delete} alt="Delete" />
+      <button className="delete-btn"><img className="delete" src={Delete} alt="Delete" /></button>
       <button className={`edit ${theme}`}>Edit</button>
       </section>
       </section>

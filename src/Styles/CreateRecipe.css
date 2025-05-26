@@ -13,6 +13,11 @@
   font-weight: 600;
 }
 
+.delete-btn{
+  background-color: transparent;
+  border: none;
+}
+
 .add-ingredient{
   background-color: white;
   border: solid 1.75px black;

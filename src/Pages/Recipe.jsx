@@ -97,7 +97,7 @@ useEffect(() => {
 
           <section className={`grid-col2 ${theme}`}>
           <h3 className={`page-heading2 ${theme}`}>Ingredients</h3>
-          <ul className={`info-p  ${theme}`}>
+          <ul className={`info-p ${theme}`}>
           {recipe.ingredients && recipe.ingredients.map((ingredient, i) => (
           <li key={i}>
           <input type="checkbox" id={`ingredient-${i}`} />
@@ -109,7 +109,7 @@ useEffect(() => {
 
           <section className={`grid-col3 ${theme}`}>
             <h3 className={`page-heading2 ${theme}`}>Instructions</h3>
-            <ul className={`info-p2  ${theme}`}>
+            <ul className={`info-p2 ${theme}`}>
             {recipe.instructions && recipe.instructions.map((instruction, i) => (
             <li key={i}>{instruction}</li>
             ))}   

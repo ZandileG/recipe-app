@@ -119,8 +119,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    background-color: black;
-    border: solid 1.75px #f7f7f7;
+    background-color: #3c3c3b;
+    border: solid 1.75px black;
     border-radius: 0.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -145,8 +145,12 @@
   border-radius: 0.2em;
 }
 
-.info-p input[type="checkbox"]:checked{
+.info-p.light input[type="checkbox"]:checked{
   accent-color: #d27f5d;
+}
+
+.info-p.dark input[type="checkbox"]:checked{
+  accent-color: black;
 }
 
 .info-p2.light{

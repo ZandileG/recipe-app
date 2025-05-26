@@ -1,20 +1,24 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
 
+//I want the theme to remain the same even after the page reloads so I'm saving it in localStorage
 function ThemeProvider({ children }) {
-const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
 
-//When the dark mode button is clicked, the whole app will be styled according to dark or light
-function toggleTheme(){
-  setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-}
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-return (
-  <ThemeContext.Provider value={{theme, toggleTheme}}>
-    {children}
-  </ThemeContext.Provider>
- ); 
+  function toggleTheme() {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export default ThemeProvider;

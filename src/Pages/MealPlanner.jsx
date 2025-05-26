@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
+import { SavedContext } from "../Context/SavedContext";
 
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -10,6 +11,7 @@ import "../Styles/MealPlanner.css";
 
 function MealPlanner() {
 const {theme} = useContext(ThemeContext);
+const {savedRecipes} = useContext(SavedContext);
 const [isOpen, setIsOpen] = useState(true);
 
 function openSidebar(){
@@ -19,6 +21,13 @@ function openSidebar(){
 function closeSidebar(){
     setIsOpen(false);
   }
+
+function getSavedRecipes(type) {
+  return savedRecipes.filter(recipe => Array.isArray(recipe.mealType)
+      ? recipe.mealType.includes(type)
+      : recipe.mealType === type
+  );
+}
 
   return (
     <main className={`meal-planner-page ${isOpen ? "with-sidebar" : "full-width"}`}>
@@ -39,7 +48,7 @@ function closeSidebar(){
       <section className="grid-sidebar">
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>
-      <img className="delete" src={Delete} alt="Delete" />
+      <button className="delete-btn"><img className="delete" src={Delete} alt="Delete" /></button>
       <button className={`edit ${theme}`}>Edit</button>
       </section>
       </section>
@@ -63,20 +72,29 @@ function closeSidebar(){
             <tr>
               <th scope="row" className={`col1 ${theme}`}>Monday</th>
               <td className={`td ${theme}`}>
-                <select name="breakfast" className={`list ${theme}`}>
-                  <option name="" value=""></option>
-                </select>
+              <select name="breakfast" className={`list ${theme}`}>
+                 <option>Select Breakfast</option>
+                 {getSavedRecipes("Breakfast").map(recipe => (
+                  <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
+              </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -85,19 +103,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Tuesday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -106,19 +133,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Wednesday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -127,19 +163,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Thursday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -148,19 +193,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Friday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -169,19 +223,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Saturday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
@@ -190,19 +253,28 @@ function closeSidebar(){
               <th scope="row" className={`col1 ${theme}`}>Sunday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Breakfast</option>
+                  {getSavedRecipes("Breakfast").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Lunch</option>
+                  {getSavedRecipes("Lunch").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option value=""></option>
+                  <option>Select Dinner</option>
+                  {getSavedRecipes("Dinner").map(recipe => (
+                    <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
+                  ))}
                 </select>
               </td>
             </tr>
