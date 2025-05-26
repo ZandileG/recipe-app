@@ -13,6 +13,9 @@ function CreateRecipe() {
 const {theme} = useContext(ThemeContext);
 const [isOpen, setIsOpen] = useState(true);
 
+//These are the ingridient inputs that are initially seen by the user
+const [ingredientInputs, setIngredientInputs] = useState(6);
+
 //This is a function that makes sure that the input box increases line by line as the user types
   function increaseBox(e) {
     e.target.style.height = "auto";
@@ -24,9 +27,22 @@ function addRecipe(){
 
 }
 
-function addMoreIngredients(e){
-  e.preventDefault();
-}
+//When the user clicks the add button, 2 ingredient inputs are added to the form
+ function addMoreIngredients(e){
+    e.preventDefault();
+    setIngredientInputs(prev => Math.min(prev + 2, 20));
+  }
+
+//These are the form's ingredient input fields they end at 20
+const ingredientFields = [];
+  for (let i = 1; i <= 20; i++) {
+    ingredientFields.push(
+      <section key={i} className={i <= ingredientInputs ? "" : "hidden-ingredient"}>
+        <label>{`Ingredient ${i}: `}</label>
+        <input className={`item ${theme}`} type="text"/>
+      </section>
+    );
+  }
 
 function openSidebar(){
     setIsOpen(true);
@@ -57,7 +73,6 @@ function closeSidebar(){
     <section className={`slot ${theme}`}>
       <p className="your-recipe-name">Recipe Name</p>
       <button className="delete-btn"><img className="delete" src={Delete} alt="Delete" /></button>
-      <button className={`edit ${theme}`}>Edit</button>
       </section>
       </section>
     </aside>
@@ -92,107 +107,8 @@ function closeSidebar(){
 
       <section className={`item2 ${theme}`}>
       <p className="form-heading-edit">Enter your ingredients</p>
-      <section className="item2-1">
-        <section>
-        <label>Ingredient 1: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
+      <section className="item2-1">{ingredientFields}</section>
 
-        <section>
-        <label>Ingredient 2: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section>
-        <label>Ingredient 3: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section>
-        <label>Ingredient 4: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section>
-        <label>Ingredient 5: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-         <section>
-        <label>Ingredient 6: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 7: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 8: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 9: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 10: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 11: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 12: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 13: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 14: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 15: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 16: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 17: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-         <section className="hidden-ingredient">
-        <label>Ingredient 18: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 19: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-
-        <section className="hidden-ingredient">
-        <label>Ingredient 20: </label>
-        <input className={`item ${theme}`} type="text"/>
-        </section>
-      </section>
       <button className="add-ingredient" onClick={addMoreIngredients}><img src={Add} alt="Add" /></button>
       </section>
 

@@ -49,7 +49,6 @@ function getSavedRecipes(type) {
       <section className={`block ${theme}`}>
       <p className="week">Week 1</p>
       <button className="delete-btn"><img className="delete" src={Delete} alt="Delete" /></button>
-      <button className={`edit ${theme}`}>Edit</button>
       </section>
       </section>
     </aside>
@@ -62,9 +61,9 @@ function getSavedRecipes(type) {
           <thead>
           <tr>
           <th scope="col" className={`save ${theme}`}><button>Save</button></th>
-          <th scope="col" className={`th ${theme}`}>Breakfast</th>
-          <th scope="col" className={`th ${theme}`}>Lunch</th>
-          <th scope="col" className={`th ${theme}`}>Dinner</th>
+          <th scope="col" className={`th1 ${theme}`}>Breakfast</th>
+          <th scope="col" className={`th1 ${theme}`}>Lunch</th>
+          <th scope="col" className={`th1 ${theme}`}>Dinner</th>
           </tr>
           </thead>
 
@@ -73,7 +72,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Monday</th>
               <td className={`td ${theme}`}>
               <select name="breakfast" className={`list ${theme}`}>
-                 <option>Select Breakfast</option>
+                 <option></option>
                  {getSavedRecipes("Breakfast").map(recipe => (
                   <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -82,7 +81,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -91,7 +90,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -103,7 +102,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Tuesday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -112,7 +111,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -121,7 +120,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -133,7 +132,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Wednesday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -142,7 +141,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -151,7 +150,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -163,7 +162,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Thursday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -172,7 +171,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -181,7 +180,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -193,7 +192,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Friday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -202,7 +201,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -211,7 +210,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -223,7 +222,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Saturday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -232,7 +231,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -241,7 +240,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -253,7 +252,7 @@ function getSavedRecipes(type) {
               <th scope="row" className={`col1 ${theme}`}>Sunday</th>
               <td className={`td ${theme}`}>
                 <select name="breakfast" className={`list ${theme}`}>
-                  <option>Select Breakfast</option>
+                 <option></option>
                   {getSavedRecipes("Breakfast").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -262,7 +261,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="lunch" className={`list ${theme}`}>
-                  <option>Select Lunch</option>
+                 <option></option>
                   {getSavedRecipes("Lunch").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}
@@ -271,7 +270,7 @@ function getSavedRecipes(type) {
 
               <td className={`td ${theme}`}>
                  <select name="dinner" className={`list ${theme}`}>
-                  <option>Select Dinner</option>
+                 <option></option>
                   {getSavedRecipes("Dinner").map(recipe => (
                     <option key={recipe.id} value={recipe.id}>{recipe.name}</option>
                   ))}

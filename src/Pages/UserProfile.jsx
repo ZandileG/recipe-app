@@ -28,8 +28,8 @@ function createRecipe(){
     navigate("/create-recipe");
   }
 
-function savedRecipes(){
-    navigate("/saved-recipes");
+function mealPlanner(){
+    navigate("/meal-planner");
   }
 
 function openSidebar(){
@@ -102,10 +102,10 @@ function handleSubmit(e) {
     <section className={`tab2 ${theme}`}>Your Recipes</section>
     </section>
 
-    <section className={`tab ${theme}`} onClick={savedRecipes}>
+    <section className={`tab ${theme}`} onClick={mealPlanner}>
       <section className="tab1"><img className={`save-icon ${theme}`} src={SavedIcon} alt="Save" /></section>
       <section className="tab1"><img className={`save-icon2 ${theme}`} src={SavedIcon2} alt="Save" /></section>
-      <section className={`tab2 ${theme}`}>Saved Recipes</section>
+      <section className={`tab2 ${theme}`}>Your Meal Plans</section>
       </section>
     </section>
     </section>

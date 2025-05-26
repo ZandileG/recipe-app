@@ -120,6 +120,19 @@ th.light, td.light{
     padding: 0.5rem;
   }
   
+  .th1.light{
+    font-weight: 600;
+    background-color: #f7f7f7;
+    border-bottom: 1.75px solid black;
+    border-left: 1.75px solid black;
+  }
+
+  .th1.dark{
+    font-weight: 600;
+    border-bottom: 1.75px solid black;
+    border-left: 1.75px solid black;
+  }
+
   th.light{
     font-weight: 600;
     background-color: #f7f7f7;
@@ -223,6 +236,7 @@ th.light, td.light{
     position: relative;
     width: 10rem;
     height: 10rem;
+    cursor: pointer;
 }
 
 .block.dark{
@@ -233,6 +247,7 @@ th.light, td.light{
     position: relative;
     width: 10rem;
     height: 10rem;
+    cursor: pointer;
 }
 
 .delete{
@@ -252,59 +267,16 @@ th.light, td.light{
   transform: scale(1);
 }
 
-.edit.light:hover{
-  background-color: #d5c8b0;
-}
-
-.edit.light{
-  background-color: #d27f5d;
-  border-radius: 0.3rem;
-  border: solid 1px black;
-  height: 1.75rem;
-  width: 3rem;
-  cursor: pointer; 
-  bottom: 0.25rem;
-  margin: auto;
-  right: 2rem;
-  left: 2rem;
-  position: absolute;
-  z-index: 1;
-  font-weight: 600;
-}
-
-.edit.dark{
-  background-color: black;
-  color: white;
-  border-radius: 0.3rem;
-  border: solid 1px black;
-  height: 1.75rem;
-  width: 3rem;
-  cursor: pointer; 
-  bottom: 0.25rem;
-  margin: auto;
-  right: 2rem;
-  left: 2rem;
-  position: absolute;
-  z-index: 1;
-  font-weight: 600; 
-}
-
-.edit.dark:hover{
-  background-color: #3c3c3b;
-}
-
 .save.light{
   background-color: #a6b26d;
   cursor: pointer;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
-  border-right: 1.75px solid black;
 }
 
 .save.dark{
   background-color: #3c3c3b;
   color: #f7f7f7;
   cursor: pointer;
-  border-right: 1.75px solid black;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 

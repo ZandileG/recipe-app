@@ -189,7 +189,7 @@
 }
 
 .save-change:hover.dark{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
 }
 
@@ -229,7 +229,7 @@ background-color: #3c3c3b;
 }
 
 .dark-mode.dark:hover{
-  background-color: #d5c8b0;
+  background-color: #7f8080;
   color: black;
 }
 
