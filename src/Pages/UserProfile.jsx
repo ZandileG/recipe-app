@@ -23,12 +23,10 @@ function UserProfile() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
 
-//I want to allow the user to change their user image
  const [userImage, setUserImage] = useState(() => {
     return localStorage.getItem("userImage") || "";
   });
 
-//This saves the uploaded image to localStorage
   useEffect(() => {
     if (userImage) {
       localStorage.setItem("userImage", userImage);
@@ -38,7 +36,6 @@ function UserProfile() {
   function handleImageChange(e) {
     const file = e.target.files[0];
     if (file) {
-    //FileReader allows the user to upload stuff from their device
       const reader = new FileReader();
       reader.onloadend = () => {
         setUserImage(reader.result);
