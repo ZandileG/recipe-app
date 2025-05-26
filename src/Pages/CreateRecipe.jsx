@@ -22,11 +22,6 @@ const [ingredientInputs, setIngredientInputs] = useState(6);
     e.target.style.height = e.target.scrollHeight + "px";
   }
 
-//When the user saves the form, the recipe appears on the sidebar and the recipe is added to the recipe list
-function addRecipe(){
-
-}
-
 //When the user clicks the add button, 2 ingredient inputs are added to the form
  function addMoreIngredients(e){
     e.preventDefault();
@@ -43,6 +38,11 @@ const ingredientFields = [];
       </section>
     );
   }
+
+//When the user saves the form, the recipe appears on the sidebar
+function saveYourRecipe() {
+  alert("Your recipe was successfully saved!");
+}
 
 function openSidebar(){
     setIsOpen(true);
@@ -79,7 +79,7 @@ function closeSidebar(){
 
     <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Create Recipe</h1>
-      <form onSubmit={addRecipe} className={`create-recipe-form ${theme}`}>
+      <form onSubmit={saveYourRecipe} className={`create-recipe-form ${theme}`}>
 
       <section className={`item1 ${theme}`}>
         <p className="form-heading">Enter your recipe information</p>
