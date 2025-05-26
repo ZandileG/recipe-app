@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 
 import RecipeList from "../Components/RecipeList";
 import Footer from "../Components/Footer";
 
-import UserImage from "../Images/User Icon.webp";
+import DefaultUserImage from "../Images/User Icon.webp";
 import Hamburger from "../Images/Hamburger.png";
 import Close from "../Images/Close.png";
 import Logo from "../Images/Logo.webp";
@@ -20,6 +20,24 @@ const [searchQuery, setSearchQuery] = useState("");
 const [isOpen, setIsOpen] = useState(true);
 const [difficulty, setDifficulty] = useState("");
 const [mealType, setMealType] = useState("");
+
+//The user's image that was uploaded in User Profile will be displayed in the navbar
+  const [userImage, setUserImage] = useState(() => {
+    return localStorage.getItem("userImage") || DefaultUserImage;
+  });
+
+ useEffect(() => {
+    function handleStorageChange() {
+      setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
+    }
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
+//This updates image when the user changes it
+  useEffect(() => {
+    setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
+  }, []);
 
 function handleSearch(e){
   setSearchQuery(e.target.value);
@@ -72,7 +90,7 @@ function filterMealType(type) {
       <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
       
       <section><button className={`logout-home ${theme}`} type="button" onClick={handleLogOut}>Log Out</button></section>
-      <section><button className="user-profile" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button></section>
+      <section><button className="user-profile" type="button" onClick={userProfile}><img src={userImage} alt="User" /></button></section>
       <button type="button" className={`hamburger-home ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
         <img src={Hamburger} alt="Hamburger" />
       </button>

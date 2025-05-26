@@ -120,10 +120,18 @@
   color: #f7f7f7;
 }
 
-.user-image1, .user-image2{
+.user-image1{
   width: 15rem;
   height: 15rem;
-  padding: 2rem;
+  margin: 2rem;
+  border: solid 1.75px black;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#user-image-upload{
+  display: none; 
 }
 
 .create-icon, .create-icon2{
@@ -231,19 +239,6 @@ background-color: #3c3c3b;
 .dark-mode.dark:hover{
   background-color: #7f8080;
   color: black;
-}
-
-.user-image2.light{
-  display: none;
-}
-
-.user-image2.dark{
-  display: block;
-  margin: auto;
-}
-
-.user-image1.dark{
-  display: none;
 }
 
 .username-change.light, .password-change.light{

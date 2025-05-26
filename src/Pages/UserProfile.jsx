@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import { LoginContext } from "../Context/LoginContext";
 
-import UserImage from "../Images/User Icon.png";
-import UserImage2 from "../Images/User Icon Dark.png";
+import UserImage from "../Images/User Icon.webp";
 import CreateIcon from "../Images/Create.png";
 import CreateIcon2 from "../Images/Create2.png";
 import SavedIcon from "../Images/Save.png";
@@ -23,6 +22,30 @@ function UserProfile() {
   const {setUserDetails} = useContext(LoginContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const navigate = useNavigate();
+
+//I want to allow the user to change their user image
+ const [userImage, setUserImage] = useState(() => {
+    return localStorage.getItem("userImage") || "";
+  });
+
+//This saves the uploaded image to localStorage
+  useEffect(() => {
+    if (userImage) {
+      localStorage.setItem("userImage", userImage);
+    }
+  }, [userImage]);
+
+  function handleImageChange(e) {
+    const file = e.target.files[0];
+    if (file) {
+    //FileReader allows the user to upload stuff from their device
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUserImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
 function createRecipe(){
     navigate("/create-recipe");
@@ -67,14 +90,18 @@ function handleSubmit(e) {
 
     <aside className={`sidebar ${theme} ${isOpen ? "inline-block" : "hidden"}`}>
     <section className="sidebar">
+  
             <button type="button" className={`close ${isOpen ? "inline-block" : "hidden"}`} onClick={e => {
             e.stopPropagation();
             closeSidebar();
             }}>
       <img src={Close} alt="Close" /></button>
       
-      <img src={UserImage} alt="User" className={`user-image1 ${theme}`}  />
-      <img src={UserImage2} alt="User" className={`user-image2 ${theme}`}  />
+      <label htmlFor="user-image-upload">
+      <img src={userImage || UserImage} alt="User" className="user-image1" />
+      </label>
+      <input id="user-image-upload" type="file" accept="image/*" onChange={handleImageChange} />      
+          
     </section>
 
     <form onSubmit={handleSubmit}>

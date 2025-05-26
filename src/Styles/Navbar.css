@@ -111,6 +111,8 @@ right: 2rem;
 .user-profile-nav img{
   width: 2rem;
   height: 2rem;
+  border-radius: 50%;
+  border: solid 1.75px black;
   transition: transform 0.3s ease;
 }
 

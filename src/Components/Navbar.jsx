@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 
-import UserImage from "../Images/User Icon.webp";
+import DefaultUserImage from "../Images/User Icon.webp";
 import Hamburger from "../Images/Hamburger.png";
 import Logo from "../Images/Logo.webp";
 import "../Styles/Navbar.css";
@@ -12,6 +12,24 @@ function Navbar({isOpen, openSidebar}) {
   
     const navigate = useNavigate();
     const location = useLocation();
+
+//The user's image that was uploaded in User Profile will be displayed in the navbar
+  const [userImage, setUserImage] = useState(() => {
+    return localStorage.getItem("userImage") || DefaultUserImage;
+  });
+
+ useEffect(() => {
+    function handleStorageChange() {
+      setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
+    }
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
+//This updates image when the user changes it
+  useEffect(() => {
+    setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
+  }, []);
 
   //These are functions to navigate to different pages when the nav items are clicked
     function home() {
@@ -55,7 +73,7 @@ function Navbar({isOpen, openSidebar}) {
         <button className={`logout ${theme}`} onClick={handleLogOut}>Log Out</button>
 
         <section className="nav-item5">
-        <button className="user-profile-nav" type="button" onClick={userProfile}><img src={UserImage} alt="User" /></button>
+        <button className="user-profile-nav" type="button" onClick={userProfile}><img src={userImage} alt="User" /></button>
         <button type="button" className={`hamburger ${isOpen ? "hidden" : "inline-block"}`} onClick={openSidebar}>
         <img src={Hamburger} alt="Hamburger" />
         </button>

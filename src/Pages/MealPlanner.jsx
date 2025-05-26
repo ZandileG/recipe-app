@@ -51,7 +51,7 @@ function saveMealPlan() {
       alert("Your Meal Plan was successfully saved!");
   } else {
   alert("Please fill in all the slots before saving.");
-}
+  }
 }
 
 //This updates the current plan when a meal is selected
