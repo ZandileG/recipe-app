@@ -6,7 +6,7 @@ function Footer() {
 const {theme} = useContext(ThemeContext);
 
 //This is a function for the return to top button
-  function scrollToTop() {
+  function scrollToTop(){
     window.scrollTo({
       top: 0,
       behavior: "smooth"

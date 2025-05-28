@@ -9,7 +9,7 @@ import Delete from "../Images/Delete.png";
 import Close from "../Images/Close.png";
 import "../Styles/MealPlanner.css";
 
-function MealPlanner() {
+function MealPlanner(){
 const {theme} = useContext(ThemeContext);
 const {savedRecipes} = useContext(SavedContext);
 const [isOpen, setIsOpen] = useState(true);
@@ -36,7 +36,7 @@ useEffect(() => {
 }, [savedPlans]);
 
 //This checks if all the meal slots are filled before the meal plan can be saved
-function saveMealPlan() {
+function saveMealPlan(){
   if (Object.values(currentPlan).every(day => Object.values(day).every(Boolean))) {
     setSavedPlans([...savedPlans, currentPlan]);
     setCurrentPlan({
@@ -55,7 +55,7 @@ function saveMealPlan() {
 }
 
 //This updates the current plan when a meal is selected
-function handleChange(day, mealType, value) {
+function handleChange(day, mealType, value){
   setCurrentPlan(prev => ({
     ...prev, [day]: {
     ...prev[day],
@@ -65,7 +65,7 @@ function handleChange(day, mealType, value) {
 }
 
 //This deletes a saved meal plan by filtering it out of the savedPlans array
-function handleDelete(index) {
+function handleDelete(index){
   setSavedPlans(prev => prev.filter((_, i) => i !== index));
 }
 
@@ -78,7 +78,7 @@ function closeSidebar(){
   }
 
 //This gets the saved recipes and sorts them by meal type so that they can appear in the dropdowns
-function getSavedRecipes(type) {
+function getSavedRecipes(type){
   return savedRecipes.filter(recipe => Array.isArray(recipe.mealType)
       ? recipe.mealType.includes(type)
       : recipe.mealType === type

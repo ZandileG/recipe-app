@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import "../App.css"
 
-function NotFound() {
+function NotFound(){
   const navigate = useNavigate();
 
 //When the user enters an incorrect file path, they will land on this page

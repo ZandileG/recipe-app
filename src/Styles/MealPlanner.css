@@ -9,7 +9,7 @@
     min-height: 100vh;
   } 
 
-.with-sidebar {
+.with-sidebar{
   display: grid;
   grid-template-areas: 
     "header header"
@@ -35,7 +35,7 @@
     position: relative;
 }
 
-.full-width {
+.full-width{
   display: grid;
   grid-template-areas: 
     "header"

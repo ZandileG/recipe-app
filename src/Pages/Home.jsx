@@ -12,11 +12,13 @@ import Logo from "../Images/Logo.webp";
 
 import "../Styles/Home.css";
 
-function Home() {
+function Home(){
   const navigate = useNavigate();
   const {theme} = useContext(ThemeContext);
 
 const [searchQuery, setSearchQuery] = useState("");
+
+//The sidebar will be seen by default then it will be closed when the screen size is less than 1200px
 const [isOpen, setIsOpen] = useState(true);
 const [difficulty, setDifficulty] = useState("");
 const [mealType, setMealType] = useState("");
@@ -27,7 +29,7 @@ const [mealType, setMealType] = useState("");
   });
 
  useEffect(() => {
-    function handleStorageChange() {
+    function handleStorageChange(){
       setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
     }
     window.addEventListener("storage", handleStorageChange);
@@ -44,11 +46,11 @@ function handleSearch(e){
 }
 
 //This is a function for filtering the recipes according to difficulty and meal types
- function filterDifficulty(diff) {
+ function filterDifficulty(diff){
   setDifficulty(diff);
 }
 
-function filterMealType(type) {
+function filterMealType(type){
   setMealType(type);
 }
 
@@ -56,19 +58,19 @@ function filterMealType(type) {
     navigate("/");
   }
 
-  function userProfile() {
+  function userProfile(){
     navigate("/user-profile");
   }
 
-  function savedRecipes() {
+  function savedRecipes(){
     navigate("/saved-recipes");
   }
 
-  function mealPlanner() {
+  function mealPlanner(){
     navigate("/meal-planner");
   }
 
-  function createRecipe() {
+  function createRecipe(){
     navigate("/create-recipe");
   }
 

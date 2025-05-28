@@ -10,7 +10,7 @@
     padding: 3rem;
 } 
 
-.full-width .content {
+.content.full-width{
   grid-area: main;
   padding-left: 2rem;
   padding-right: 2rem;

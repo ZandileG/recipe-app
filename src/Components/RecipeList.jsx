@@ -7,7 +7,7 @@ import Next from "../Images/Arrow2.webp";
 
 import "../Styles/RecipeCard.css";
 
-function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
+function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }){
   const navigate = useNavigate();
   
 /*This works together with the pagination button and checks if there is more data to display
@@ -17,7 +17,7 @@ function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
   const [recipes, setRecipes] = useState([]);
   const [page, setPage] = useState(0); 
   
-  function openRecipe(recipe) {
+  function openRecipe(recipe){
     navigate(`/recipe/${recipe.id}`);
   }
 
@@ -26,15 +26,15 @@ function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
   const limit = isSidebarOpen ? 6 : 8;
 
   useEffect(() => {
-    async function fetchRecipes() {
+    async function fetchRecipes(){
       try {
         let url;
-      if (searchQuery) {
+      if (searchQuery){
         url = `https://dummyjson.com/recipes/search?q=${searchQuery}&limit=${limit}&skip=${page * limit}`;
       } 
     
-      //Meal type filter
-      else if (mealType) {
+    //Meal type filter
+      else if (mealType){
         url = `https://dummyjson.com/recipes/meal-type/${mealType.toLowerCase()}?limit=${limit}&skip=${page * limit}`;
       } else {
         url = `https://dummyjson.com/recipes?limit=${limit}&skip=${page * limit}`;
@@ -42,16 +42,16 @@ function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
 
       const { recipes, total } = await (await fetch(url)).json();
 
-      //Difficulty filter
+    //Difficulty filter
       let filtered = recipes;
-      if (difficulty) {
+      if (difficulty){
         filtered = filtered.filter(r => r.difficulty === difficulty);
       }
 
       setRecipes(filtered);        
-      //The pagination buttons will be disabled when the limit is reached
+    //The pagination buttons will be disabled when the limit is reached
         setHasMore((page + 1) * limit < total); 
-      } catch (error) {
+      } catch (error){
         console.error(error);
       }
     }
@@ -69,7 +69,7 @@ function RecipeList({ searchQuery, isSidebarOpen, difficulty, mealType }) {
 
 //This is keyboard navigation for the pagination buttons
 useEffect(() => {
-  function handleKeyDown(e) {
+  function handleKeyDown(e){
     if (e.key === "ArrowLeft" && page > 0) {
       setPage((prev) => prev - 1);
     }

@@ -6,7 +6,7 @@ import Save from "../Images/Icon.webp";
 import Delete from "../Images/Icon2.webp";
 import "../Styles/RecipeCard.css";
 
-function RecipeCard({recipe}) {
+function RecipeCard({recipe}){
 const {theme} = useContext(ThemeContext);
 const { saveRecipe, removeRecipe, isSaved } = useContext(SavedContext);
 

@@ -10,7 +10,7 @@ import axios from "axios";
 import "../Styles/Recipe.css";
 import "../Styles/Navbar.css";
 
-function Recipe() {
+function Recipe(){
 const { id } = useParams();
 const {theme} = useContext(ThemeContext);
 const [recipe, setRecipe] = useState(null);

@@ -63,14 +63,18 @@ position: absolute;
 right: 2rem;
 }
 
-.nav-item1.light, .nav-item2.light, .nav-item3.light{
+.nav-item1.light, 
+.nav-item2.light, 
+.nav-item3.light{
   border-left: solid 1.75px black;
   padding: 2rem;  
   font-weight: 600;
   cursor: pointer;
 }
 
-.nav-item1.dark, .nav-item2.dark, .nav-item3.dark{
+.nav-item1.dark, 
+.nav-item2.dark, 
+.nav-item3.dark{
   border-left: solid 1.75px black;
   padding: 2rem;  
   font-weight: 600;
@@ -120,36 +124,48 @@ right: 2rem;
   transform: scale(1.05);
 }
 
-.nav-item1.light.active, .nav-item2.light.active, 
-.nav-item3.light.active, .nav-item4.light.active{
+.nav-item1.light.active, 
+.nav-item2.light.active, 
+.nav-item3.light.active, 
+.nav-item4.light.active{
   background-color: #a6b26d;
 }
 
-.nav-item1.dark.active, .nav-item2.dark.active, 
-.nav-item3.dark.active, .nav-item4.dark.active{
+.nav-item1.dark.active, 
+.nav-item2.dark.active, 
+.nav-item3.dark.active, 
+.nav-item4.dark.active{
   background-color: #7f8080;
   color: black;
 }
 
-.nav-item1.light:hover, .nav-item2.light:hover, 
-.nav-item3.light:hover, .nav-item4.light:hover{
+.nav-item1.light:hover, 
+.nav-item2.light:hover, 
+.nav-item3.light:hover,
+.nav-item4.light:hover{
   background-color: #d5c8b0;
 }
 
-.nav-item1.dark:hover, .nav-item2.dark:hover, 
-.nav-item3.dark:hover, .nav-item4.dark:hover{
+.nav-item1.dark:hover, 
+.nav-item2.dark:hover, 
+.nav-item3.dark:hover, 
+.nav-item4.dark:hover{
   background-color: #7f8080;
   color: black;
 }
 
-.nav-item1.light.active:hover, .nav-item2.light.active:hover, 
-.nav-item3.light.active:hover, .nav-item4.light.active:hover{
+.nav-item1.light.active:hover, 
+.nav-item2.light.active:hover, 
+.nav-item3.light.active:hover, 
+.nav-item4.light.active:hover{
   background-color: #a6b26d;
   cursor: default;
 }
 
-.nav-item1.dark.active:hover, .nav-item2.dark.active:hover, 
-.nav-item3.dark.active:hover, .nav-item4.dark.active:hover{
+.nav-item1.dark.active:hover, 
+.nav-item2.dark.active:hover, 
+.nav-item3.dark.active:hover, 
+.nav-item4.dark.active:hover{
   background-color: #7f8080;
   cursor: default;
 }

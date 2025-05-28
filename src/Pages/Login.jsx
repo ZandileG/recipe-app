@@ -5,7 +5,7 @@ import { LoginContext } from "../Context/LoginContext";
 import Logo from "../Images/Logo.webp";
 import "../Styles/Login.css";
 
-function Login() {
+function Login(){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,19 +15,19 @@ function Login() {
   const {login, signUp, setUserDetails} = useContext(LoginContext);
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
+  function handleSubmit(e){
   //The page shouldn't reload when the login button is pressed
     e.preventDefault();
 
   //The user gets an alert if they didn't fill in all the input fields
-    if (username.trim() === "" || password.trim() === "") {
+    if (username.trim() === "" || password.trim() === ""){
       alert("Please fill in all fields.");
       return;
     }
 
   //The user can change their username or password
-    if (changeDetails) {
-      if(username && password) {
+    if (changeDetails){
+      if(username && password){
         const updatedDetails ={username, password};
         setUserDetails(updatedDetails);
         localStorage.setItem("userDetails", JSON.stringify(updatedDetails)); 
@@ -39,15 +39,15 @@ function Login() {
       }
 
   //The user can sign up and get a successful alert
-    } else if (isSigningUp) {
-    if (signUp(username, password)) {
+    } else if (isSigningUp){
+    if (signUp(username, password)){
       alert("You have successfully signed up!");
       setIsSigningUp(true);
       } 
      } else {
       
     //When they log back in, they will get an alert if they have entered incorrect details
-      if (login(username, password)) {
+      if (login(username, password)){
         navigate("/home");
       } else {
         setError("Incorrect username or password. Please try again.");

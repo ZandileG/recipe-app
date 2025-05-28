@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-.with-sidebar {
+.with-sidebar{
   display: grid;
   grid-template-areas: 
     "header header"
@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.full-width {
+.full-width{
   display: grid;
   grid-template-areas: 
     "header"
@@ -283,19 +283,19 @@ background-color: #3c3c3b;
 }
 
 @media (max-width: 399px){
-
+  
 }
 
 @media (min-width: 400px) and (max-width: 599px){
-
+ 
 }
 
 @media (min-width: 600px) and (max-width: 899px){
-
+ 
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
-
+ 
 }
 
 @media (min-width: 1200px){

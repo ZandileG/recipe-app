@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-.with-sidebar {
+.with-sidebar{
   display: grid;
   grid-template-areas: 
     "header header"
@@ -20,7 +20,7 @@
   min-height: 100vh;
 }
 
-.full-width {
+.full-width{
   display: grid;
   grid-template-areas: 
     "header"
@@ -79,7 +79,6 @@
   height: 1.5rem;
   border-radius: 0.5rem;
 }
-
 
 .hamburger-home:hover{
   transform: scale(1.05);
@@ -320,11 +319,15 @@
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
-
+  
 }
 
 @media (min-width: 1200px){
   
+}
+
+@media (max-width: 1200px){
+ 
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){

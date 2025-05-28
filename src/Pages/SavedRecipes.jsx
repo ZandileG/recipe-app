@@ -18,27 +18,27 @@ function SavedRecipes({isSidebarOpen}) {
   const [mealType, setMealType] = useState("");
   const navigate = useNavigate();
 
-function openRecipe(recipe) {
+function openRecipe(recipe){
     navigate(`/recipe/${recipe.id}`);
   }
 
-function filterDifficulty(diff) {
+function filterDifficulty(diff){
   setDifficulty(diff);
 }
 
-function filterMealType(type) {
+function filterMealType(type){
   setMealType(type);
 }
 
 //This filters the saved recipes based on selected difficulty and meal type
 const filteredRecipes = savedRecipes.filter(recipe => {
   let matches = true;
-  if (difficulty) {
+  if (difficulty){
     matches = matches && recipe.difficulty === difficulty;
   }
 
 //Checks if the mealType is a string or an array
-  if (mealType) {
+  if (mealType){
     matches = matches && recipe.mealType?.includes(mealType);
   }
   return matches;

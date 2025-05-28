@@ -14,7 +14,7 @@ import Footer from "../Components/Footer";
 import Close from "../Images/Close.png";
 import "../Styles/UserProfile.css";
 
-function UserProfile() {
+function UserProfile(){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isOpen, setIsOpen] = useState(true);
@@ -28,12 +28,12 @@ function UserProfile() {
   });
 
   useEffect(() => {
-    if (userImage) {
+    if (userImage){
       localStorage.setItem("userImage", userImage);
     }
   }, [userImage]);
 
-  function handleImageChange(e) {
+  function handleImageChange(e){
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -60,10 +60,10 @@ function closeSidebar(){
     setIsOpen(false);
   }
 
-function handleSubmit(e) {
+function handleSubmit(e){
     e.preventDefault();
 
-    if (username.trim() === "" || password.trim() === "") {
+    if (username.trim() === "" || password.trim() === ""){
       alert("Please fill in all fields.");
       return;
     }

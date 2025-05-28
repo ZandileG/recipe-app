@@ -81,7 +81,7 @@
   display: none;
 }
 
-.with-sidebar {
+.with-sidebar{
   display: grid;
   grid-template-areas: 
     "header header"
@@ -92,7 +92,7 @@
   min-height: 100vh;
 }
 
-.full-width {
+.full-width{
   display: grid;
   grid-template-areas: 
     "header"

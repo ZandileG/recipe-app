@@ -9,7 +9,7 @@
     min-height: 100vh;
   }
 
-.with-sidebar {
+.with-sidebar{
   display: grid;
   grid-template-areas: 
     "header header"
@@ -20,7 +20,7 @@
   min-height: 100vh;
 }
 
-.full-width {
+.full-width{
   display: grid;
   grid-template-areas: 
     "header"
@@ -137,7 +137,7 @@
     margin-left: -2rem;
 }
 
-.info-p input[type="checkbox"] {
+.info-p input[type="checkbox"]{
   width: 1.2em;
   height: 1.2em;
   margin-right: 0.7em;

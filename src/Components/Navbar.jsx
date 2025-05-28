@@ -7,7 +7,7 @@ import Hamburger from "../Images/Hamburger.png";
 import Logo from "../Images/Logo.webp";
 import "../Styles/Navbar.css";
 
-function Navbar({isOpen, openSidebar}) {
+function Navbar({isOpen, openSidebar}){
   const {theme} = useContext(ThemeContext);
   
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ function Navbar({isOpen, openSidebar}) {
   });
 
  useEffect(() => {
-    function handleStorageChange() {
+    function handleStorageChange(){
       setUserImage(localStorage.getItem("userImage") || DefaultUserImage);
     }
     window.addEventListener("storage", handleStorageChange);
@@ -32,7 +32,7 @@ function Navbar({isOpen, openSidebar}) {
   }, []);
 
   //These are functions to navigate to different pages when the nav items are clicked
-    function home() {
+    function home(){
       navigate("/home");
     }
   
@@ -40,7 +40,7 @@ function Navbar({isOpen, openSidebar}) {
       navigate("/");
     } 
     
-    function mealPlanner() {
+    function mealPlanner(){
       navigate("/meal-planner");
     }
     
@@ -48,11 +48,11 @@ function Navbar({isOpen, openSidebar}) {
       navigate("/user-profile");
     }
 
-      function savedRecipes() {
+      function savedRecipes(){
     navigate("/saved-recipes");
   }
 
-  function createRecipe() {
+  function createRecipe(){
     navigate("/create-recipe");
   }
 

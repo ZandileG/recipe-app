@@ -35,7 +35,7 @@
   min-height: 100vh;
 }
 
-.recipe-list.full-width {
+.recipe-list.full-width{
   display: grid;
   gap: 1.25rem;
 }
@@ -154,15 +154,15 @@
 }
 
 @media (min-width: 400px) and (max-width: 599px){
-
+ 
 }
 
 @media (min-width: 600px) and (max-width: 899px){
-
+ 
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
-
+ 
 }
 
 @media (min-width: 1200px){

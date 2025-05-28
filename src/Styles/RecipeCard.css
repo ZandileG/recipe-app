@@ -47,12 +47,14 @@
   transform: scale(1.1);
 }
 
-.back-button:disabled img, .next-button:disabled img{
+.back-button:disabled img, 
+.next-button:disabled img{
  opacity: 0.5;
  cursor: not-allowed;
 }
 
-.back-button:disabled:hover, .next-button:disabled:hover{
+.back-button:disabled:hover, 
+.next-button:disabled:hover{
   transform: none;
 }
 
@@ -100,7 +102,8 @@
   display: inline-block;
 }
 
-.save-shortcut:hover, .delete-shortcut:hover{
+.save-shortcut:hover, 
+.delete-shortcut:hover{
   transform: scale(1.05);
 }
 
@@ -141,11 +144,11 @@
     display: grid;
 }
 
-.recipe-list.with-sidebar {
+.recipe-list.with-sidebar{
   grid-template-columns: repeat(3, 1fr);
 }
 
-.recipe-list.full-width {
+.recipe-list.full-width{
   grid-template-columns: repeat(4, 1fr);
 }
 

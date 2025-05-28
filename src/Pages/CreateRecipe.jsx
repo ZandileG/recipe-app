@@ -10,7 +10,7 @@ import Delete from "../Images/Delete.png";
 import Close from "../Images/Close.png";
 import "../Styles/CreateRecipe.css";
 
-function CreateRecipe() {
+function CreateRecipe(){
 const {theme} = useContext(ThemeContext);
 const [isOpen, setIsOpen] = useState(true);
 
@@ -37,7 +37,7 @@ const [form, setForm] = useState({ ...emptyRecipe });
   }, [recipes]);
 
   //I want to allow the user to be able to upload an image for their recipe
-  function handleImageChange(e) {
+  function handleImageChange(e){
     const file = e.target.files[0];
     if (file) {
     //FileReader allows the user to upload stuff from their device
@@ -49,12 +49,12 @@ const [form, setForm] = useState({ ...emptyRecipe });
     }
   }
 
-  function handleChange(e) {
+  function handleChange(e){
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));
   }
 
-  function handleIngredientChange(i, value) {
+  function handleIngredientChange(i, value){
     setForm(f => {
       const newIngredients = [...f.ingredients];
       newIngredients[i] = value;
@@ -77,7 +77,7 @@ const [ingredientInputs, setIngredientInputs] = useState(7);
 
 //These are the form's ingredient input fields they end at 15
 const ingredientFields = [];
-  for (let i = 0; i <= 14; i++) {
+  for (let i = 0; i <= 14; i++){
     ingredientFields.push(
       <section key={i} className={i <= ingredientInputs ? "" : "hidden-ingredient"}>
         <label>{`Ingredient ${i + 1}: `}</label>
@@ -88,10 +88,10 @@ const ingredientFields = [];
   }
 
 //When the user saves the form, the recipe appears on the sidebar
-  function saveYourRecipe(e) {
+  function saveYourRecipe(e){
   //The user must enter a recipe name before saving
     e.preventDefault();
-    if (!form.name.trim()) {
+    if (!form.name.trim()){
       alert("Please enter a recipe name.");
       return;
     }
@@ -102,7 +102,7 @@ const ingredientFields = [];
   }
 
 //Load recipe into form
-  function loadRecipe(i) {
+  function loadRecipe(i){
     const recipe = recipes[i];
     setForm({
       ...recipe,
@@ -112,14 +112,14 @@ const ingredientFields = [];
   }
 
 //Delete recipe
-  function deleteRecipe(index) {
+  function deleteRecipe(index){
     setRecipes(prev => prev.filter((_, i) => i !== index));
     setForm({ ...emptyRecipe, ingredients: Array(8).fill("") });
     setIngredientInputs(8);
   }
 
 //This is a function that makes sure that the input box increases line by line as the user types
-  function increaseBox(e) {
+  function increaseBox(e){
     e.target.style.height = "auto";
     e.target.style.height = e.target.scrollHeight + "px";
   }
