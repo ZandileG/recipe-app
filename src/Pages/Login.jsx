@@ -59,7 +59,7 @@ function Login() {
 
   return (
     <main className="login-page">
-    <section>{/*This is an empty section I'm using so that the login page grid has two equal columns*/}</section>
+    <section className="disappear">{/*This is an empty section I'm using so that the login page grid has two equal columns*/}</section>
 
     <section className="login-items">
     <img className="logo-login" src={Logo} alt="Zandile's Recipes"/>
