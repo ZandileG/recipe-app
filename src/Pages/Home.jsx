@@ -102,7 +102,7 @@ function filterMealType(type){
     <header className={`header ${theme}`}>
     <nav>
       <section><img src={Logo} className="logo-home" alt="Zandile's Recipes" /></section>
-      
+
       <section className="navbar-home">
       <section><input className={`searchbar ${theme}`} type="search" placeholder="Search..." onChange={handleSearch}/></section>
       

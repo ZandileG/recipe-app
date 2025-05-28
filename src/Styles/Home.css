@@ -232,6 +232,10 @@
   font-weight: 600;
   color: black;
 }
+
+.searchbar-2{
+  display: none;
+}
      
 .filter.light{
   display: flex;
@@ -311,11 +315,32 @@
 }
 
 @media (min-width: 400px) and (max-width: 599px){
-
+ 
 }
 
 @media (min-width: 600px) and (max-width: 899px){
+  .header{
+    height: 12rem;
+  }
 
+  .logo-home{
+    width: 13rem;
+    margin-left: 16rem;
+  }
+
+  .navbar-home{
+    margin-top: 10rem;
+    left: 2rem;
+    gap: 2.5rem;
+  }
+
+  .searchbar.light, .searchbar.dark{
+    width: 28rem;
+  }
+
+  .logout-home.light, .logout-home.dark, .user-profile{
+     margin-right: -1rem;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
