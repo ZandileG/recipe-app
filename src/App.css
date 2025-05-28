@@ -81,12 +81,8 @@
     grid-template-rows: auto;
 }
 
-.not-found-page img{
-    margin-top: 5rem;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 0.75rem;
-    border: solid 1.75px black;
+.empty-404{
+    height: 15rem;
 }
 
 .back-home{

@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Sorry from "../Images/Sorry.gif";
 import "../App.css"
 
 function NotFound() {
@@ -16,7 +15,7 @@ function NotFound() {
   return (
       <main className="not-found-page">
       <section>
-        <img src={Sorry} alt="Sorry" />
+        <section className="empty-404"></section>
         <h1>Page Not found!</h1>
 
         <button type="button" className="back-home" onClick={home}>Home</button>
