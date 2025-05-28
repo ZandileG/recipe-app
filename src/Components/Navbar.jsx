@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 
-import DefaultUserImage from "../Images/User Icon.webp";
+import DefaultUserImage from "../Images/User Icon.png";
 import Hamburger from "../Images/Hamburger.png";
 import Logo from "../Images/Logo.webp";
 import "../Styles/Navbar.css";
