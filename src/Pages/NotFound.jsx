@@ -15,10 +15,12 @@ function NotFound() {
 
   return (
       <main className="not-found-page">
+      <section>
         <img src={Sorry} alt="Sorry" />
         <h1>Page Not found!</h1>
 
         <button type="button" className="back-home" onClick={home}>Home</button>
+      </section>
       </main>
   );
 }

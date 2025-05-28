@@ -218,3 +218,7 @@ right: 2rem;
 @media (min-width: 1200px){
   
 }
+
+@media (min-width: 2000px) and (max-width: 3648px){
+
+}
