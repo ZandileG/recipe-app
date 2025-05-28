@@ -149,35 +149,22 @@
   box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.37);
 }
 
-/*This is for really small devices such as phones less than 576px)*/
-@media (max-width: 575.98px){
+@media (max-width: 399px){
 
 }
 
-/*This is for small devices that are 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px){
+@media (min-width: 400px) and (max-width: 599px){
 
 }
 
-/*This is for medium devices such as tablets that are 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px){
+@media (min-width: 600px) and (max-width: 899px){
 
 }
 
-/*This is for large devices such as desktops that are 992px and up*/
-@media (min-width: 992px) and (max-width: 1199.98px){
+@media (min-width: 900px) and (max-width: 1199px){
 
 }
 
-/*This is for extra large devices that are 1200px and up*/
 @media (min-width: 1200px){
-
-}
-
-@media (orientation: portrait){
-    
-  }
   
-@media (orientation: landscape){
-      
-  }
+}
