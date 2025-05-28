@@ -17,7 +17,7 @@ import "../Styles/UserProfile.css";
 function UserProfile(){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
   
   const {setUserDetails} = useContext(LoginContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -51,6 +51,21 @@ function createRecipe(){
 function mealPlanner(){
     navigate("/meal-planner");
   }
+
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
 function openSidebar(){
     setIsOpen(true);

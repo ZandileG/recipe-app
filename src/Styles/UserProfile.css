@@ -36,11 +36,11 @@
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .inline-block{
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .close{

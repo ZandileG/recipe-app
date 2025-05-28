@@ -231,6 +231,14 @@
     font-weight: 600;
 }
 
+.hidden{
+  display: none !important;
+}
+
+.inline-block{
+  display: inline-block !important;
+}
+
 @media (max-width: 399px){
 
 }

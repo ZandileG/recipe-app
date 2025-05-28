@@ -12,7 +12,22 @@ import "../Styles/MealPlanner.css";
 function MealPlanner(){
 const {theme} = useContext(ThemeContext);
 const {savedRecipes} = useContext(SavedContext);
-const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
+
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
 //This is a way to track the meals for each day
 const [currentPlan, setCurrentPlan] = useState({

@@ -19,9 +19,24 @@ function Home(){
 const [searchQuery, setSearchQuery] = useState("");
 
 //The sidebar will be seen by default then it will be closed when the screen size is less than 1200px
-const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
 const [difficulty, setDifficulty] = useState("");
 const [mealType, setMealType] = useState("");
+
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
 //The user's image that was uploaded in User Profile will be displayed in the navbar
   const [userImage, setUserImage] = useState(() => {

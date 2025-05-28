@@ -12,7 +12,22 @@ import "../Styles/CreateRecipe.css";
 
 function CreateRecipe(){
 const {theme} = useContext(ThemeContext);
-const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
+
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
  const emptyRecipe = {
     name: "",

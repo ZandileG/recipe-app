@@ -21,8 +21,23 @@ useEffect(() => {
       .catch(err => console.error(err));
   }, [id]);
 
-   const [isOpen, setIsOpen] = useState(true);
+const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
    
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
    function openSidebar(){
        setIsOpen(true);
      }

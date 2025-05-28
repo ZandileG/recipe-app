@@ -1,4 +1,4 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, useContext, useEffect, Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import { SavedContext } from "../Context/SavedContext";
 import { ThemeContext } from "../Context/ThemeContext";
@@ -13,7 +13,8 @@ import "../Styles/SavedRecipes.css";
 function SavedRecipes({isSidebarOpen}) {
   const {theme} = useContext(ThemeContext);
   const { savedRecipes } = useContext(SavedContext);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(() => window.innerWidth > 1200);
+  
   const [difficulty, setDifficulty] = useState("");
   const [mealType, setMealType] = useState("");
   const navigate = useNavigate();
@@ -43,6 +44,21 @@ const filteredRecipes = savedRecipes.filter(recipe => {
   }
   return matches;
 });
+
+useEffect(() => {
+  function handleResize() {
+    if (window.innerWidth <= 1200) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   function openSidebar(){
     setIsOpen(true);

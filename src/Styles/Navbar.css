@@ -1,9 +1,9 @@
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .inline-block{
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .hamburger{
@@ -233,6 +233,16 @@ right: 2rem;
 
 @media (min-width: 1200px){
   
+}
+
+@media (max-width: 1200px){
+  .hidden{
+  display: inline-block;
+}
+
+.inline-block{
+  display: none;
+}
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
