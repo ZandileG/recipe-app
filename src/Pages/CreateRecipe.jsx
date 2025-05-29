@@ -190,7 +190,7 @@ function closeSidebar(){
           <section className={`page-heading2 ${theme}`}>
           <input type="text" name="name" className={`item ${theme}`}
                  value={form.name} onChange={handleChange}
-                 placeholder="Recipe Name" required />
+                 placeholder="Enter Recipe Name" required />
           </section>
           
           <label htmlFor="user-image-upload">
