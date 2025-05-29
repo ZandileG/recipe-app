@@ -168,10 +168,6 @@
 
 }
 
-@media (min-width: 1200px){
-  
-}
-
 @media (min-width: 2000px) and (max-width: 3648px){
 .recipe-card.light, .recipe-card.dark{
   font-size: x-large;
@@ -181,20 +177,20 @@
 
 .recipe-card.light{
   border: solid 2.5px black;
-}
+ }
 
 .recipe-card.dark{
     border: solid 2.5px #3c3c3b;
-}
+  }
 
  .back-button img, .next-button img{
     width: 3.5rem;
     height: 3.5rem;
-}
+  }
 
 .save-shortcut, .delete-shortcut{
   width: 4rem;
   height: 4rem;
-}
+ }
 
 }

@@ -211,13 +211,6 @@
   }
 }
 
-@media (min-width: 1200px){
-  .login-form{
-    width: 27rem;
-    height: 30rem;
-  }
-}
-
 @media (min-width: 2000px) and (max-width: 3648px){
   .login-form{
     width: 48rem;

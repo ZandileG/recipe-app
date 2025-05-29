@@ -426,20 +426,16 @@ label{
 
 }
 
-@media (min-width: 1200px){
-  
-}
-
 @media (min-width: 2000px) and (max-width: 3648px){
   .page-heading2, .in-line-heading{
     font-size: xx-large;
   }
 
-  .item, .item2-1,.large-input::placeholder, .large-input, .save-recipe{
+ .item, .item2-1,.large-input::placeholder, .large-input, .save-recipe{
     font-size: x-large;
   }
 
-  .item1-4 input, .item1-3 input{
+ .item1-4 input, .item1-3 input{
   width: 6.25rem;
  }
 
@@ -447,16 +443,16 @@ label{
   width: 1.75rem;
   padding-top: 0.35rem;
   height: auto;
-}
+ }
 
-.save-recipe{
+ .save-recipe{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
+ }
 
 .large-input.light, .large-input.dark{
   height: 25rem;
-}
+ }
 }
