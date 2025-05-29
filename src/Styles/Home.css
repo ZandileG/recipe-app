@@ -242,7 +242,8 @@
   flex-direction: column;
   margin: auto;
   width: 5.5rem;
-  height: 2.5rem;
+  height: 2.75rem;
+  line-height: 2.5rem;
   margin-bottom: 1rem;
   background-color: #d27f5d;
   border-right: solid 1.75px black;
@@ -259,6 +260,8 @@
   flex-direction: column;
   margin: auto;
   width: 5.5rem;
+  height: 2.75rem;
+  line-height: 2.5rem;
   margin-bottom: 1rem;
   background-color: #3c3c3b;
   border: none;
@@ -366,8 +369,46 @@
     padding-bottom: 2rem;
   }
 
+  .heading, .filter.light, .filter.dark{
+    font-size: 1.75rem;
+  }
+
+  .filter.light, .filter.dark{
+    width: 10rem !important;
+    height: 5rem !important;
+    line-height: 4.25rem !important;
+    border-radius: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
 .close.inline-block img{
   width: 3rem;
   height: 3rem;
+ }
+
+.logo-home{
+  width: 25rem;
+  }
+
+  .searchbar.light, .searchbar.dark{
+    width: 80rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+    padding-left: 1.5rem;
+  }
+
+  .user-profile img{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+  .logout-home.light, .logout-home.dark{
+  border-radius: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: -2rem;
+  font-size: x-large;
 }
 }

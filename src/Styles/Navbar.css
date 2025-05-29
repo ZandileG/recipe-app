@@ -278,5 +278,50 @@ right: 2rem;
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
+  .logout.light, .logout.dark{
+  border-radius: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  font-size: x-large;
+}
 
+.logo-navbar{
+  width: 25rem;
+  }
+
+.user-profile-nav img{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.hamburger{
+  margin-top: 0rem;
+  margin-right: 2rem;
+}
+
+.hamburger img{
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+.user-profile-nav{
+  margin-top: 0rem;
+  margin-bottom: 3rem;
+}
+
+  .nav-item1.light, 
+  .nav-item2.light, 
+  .nav-item3.light, 
+  .nav-item4.light,
+  .nav-item1.dark, 
+  .nav-item2.dark, 
+  .nav-item3.dark, 
+  .nav-item4.dark{
+    padding: 4rem;  
+    font-size: 1.75rem;
+  }
 }
