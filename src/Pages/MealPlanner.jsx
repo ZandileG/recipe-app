@@ -29,6 +29,14 @@ useEffect(() => {
   return () => window.removeEventListener("resize", handleResize);
 }, []);
 
+//The user will get a message that tells them how to create a meal plan
+useEffect(() => {
+  if (!localStorage.getItem("message")) {
+    alert("To see the meal options in the table, you should first save recipes from each meal category.");
+    localStorage.setItem("message", "true");
+  }
+}, []);
+
 //This is a way to track the meals for each day
 const [currentPlan, setCurrentPlan] = useState({
   Monday: { Breakfast: "", Lunch: "", Dinner: "" },
