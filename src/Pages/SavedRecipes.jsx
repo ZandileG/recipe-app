@@ -102,7 +102,7 @@ useEffect(() => {
     <h1 className={`page-heading ${theme}`}>Saved Recipes</h1>
 
 {/*This displays the user's saved recipes*/}
-  <section className={`recipe-list ${isSidebarOpen ? "with-sidebar" : "full-width"}`}>
+  <section className={`recipe-list ${isOpen ? "with-sidebar" : "full-width"}`}>
       {filteredRecipes.length > 0 ? (
             filteredRecipes.map((recipe) => (
               <section key={recipe.id} onClick={() => openRecipe(recipe)}>
