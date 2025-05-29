@@ -126,5 +126,12 @@
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
+.footer-text{
+    font-size: 1.75rem;
+  }
 
+.back-top{
+    width: 3.5rem;
+    height: 3.5rem;
+ }
 }

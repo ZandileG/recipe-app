@@ -65,7 +65,7 @@
   cursor: pointer;
   text-align: center;
   background-color: black;
-  border: solid 1px #3c3c3b;
+  border: solid 1.75px #3c3c3b;
   font-weight: bold;
   font-size: large;
   width: 18rem;
@@ -173,5 +173,28 @@
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
+.recipe-card.light, .recipe-card.dark{
+  font-size: x-large;
+  width: 30rem;
+  height: 33.35rem;
+ }
+
+.recipe-card.light{
+  border: solid 2.5px black;
+}
+
+.recipe-card.dark{
+    border: solid 2.5px #3c3c3b;
+}
+
+ .back-button img, .next-button img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.save-shortcut, .delete-shortcut{
+  width: 4rem;
+  height: 4rem;
+}
 
 }

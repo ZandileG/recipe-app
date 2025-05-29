@@ -165,5 +165,7 @@
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
-
+h1{
+    font-size: 2.5rem;
+  }
 }

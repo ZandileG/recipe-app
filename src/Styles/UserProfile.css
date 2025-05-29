@@ -324,5 +324,7 @@ background-color: #3c3c3b;
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
-
+h1{
+    font-size: 2.5rem;
+  }
 }

@@ -356,5 +356,18 @@
 }
 
 @media (min-width: 2000px) and (max-width: 3648px){
+  h1{
+    font-size: 2.5rem;
+  }
 
+  .sidebar-item.light, .sidebar-item.dark{
+    font-size: 1.75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+.close.inline-block img{
+  width: 3rem;
+  height: 3rem;
+}
 }
