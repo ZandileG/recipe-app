@@ -144,62 +144,52 @@
     display: grid;
 }
 
+.recipe-list.with-sidebar{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.recipe-list.full-width{
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (max-width: 399px){
- .recipe-list.with-sidebar,   
- .recipe-list.full-width{
-    grid-template-columns: 1fr !important;
- }
+.recipe-card.light, .recipe-card.dark{
+  font-size: small;
+  width: 10rem;
+  height: 12.35rem;
  }
 
+ .save-shortcut, .delete-shortcut{
+  width: 2rem;
+  height: 2rem;
+ }
+}
+
 @media (min-width: 400px) and (max-width: 599px){
- .recipe-list.with-sidebar,   
- .recipe-list.full-width{
-    grid-template-columns: 1fr !important;
+.recipe-card.light, .recipe-card.dark{
+  font-size: medium;
+  width: 12rem;
+  height: 14.65rem;
  }
 }
 
 @media (min-width: 600px) and (max-width: 899px){
 .recipe-card.light, .recipe-card.dark{
   font-size: medium;
-  width: 13.5rem;
-  height: 16.15rem;
+  width: 12rem;
+  height: 14.65rem;
  }
-
- .recipe-list.with-sidebar{
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .recipe-list.full-width{
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
- .recipe-list.with-sidebar{
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .recipe-list.full-width{
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1699px){
-  .recipe-list.with-sidebar{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .recipe-list.full-width{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1700px) and (max-width: 2149px){
-  .recipe-card.light, .recipe-card.dark{
-  font-size: x-large;
-  width: 23rem;
-  height: 26.35rem;
+.recipe-card.light, .recipe-card.dark{
+  font-size: large;
+  width: 15rem;
+  height: 17.75rem;
  }
 }
 
-@media (min-width: 2150px) and (max-width: 3648px){
+@media (min-width: 2000px) and (max-width: 3648px){
 .recipe-card.light, .recipe-card.dark{
   font-size: x-large;
   width: 30rem;
