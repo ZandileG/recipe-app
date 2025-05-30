@@ -32,7 +32,7 @@
     padding: 10px; 
     text-align: center; 
     background-color: #d27f5d;
-    border-top: solid 1.75px black;
+    border-top: solid 2px black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     font-weight: 600;
 } 
@@ -88,8 +88,8 @@
 .back-home{
   background-color: #a6b26d;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-  border-right: solid 1.75px black;
-  border-bottom: solid 1.75px black;
+  border-right: solid 2px black;
+  border-bottom: solid 2px black;
   border-top: none;
   border-left: none;
   font-weight: 600;

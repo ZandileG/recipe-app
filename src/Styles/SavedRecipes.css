@@ -73,14 +73,14 @@
     text-align: center;
     grid-area: sidebar; 
     background-color: #a6b26d;
-    border-right: solid 1.75px black;
+    border-right: solid 2px black;
 }
 
   aside.dark{ 
     text-align: center;
     grid-area: sidebar; 
     background-color: black;
-    border-right: solid 1.75px #3c3c3b;
+    border-right: solid 2px #3c3c3b;
 }
 
 .nothing.light{
@@ -114,8 +114,8 @@
   margin: auto;
   margin-bottom: 1rem;
   background-color: #d27f5d;
-  border-right: solid 1.75px black;
-  border-bottom: solid 1.75px black;
+  border-right: solid 2px black;
+  border-bottom: solid 2px black;
   border-top: none;
   border-left: none;
   font-weight: 600;

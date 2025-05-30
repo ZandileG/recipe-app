@@ -58,7 +58,7 @@
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
-    border: solid 1.75px black;
+    border: solid 2px black;
 }
 
 .page-heading1.light{
@@ -109,7 +109,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     background-color: #f7f7f7;
-    border: solid 1.75px black;
+    border: solid 2px black;
     border-radius: 0.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -120,7 +120,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     background-color: #3c3c3b;
-    border: solid 1.75px black;
+    border: solid 2px black;
     border-radius: 0.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
