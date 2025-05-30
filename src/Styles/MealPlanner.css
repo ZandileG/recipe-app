@@ -306,14 +306,6 @@ th.light, td.light{
 
 }
 
-@media (min-width: 1200px) and (max-width: 1699px){
-
-}
-
-@media (min-width: 1900px) and (max-width: 1999px){
-
-}
-
 @media (min-width: 2000px) and (max-width: 3648px){
 h1{
     font-size: 2.5rem;
