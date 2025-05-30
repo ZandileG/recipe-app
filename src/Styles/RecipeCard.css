@@ -148,17 +148,17 @@
  .recipe-list.with-sidebar,   
  .recipe-list.full-width{
     grid-template-columns: 1fr !important;
- }
+  }
  }
 
-@media (min-width: 400px) and (max-width: 599px){
+@media (min-width: 400px) and (max-width: 600px){
  .recipe-list.with-sidebar,   
  .recipe-list.full-width{
     grid-template-columns: 1fr !important;
  }
 }
 
-@media (min-width: 600px) and (max-width: 899px){
+@media (min-width: 601px) and (max-width: 899px){
 .recipe-card.light, .recipe-card.dark{
   font-size: medium;
   width: 13.5rem;
@@ -173,7 +173,7 @@
   }
 }
 
-@media (min-width: 900px) and (max-width: 1199px){
+@media (min-width: 900px) and (max-width: 1349px){
  .recipe-list.with-sidebar{
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -182,7 +182,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1699px){
+@media (min-width: 1350px) and (max-width: 1799px){
   .recipe-list.with-sidebar{
     grid-template-columns: repeat(3, 1fr);
   }
@@ -191,19 +191,28 @@
   }
 }
 
-@media (min-width: 1700px) and (max-width: 2149px){
+@media (min-width: 1700px) and (max-width: 2199px){
   .recipe-card.light, .recipe-card.dark{
-  font-size: x-large;
+  font-size: 1.35rem;
   width: 23rem;
-  height: 26.35rem;
+  height: 26.6rem;
+ }
+
+  .card2.light, .card2.dark{
+  padding: 0.75rem;
+ }
+
+ .save-shortcut, .delete-shortcut{
+  width: 3.5rem;
+  height: 3.5rem;
  }
 }
 
-@media (min-width: 2150px) and (max-width: 3648px){
+@media (min-width: 2200px) and (max-width: 3100px){
 .recipe-card.light, .recipe-card.dark{
-  font-size: x-large;
+  font-size: xx-large;
   width: 30rem;
-  height: 33.35rem;
+  height: 35.1rem;
  }
 
 .recipe-card.light{
@@ -222,5 +231,10 @@
 .save-shortcut, .delete-shortcut{
   width: 4rem;
   height: 4rem;
+ }
+
+ .card2.light, .card2.dark{
+  border-top: solid 2.5px black;
+  padding: 1rem;
  }
 }
