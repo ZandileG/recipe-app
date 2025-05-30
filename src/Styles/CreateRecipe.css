@@ -426,6 +426,14 @@ label{
 
 }
 
+@media (min-width: 1200px) and (max-width: 1699px){
+
+}
+
+@media (min-width: 1900px) and (max-width: 1999px){
+
+}
+
 @media (min-width: 2000px) and (max-width: 3648px){
   .page-heading2, .in-line-heading{
     font-size: xx-large;
