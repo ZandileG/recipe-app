@@ -333,12 +333,8 @@
 
   .navbar-home{
     margin-top: 10rem;
-    left: 2rem;
+    right: 0rem;
     gap: 2.5rem;
-  }
-
-  .searchbar.light, .searchbar.dark{
-    width: 28rem;
   }
 
   .logout-home.light, .logout-home.dark, .user-profile{
@@ -347,22 +343,87 @@
 }
 
 @media (min-width: 900px) and (max-width: 1199px){
-  
+    .header{
+    height: 12rem;
+  }
+
+  .logo-home{
+    width: 13rem;
+    margin-left: 16rem;
+  }
+
+  .navbar-home{
+    margin-top: 10rem;
+    left: 2rem;
+    gap: 2.5rem;
+  }
+
+  .searchbar.light, .searchbar.dark{
+    width: 40rem;
+  }
+
+  .logout-home.light, .logout-home.dark, .user-profile{
+     margin-right: -1rem;
+  }
+
+  .logout-home.light, .logout-home.dark{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 }
 
-@media (min-width: 2000px) and (max-width: 3648px){
+@media (min-width: 1200px) and (max-width: 1699px){
+
+}
+
+@media (min-width: 1900px) and (max-width: 2199px){
+ h1{
+    font-size: 1.75rem !important;
+  }
+
+  .searchbar.light, .searchbar.dark{
+    width: 60rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .logout-home.light, .logout-home.dark{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+ }
+
+ .sidebar-item.light, .sidebar-item.dark{
+    font-size: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .heading, .filter.light, .filter.dark{
+    font-size: 1.25rem;
+  }
+
+  .filter.light, .filter.dark{
+    width: 6rem !important;
+    height: 3rem !important;
+  }
+}
+
+@media (min-width: 2200px) and (max-width: 3100px){
   h1{
     font-size: 2.5rem;
   }
 
   .sidebar-item.light, .sidebar-item.dark{
-    font-size: 1.75rem;
+    font-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   .heading, .filter.light, .filter.dark{
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .filter.light, .filter.dark{
@@ -383,7 +444,7 @@
   }
 
   .searchbar.light, .searchbar.dark{
-    width: 80rem;
+    width: 88rem;
     height: 3.5rem;
     font-size: 1.75rem;
     padding-left: 1.5rem;
@@ -401,6 +462,17 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-right: -2rem;
-  font-size: x-large;
+  font-size: 1.75rem;
+ }
+
+ .hamburger-home{
+  margin-top: 0rem;
+  margin-right: 2rem;
+ }
+
+.hamburger-home img{
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.35rem;
  }
 }
