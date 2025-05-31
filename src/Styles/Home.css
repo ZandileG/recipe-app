@@ -314,11 +314,63 @@
 }
 
 @media (max-width: 399px){
+  .with-sidebar{
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr !important;
+  }
 
+    aside.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: 15rem;
+    height: 184.5vh;
+    min-height: 100vh;
+    z-index: 1000;
+    overflow-y: visible;  
+  }
 }
 
 @media (min-width: 400px) and (max-width: 599px){
- 
+   .with-sidebar{
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr !important;
+  }
+}
+
+  @media (min-width: 400px) and (max-width: 500px){
+    aside.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: 18rem;
+    height: 100vh;
+    min-height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;  
+  }
+}
+
+@media (min-width: 499px) and (max-width: 599px){
+    aside.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: 20rem;
+    height: 100vh;
+    min-height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;  
+  }
 }
 
 @media (min-width: 600px) and (max-width: 899px){
@@ -338,7 +390,7 @@
   }
 
   .searchbar.light, .searchbar.dark{
-    width: 28rem;
+    width: 25rem;
   }
 
   .logout-home.light, .logout-home.dark, .user-profile{
