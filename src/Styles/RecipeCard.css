@@ -9,7 +9,7 @@
   font-weight: bold;
   font-size: large;
   width: 18rem;
-  height: 20.85rem;
+  height: 20.825rem;
   border-radius: 0.75rem;
   margin: auto;
   margin-bottom: 3.5rem;
@@ -69,7 +69,7 @@
   font-weight: bold;
   font-size: large;
   width: 18rem;
-  height: 20.85rem;
+  height: 20.825rem;
   border-radius: 0.75rem;
   margin: auto;
   margin-bottom: 3.5rem;
@@ -179,15 +179,6 @@
   }
   .recipe-list.full-width{
     grid-template-columns: repeat(3, 1fr) !important;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1699px){
-  .recipe-list.with-sidebar{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .recipe-list.full-width{
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 

@@ -60,7 +60,7 @@ function handleSearch(e){
   setSearchQuery(e.target.value);
 }
 
-//This is a function for filtering the recipes according to difficulty and meal types
+//This is a function for filtering the recipes according to tags, difficulty and meal types
  function filterDifficulty(diff){
   setDifficulty(diff);
 }
@@ -154,7 +154,7 @@ function filterMealType(type){
     <section className={`content ${theme}`}>
       <h1 className={`page-heading ${theme}`}>Recipes</h1>
 
-      <RecipeList searchQuery={searchQuery} isSidebarOpen={isOpen} difficulty={difficulty} mealType={mealType}/>
+      <RecipeList searchQuery={searchQuery} isSidebarOpen={isOpen} difficulty={difficulty} mealType={mealType} />
     </section>
 
     <Footer />
