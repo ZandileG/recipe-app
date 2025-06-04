@@ -8,7 +8,6 @@ import "../Styles/Login.css";
 function Login(){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [changeDetails, setChangeDetails] = useState(false);
 
@@ -52,7 +51,7 @@ function Login(){
       if (login(username, password)){
         navigate("/home");
       } else {
-        setError("Incorrect username or password.");
+        alert("Incorrect username or password. Please try again.");
         setUsername("");
         setPassword("");
       }
@@ -72,12 +71,7 @@ function Login(){
     <section className="login-inputs">
     <input className="username" type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
     <input className="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
-    {error && <p className="login-error">{error}</p>}
     </section>
-    
-  {!userExists && !isSigningUp && (
-  <p className="login-signup" onClick={() => setIsSigningUp(true)}>Sign Up</p>
-  )}
 
     {userExists && !isSigningUp && !changeDetails && (
     <p className="login-change" onClick={() => {setChangeDetails(true); 
