@@ -50,7 +50,6 @@ function login(username, password) {
 function logout(){
     setIsLoggedIn(false);
     localStorage.setItem("isLoggedIn", "false");
-    localStorage.removeItem("isLoggedIn");
 }
 
 return (

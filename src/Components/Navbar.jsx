@@ -15,8 +15,8 @@ import "../Styles/Navbar.css";
 function Navbar({isOpen, openSidebar}){
   const {theme} = useContext(ThemeContext);
   
-    const navigate = useNavigate();
-    const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
 //The user's image that was uploaded in User Profile will be displayed in the navbar
   const [userImage, setUserImage] = useState(() => {
