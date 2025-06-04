@@ -161,11 +161,6 @@
     color: #f7f7f7;    
 }
 
-.recipe-page.full-width .content{
-  margin-left: 8rem;
-  margin-right: 8rem;
-}
-
 .info-p input[type="checkbox"]{
   width: 1.2em;
   height: 1.2em;
@@ -491,4 +486,9 @@ h1{
     border-radius: 1rem;
     border: solid 2.5px black;
   }
+
+  .recipe-page.full-width .content{
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
 }
