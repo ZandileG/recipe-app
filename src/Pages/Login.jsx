@@ -8,14 +8,14 @@ import "../Styles/Login.css";
 function Login(){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isSigningUp, setIsSigningUp] = useState(false);
+
+  //I want to track whether the user is new or not to change the sign up or login text
+  const userExists = !!localStorage.getItem("userDetails");
+  const [isSigningUp, setIsSigningUp] = useState(!userExists);
   const [changeDetails, setChangeDetails] = useState(false);
 
   const {login, signUp, setUserDetails} = useContext(LoginContext);
   const navigate = useNavigate();
-
-//I want to track whether the user is new or not to change the sign up or login text
-  const userExists = !!localStorage.getItem("userDetails");
 
   function handleSubmit(e){
     e.preventDefault();
@@ -42,9 +42,11 @@ function Login(){
   //The user can sign up and get a successful alert
     } else if (isSigningUp){
     if (signUp(username, password)){
-      alert("You have successfully signed up!");
-      setIsSigningUp(true);
+      setUserDetails({ username, password });
+      alert("You have successfully signed up! Please log in.");
       } 
+      setIsSigningUp(true);
+      navigate("/home");
      } else {
       
     //When they log back in, they will get an alert if they have entered incorrect details
