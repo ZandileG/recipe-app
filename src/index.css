@@ -1,0 +1,48 @@
+/*
+GitHub Repo - https://github.com/ZandileG/recipe-app
+Deployed Page - https://zandileg.github.io/recipe-app/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&display=swap");
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Dosis";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+}
+
+body{
+  background-color: #d5c8b0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f7f7f7 black; 
+}
+
+button, input, select, textarea{
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+option{
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+}
+
+code{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

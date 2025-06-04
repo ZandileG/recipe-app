@@ -1,0 +1,256 @@
+.login-page{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    background-image: url("../Images/Sign In BG.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-items{
+    display: grid; 
+    position: relative;
+    align-items: center;
+    justify-items: center; 
+    gap: 2rem; 
+}
+
+.logo-login{
+    width: 15rem;
+    height: auto;
+    position: absolute;
+    top: -3rem;
+}
+
+.login-form{
+    display: grid;
+    place-items: center;
+    width: 27rem;
+    height: 30rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    background-color: #d5c8b0;
+    z-index: 1000px;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.login-heading{
+    font-size: 2rem;
+    font-weight: medium;
+    text-align: center;
+    color: black;
+    cursor: default;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.login-inputs{
+    display: grid;
+    margin-top: -5rem;
+    place-items: center;
+    gap: 1.25rem;
+}
+
+.username, .password{
+    width: 15rem;
+    height: 4rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+}
+
+.username:focus, .password:focus{
+    outline: none;
+    border: solid 1px black;
+}
+
+.username::placeholder, .password::placeholder{
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.login-submit{
+    width: 5rem;
+    height: 3rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-change{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -2rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-change:hover{
+    color: rgb(98, 98, 98);
+}
+
+.login-submit:hover{
+    background-color: #957357;
+}
+
+.login-error{
+    color: black;
+    font-weight: 600;
+}
+
+@media (max-width: 400px){  
+.login-page{
+    grid-template-columns: 1fr; 
+  }
+
+  .login-form{
+    width: 14rem;
+    height: 18rem;
+  }
+
+  .login-heading{
+    font-size: 1.25rem;
+  }
+
+  .login-inputs{
+    gap: 1rem;
+  }
+
+.login-change{
+    margin-top: -1rem;
+    font-size: 0.75rem;
+  }
+
+.username, .password{
+    width: 7rem;
+    height: 2rem;
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
+
+.username::placeholder, .password::placeholder{
+    font-size: 0.75rem;
+  }
+
+.login-submit{
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+
+.logo-login{
+    width: 12rem;
+    top: -2.5rem;
+  }
+
+.disappear{
+    display: none;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px){
+.login-page{
+    grid-template-columns: 1fr; 
+  }
+
+  .login-form{
+    width: 20rem;
+    height: 24rem;
+  }
+
+ .login-heading{
+    font-size: 1.75rem;
+  }
+
+ .login-inputs{
+    gap: 1.5rem;
+  }
+
+.username, .password{
+    width: 11rem;
+    height: 3rem;
+  }
+
+.login-submit{
+    width: 5rem;
+    height: 2.75rem;
+  }
+
+.disappear{
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px){
+  .login-page{
+    grid-template-columns: 1fr; 
+  }
+
+.logo-login{
+    width: 16rem;
+  }
+
+ .disappear{
+    display: none;
+  }
+}
+
+@media (min-width: 2000px) and (max-width: 3648px){
+  .login-form{
+    width: 48rem;
+    height: 52rem;
+    border-radius: 1.5rem;
+  }
+
+.logo-login{
+    width: 24rem;
+    top: -3.75rem;
+  }
+
+  .login-heading{
+    font-size: 3.5rem;
+  }
+
+  .username, .password{
+    width: 26rem;
+    height: 7rem;
+    font-size: 1.75rem;
+    border-radius: 1rem;
+    padding-left: 2rem;
+  }
+
+.username::placeholder, .password::placeholder{
+    font-size: 1.75rem;
+  }
+
+.login-submit{
+    width: 8.5rem;
+    height: 5rem;
+    font-size: 1.75rem;
+    border-radius: 1rem;
+  }
+
+.login-change{
+    font-size: 1.75rem;
+  }
+
+.login-inputs{
+    gap: 2.5rem;
+  }
+}
