@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/recipe-app/static/css/main.1281ed5d.css",
+    "main.js": "/recipe-app/static/js/main.5e48e9eb.js",
+    "static/js/453.679e8433.chunk.js": "/recipe-app/static/js/453.679e8433.chunk.js",
+    "static/media/Sign In BG.webp": "/recipe-app/static/media/Sign In BG.76ded8c3ad2d5cfe0f58.webp",
+    "static/media/Food.png": "/recipe-app/static/media/Food.4b0bacada24039b968a3.png",
+    "static/media/Create.png": "/recipe-app/static/media/Create.3497f2b65160a634651a.png",
+    "static/media/Create2.png": "/recipe-app/static/media/Create2.1ffe11f8dbf39b77625e.png",
+    "static/media/Save.png": "/recipe-app/static/media/Save.f73d8170db7aff77e038.png",
+    "static/media/Save2.png": "/recipe-app/static/media/Save2.fe43c630cb2e5e9aa219.png",
+    "static/media/User Icon.png": "/recipe-app/static/media/User Icon.fdb365622b8c54285208.png",
+    "static/media/Arrow2.webp": "/recipe-app/static/media/Arrow2.a5797c4fde77e7afb7c9.webp",
+    "static/media/Arrow1.webp": "/recipe-app/static/media/Arrow1.895388b13d7f70a2edd6.webp",
+    "static/media/Close.png": "/recipe-app/static/media/Close.bb63abf176abbb2877b1.png",
+    "static/media/Arrow.webp": "/recipe-app/static/media/Arrow.748a90154956007c3297.webp",
+    "static/media/User Icon.webp": "/recipe-app/static/media/User Icon.75370e359a301556c508.webp",
+    "static/media/Plan.png": "/recipe-app/static/media/Plan.ac4353269fc5d7c09330.png",
+    "static/media/Edit.jpg": "/recipe-app/static/media/Edit.51af696a286f9bf98eec.jpg",
+    "static/media/Home.png": "/recipe-app/static/media/Home.a2b87f8173c5ee43d70d.png",
+    "static/media/Exit.jpg": "/recipe-app/static/media/Exit.95c0afc2a3f6e07b5bf5.jpg",
+    "static/media/Logo.webp": "/recipe-app/static/media/Logo.55b02cc6a85a3b1937e3.webp",
+    "static/media/Icon2.webp": "/recipe-app/static/media/Icon2.44612dc5a277b545d138.webp",
+    "static/media/Icon.webp": "/recipe-app/static/media/Icon.15d237de18d0805eb053.webp",
+    "index.html": "/recipe-app/index.html",
+    "main.1281ed5d.css.map": "/recipe-app/static/css/main.1281ed5d.css.map",
+    "main.5e48e9eb.js.map": "/recipe-app/static/js/main.5e48e9eb.js.map",
+    "453.679e8433.chunk.js.map": "/recipe-app/static/js/453.679e8433.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1281ed5d.css",
+    "static/js/main.5e48e9eb.js"
+  ]
+}

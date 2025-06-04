@@ -1,0 +1,25 @@
+{
+  "short_name": "Recipe App",
+  "name": "Zandile's Recipe App",
+  "icons": [
+    {
+      "src": "/recipe-app/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/recipe-app/favicon.png",
+      "type": "image/png",
+      "sizes": "137x132"
+    },
+    {
+      "src": "/recipe-app/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/recipe-app/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
