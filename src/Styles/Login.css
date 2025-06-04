@@ -119,6 +119,10 @@
     grid-template-columns: 1fr; 
   }
 
+.login-error{
+  font-size: small;
+}
+
   .login-form{
     width: 14rem;
     height: 18rem;

@@ -15,7 +15,9 @@ function Login(){
   const {login, signUp, setUserDetails} = useContext(LoginContext);
   const navigate = useNavigate();
 
-//The page shouldn't reload when the login button is pressed
+//I want to track whether the user is new or not to change the sign up or login text
+  const userExists = !!localStorage.getItem("userDetails");
+
   function handleSubmit(e){
     e.preventDefault();
 
@@ -50,7 +52,7 @@ function Login(){
       if (login(username, password)){
         navigate("/home");
       } else {
-        setError("Incorrect username or password. Please try again.");
+        setError("Incorrect username or password.");
         setUsername("");
         setPassword("");
       }
@@ -73,7 +75,11 @@ function Login(){
     {error && <p className="login-error">{error}</p>}
     </section>
     
-    {!isSigningUp && !changeDetails && (
+  {!userExists && !isSigningUp && (
+  <p className="login-signup" onClick={() => setIsSigningUp(true)}>Sign Up</p>
+  )}
+
+    {userExists && !isSigningUp && !changeDetails && (
     <p className="login-change" onClick={() => {setChangeDetails(true); 
        setUsername(""); 
        setPassword("");
